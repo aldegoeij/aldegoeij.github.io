@@ -4,10 +4,10 @@ title                    : "Business degree, Tech addiction."
 title_separator          : "-"
 name                     : "ALDG / QRMR / Alexander L. de Goeij"
 description              : "Blog about tech: architecture, cloud, engineering, development, python, linux, you name it."
-url                      : http://blog.aldg.nl # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "http://blog.aldg.nl" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : aldegoeij/aldegoeij.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : /assets/images/500x300.gif # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+repository               : "aldegoeij/aldegoeij.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+teaser                   : "/assets/images/500x300.gif" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -48,7 +48,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : aldegoeij
+  username               : "aldegoeij"
 facebook:
   username               :
   app_id                 :
@@ -71,7 +71,7 @@ analytics:
 # Site Author
 author:
   name             : "Alexander"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/me.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Working on digital enterprise startups in cloud architecture, infrastructure and engineering."
   location         : "Earth, but mostly Amsterdam."
   email            : "alexander@aldg.nl"
@@ -82,19 +82,19 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : aldegoeij
+  github           : "aldegoeij"
   gitlab           :
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : https://nl.linkedin.com/in/alexanderdegoeij # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : "alexanderdegoeij" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          : aldegoeij
+  twitter          : "aldegoeij"
   vine             :
   weibo            :
   xing             :
