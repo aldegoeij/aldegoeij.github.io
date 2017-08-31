@@ -1,12 +1,12 @@
 # Site Settings
 locale                   : "en"
-title                    : "Site Title"
+title                    : "Tech Blog"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : "Alexander"
+description              : "Business degree, Tech addiction."
+url                      : http://blog.aldg.nl # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : aldegoeij/aldegoeij.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -48,7 +48,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : aldegoeij
 facebook:
   username               :
   app_id                 :
@@ -58,8 +58,8 @@ og_image                 : # Open Graph/Twitter default site image
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  name                   : Alexander L. de Goeij # If the user or organization name differs from the site's name
+  links: https://twitter.com/aldegoeij # An array of links to social media profiles
 
 # Analytics
 analytics:
@@ -70,10 +70,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Alexander L. de Goeij"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an amazing person."
-  location         : "Somewhere"
+  location         : "Earth, but mostly Amsterdam."
   email            :
   uri              :
   bitbucket        :
@@ -82,19 +82,19 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : aldegoeij
   gitlab           :
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : https://nl.linkedin.com/in/alexanderdegoeij # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          :
+  twitter          : aldegoeij
   vine             :
   weibo            :
   xing             :
