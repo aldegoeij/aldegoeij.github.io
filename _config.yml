@@ -58,7 +58,7 @@ og_image                 : # Open Graph/Twitter default site image
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
-  name                   : Alexander # If the user or organization name differs from the site's name
+  name                   : Alexander L. de Goeij # If the user or organization name differs from the site's name
   links                  : https://twitter.com/aldegoeij # An array of links to social media profiles
 
 # Analytics
@@ -70,7 +70,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Alexander L. de Goeij"
+  name             : "Alexander"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Working on digital enterprise startups in cloud architecture, infrastructure and engineering."
   location         : "Earth, but mostly Amsterdam."
