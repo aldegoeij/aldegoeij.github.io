@@ -2,7 +2,7 @@
 title: How to organize a large Terraform project
 
 header:
-  teaser: /assets/images/mars.jpg
+  image: /assets/images/mars.jpg
 
 ---
 {% include toc %}
