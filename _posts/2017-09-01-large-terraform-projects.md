@@ -5,6 +5,8 @@ header:
   teaser: /assets/images/mars.jpg
 
 ---
+{% include toc %}
+
 
 Of course we started with CloudFormation, we even threw in ansible for good measure.
 
