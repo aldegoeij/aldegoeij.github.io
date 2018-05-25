@@ -80,7 +80,7 @@ class CompositeReadIOTest < Test::Unit::TestCase
   end
 
   ## FIXME excluding on JRuby due to
-  ## http://jira.codehaus.org/browse/JRUBY-7109
+  ## https://jira.codehaus.org/browse/JRUBY-7109
   if IO.respond_to?(:copy_stream) && !defined?(JRUBY_VERSION)
     def test_compatible_with_copy_stream
       target_io = StringIO.new

@@ -1,6 +1,6 @@
 # Primer CSS Support
 
-[![npm version](http://img.shields.io/npm/v/primer-support.svg)](https://www.npmjs.org/package/primer-support)
+[![npm version](https://img.shields.io/npm/v/primer-support.svg)](https://www.npmjs.org/package/primer-support)
 [![Build Status](https://travis-ci.org/primer/primer-css.svg?branch=master)](https://travis-ci.org/primer/primer-css)
 
 > Support files are Sass variables, mixins, and functions that we import into different bases for use across components, objects, and utilities. Sharing these common properties across GitHub sites helps us to keep our styles more consistent.
@@ -36,7 +36,7 @@ You can read more about support in the [docs][docs].
 [MIT](./LICENSE) &copy; [GitHub](https://github.com/)
 
 [primer]: https://github.com/primer/primer
-[docs]: http://primercss.io/
+[docs]: https://primercss.io/
 [npm]: https://www.npmjs.com/
 [install-npm]: https://docs.npmjs.com/getting-started/installing-node
-[sass]: http://sass-lang.com/
+[sass]: https://sass-lang.com/

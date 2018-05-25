@@ -34,7 +34,7 @@ Example Rails Helper
 
 This would allow emojifying content such as: `it's raining :cat:s and :dog:s!`
 
-See the [Emoji cheat sheet](http://www.emoji-cheat-sheet.com) for more examples.
+See the [Emoji cheat sheet](https://www.emoji-cheat-sheet.com) for more examples.
 
 ```ruby
 module EmojiHelper

@@ -16,7 +16,7 @@ module Sawyer
 
     def setup
       @stubs = Faraday::Adapter::Test::Stubs.new
-      @agent = Sawyer::Agent.new "http://foo.com/a/" do |conn|
+      @agent = Sawyer::Agent.new "https://foo.com/a/" do |conn|
         conn.builder.handlers.delete(Faraday::Adapter::NetHttp)
         conn.adapter :test, @stubs
       end
@@ -47,7 +47,7 @@ module Sawyer
           :repos_url => '/repos')]
       end
 
-      agent = Sawyer::Agent.new "http://foo.com/a/" do |conn|
+      agent = Sawyer::Agent.new "https://foo.com/a/" do |conn|
         conn.builder.handlers.delete(Faraday::Adapter::NetHttp)
         conn.adapter :test, @stubs
       end
@@ -170,12 +170,12 @@ module Sawyer
 
     def test_handle_yaml_dump_and_load
       require 'yaml'
-      res = Agent.new 'http://example.com', :a => 1
+      res = Agent.new 'https://example.com', :a => 1
       YAML.load(YAML.dump(res))
     end
 
     def test_handle_marshal_dump_and_load
-      res = Agent.new 'http://example.com', :a => 1
+      res = Agent.new 'https://example.com', :a => 1
       Marshal.load(Marshal.dump(res))
     end
 
@@ -185,7 +185,7 @@ module Sawyer
         [200, { "Content-Type" => "application/json" }, " "]
       end
 
-      agent = Sawyer::Agent.new "http://foo.com/a/" do |conn|
+      agent = Sawyer::Agent.new "https://foo.com/a/" do |conn|
         conn.adapter :test, @stubs
       end
 

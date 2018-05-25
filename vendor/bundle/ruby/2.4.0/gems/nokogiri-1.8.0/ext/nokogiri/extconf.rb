@@ -474,7 +474,7 @@ else
   if cross_build_p || windows?
     zlib_recipe = process_recipe("zlib", dependencies["zlib"]["version"], static_p, cross_build_p) do |recipe|
       recipe.files = [{
-          url: "http://zlib.net/fossils/#{recipe.name}-#{recipe.version}.tar.gz",
+          url: "https://zlib.net/fossils/#{recipe.name}-#{recipe.version}.tar.gz",
           sha256: dependencies["zlib"]["sha256"]
         }]
       class << recipe
@@ -512,7 +512,7 @@ else
 
     libiconv_recipe = process_recipe("libiconv", dependencies["libiconv"]["version"], static_p, cross_build_p) do |recipe|
       recipe.files = [{
-          url: "http://ftp.gnu.org/pub/gnu/libiconv/#{recipe.name}-#{recipe.version}.tar.gz",
+          url: "https://ftp.gnu.org/pub/gnu/libiconv/#{recipe.name}-#{recipe.version}.tar.gz",
           sha256: dependencies["libiconv"]["sha256"]
         }]
       recipe.configure_options += [
@@ -547,7 +547,7 @@ EOM
 
   libxml2_recipe = process_recipe("libxml2", dependencies["libxml2"]["version"], static_p, cross_build_p) do |recipe|
     recipe.files = [{
-        url: "http://xmlsoft.org/sources/#{recipe.name}-#{recipe.version}.tar.gz",
+        url: "https://xmlsoft.org/sources/#{recipe.name}-#{recipe.version}.tar.gz",
         sha256: dependencies["libxml2"]["sha256"]
       }]
     recipe.configure_options += [
@@ -563,7 +563,7 @@ EOM
 
   libxslt_recipe = process_recipe("libxslt", dependencies["libxslt"]["version"], static_p, cross_build_p) do |recipe|
     recipe.files = [{
-        url: "http://xmlsoft.org/sources/#{recipe.name}-#{recipe.version}.tar.gz",
+        url: "https://xmlsoft.org/sources/#{recipe.name}-#{recipe.version}.tar.gz",
         sha256: dependencies["libxslt"]["sha256"]
       }]
     recipe.configure_options += [

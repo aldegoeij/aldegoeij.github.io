@@ -964,11 +964,11 @@ SCSS
     assert_converts <<SASS, <<SCSS
 $family: unquote("Droid+Sans")
 
-@import url("http://fonts.googleapis.com/css?family=\#{$family}")
+@import url("https://fonts.googleapis.com/css?family=\#{$family}")
 SASS
 $family: unquote("Droid+Sans");
 
-@import url("http://fonts.googleapis.com/css?family=\#{$family}");
+@import url("https://fonts.googleapis.com/css?family=\#{$family}");
 SCSS
   end
 

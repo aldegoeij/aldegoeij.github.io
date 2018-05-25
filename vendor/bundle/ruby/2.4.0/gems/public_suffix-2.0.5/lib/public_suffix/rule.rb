@@ -79,7 +79,7 @@ module PublicSuffix
     #   # => false
     #
     # Rule order is significant. A name can match more than one rule.
-    # See the {Public Suffix Documentation}[http://publicsuffix.org/format/]
+    # See the {Public Suffix Documentation}[https://publicsuffix.org/format/]
     # to learn more about rule priority.
     #
     # When you have the right rule, you can use it to tokenize the domain name.
@@ -293,7 +293,7 @@ module PublicSuffix
       # in the order they appear in the value.
       # The leftmost label is not considered a label.
       #
-      # See http://publicsuffix.org/format/:
+      # See https://publicsuffix.org/format/:
       # If the prevailing rule is a exception rule,
       # modify it by removing the leftmost label.
       #

@@ -30,13 +30,13 @@ module Nokogiri
 
       def test_default_to_encoding_from_string
         bad_charset = <<-eohtml
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"   "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=charset=UTF-8">
 </head>
 <body>
-  <a href="http://tenderlovemaking.com/">blah!</a>
+  <a href="https://tenderlovemaking.com/">blah!</a>
 </body>
 </html>
         eohtml
@@ -66,18 +66,18 @@ module Nokogiri
 
       def test_encoding_with_a_bad_name
         bad_charset = <<-eohtml
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"   "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=charset=UTF-8">
 </head>
 <body>
-  <a href="http://tenderlovemaking.com/">blah!</a>
+  <a href="https://tenderlovemaking.com/">blah!</a>
 </body>
 </html>
         eohtml
         doc = Nokogiri::HTML(bad_charset, nil, 'askldjfhalsdfjhlkasdfjh')
-        assert_equal ['http://tenderlovemaking.com/'],
+        assert_equal ['https://tenderlovemaking.com/'],
           doc.css('a').map { |a| a['href'] }
       end
 

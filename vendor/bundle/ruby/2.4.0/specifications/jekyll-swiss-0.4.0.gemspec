@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors = ["broccolini".freeze]
   s.date = "2016-09-21"
   s.email = ["diana.mounter@gmail.com".freeze]
-  s.homepage = "http://broccolini.net/swiss".freeze
+  s.homepage = "https://broccolini.net/swiss".freeze
   s.licenses = ["MIT".freeze]
   s.rubygems_version = "2.6.11".freeze
   s.summary = "A bold typographic theme for Jekyll, inspired by Swiss design.".freeze

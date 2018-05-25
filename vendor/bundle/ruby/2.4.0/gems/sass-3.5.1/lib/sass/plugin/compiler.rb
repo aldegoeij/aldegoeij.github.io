@@ -272,7 +272,7 @@ module Sass::Plugin
     #
     # Before the watching starts in earnest, `watch` calls \{#update\_stylesheets}.
     #
-    # Note that `watch` uses the [Listen](http://github.com/guard/listen) library
+    # Note that `watch` uses the [Listen](https://github.com/guard/listen) library
     # to monitor the filesystem for changes.
     # Listen isn't loaded until `watch` is run.
     # The version of Listen distributed with Sass is loaded by default,

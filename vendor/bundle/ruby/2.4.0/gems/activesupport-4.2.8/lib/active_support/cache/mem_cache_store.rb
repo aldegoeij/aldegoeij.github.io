@@ -12,7 +12,7 @@ require 'active_support/core_ext/array/extract_options'
 module ActiveSupport
   module Cache
     # A cache store implementation which stores data in Memcached:
-    # http://memcached.org/
+    # https://memcached.org/
     #
     # This is currently the most popular cache store for production websites.
     #

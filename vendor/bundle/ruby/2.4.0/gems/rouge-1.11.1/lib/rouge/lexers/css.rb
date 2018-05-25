@@ -174,7 +174,7 @@ module Rouge
         )
       end
 
-      # source: http://www.w3.org/TR/CSS21/syndata.html#vendor-keyword-history
+      # source: https://www.w3.org/TR/CSS21/syndata.html#vendor-keyword-history
       def self.vendor_prefixes
         @vendor_prefixes ||= Set.new %w(
           -ah- -atsc- -hp- -khtml- -moz- -ms- -o- -rim- -ro- -tc- -wap-

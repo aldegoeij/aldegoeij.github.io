@@ -139,7 +139,7 @@ class Sass::Tree::Visitors::ToCss < Sass::Tree::Visitors::Base
       if node.style == :compressed
         # A byte order mark is sufficient to tell browsers that this
         # file is UTF-8 encoded, and will override any other detection
-        # methods as per http://encoding.spec.whatwg.org/#decode-and-encode.
+        # methods as per https://encoding.spec.whatwg.org/#decode-and-encode.
         prepend! "\uFEFF"
       else
         prepend! "@charset \"UTF-8\";\n"

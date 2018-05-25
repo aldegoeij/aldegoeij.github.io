@@ -39,7 +39,7 @@ module Jekyll
     # other_hash  - the other hash whose values will be persisted after the merge
     #
     # This code was lovingly stolen from some random gem:
-    # http://gemjack.com/gems/tartan-0.1.1/classes/Hash.html
+    # https://gemjack.com/gems/tartan-0.1.1/classes/Hash.html
     #
     # Thanks to whoever made it.
     def deep_merge_hashes!(target, overwrite)

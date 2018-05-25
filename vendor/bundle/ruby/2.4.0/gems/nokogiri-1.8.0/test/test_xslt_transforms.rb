@@ -45,7 +45,7 @@ EOS
 
     input_xsl = <<-EOS
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="https://www.w3.org/1999/XSL/Transform">
   <xsl:output method="xml" version="1.0" encoding="utf-8" indent="yes"/>
   <xsl:template match="/">
     <html>
@@ -75,7 +75,7 @@ EOS
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+xmlns:xsl="https://www.w3.org/1999/XSL/Transform">
 <xsl:output method="text" version="1.0"
 encoding="iso-8859-1" indent="yes"/>
 
@@ -103,7 +103,7 @@ encoding="iso-8859-1" indent="yes"/>
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+xmlns:xsl="https://www.w3.org/1999/XSL/Transform">
 <xsl:output method="text" version="1.0"
 encoding="iso-8859-1" indent="yes"/>
 
@@ -195,7 +195,7 @@ encoding="iso-8859-1" indent="yes"/>
 
   if Nokogiri.uses_libxml?
     # By now, cannot get it working on JRuby, see:
-    #   http://yokolet.blogspot.com/2010/10/pure-java-nokogiri-xslt-extension.html
+    #   https://yokolet.blogspot.com/2010/10/pure-java-nokogiri-xslt-extension.html
     def test_exslt
       assert doc = Nokogiri::XML.parse(File.read(EXML_FILE))
       assert doc.xml?
@@ -227,7 +227,7 @@ encoding="iso-8859-1" indent="yes"/>
 
     def test_xslt_paramaters
       xslt_str = <<-EOX
-  <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
+  <xsl:stylesheet version="1.0" xmlns:xsl="https://www.w3.org/1999/XSL/Transform" >
     <xsl:template match="/">
       <xsl:value-of select="$foo" />
     </xsl:template>
@@ -241,7 +241,7 @@ encoding="iso-8859-1" indent="yes"/>
 
     def test_xslt_transform_error
       xslt_str = <<-EOX
-  <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
+  <xsl:stylesheet version="1.0" xmlns:xsl="https://www.w3.org/1999/XSL/Transform" >
     <xsl:template match="/">
       <xsl:value-of select="$foo" />
     </xsl:template>
@@ -258,7 +258,7 @@ encoding="iso-8859-1" indent="yes"/>
   def test_xslt_parse_error
     xslt_str = <<-EOX
 <xsl:stylesheet version="1.0"
- xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+ xmlns:xsl="https://www.w3.org/1999/XSL/Transform">
   <!-- Not well-formed: -->
   <xsl:template match="/"/>
     <values>
@@ -276,7 +276,7 @@ encoding="iso-8859-1" indent="yes"/>
 
 
   def test_passing_a_non_document_to_transform
-    xsl = Nokogiri::XSLT('<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"></xsl:stylesheet>')
+    xsl = Nokogiri::XSLT('<xsl:stylesheet version="1.0" xmlns:xsl="https://www.w3.org/1999/XSL/Transform"></xsl:stylesheet>')
     assert_raises(ArgumentError) { xsl.transform("<div></div>") }
     assert_raises(ArgumentError) { xsl.transform(Nokogiri::HTML("").css("body")) }
   end
@@ -298,7 +298,7 @@ encoding="iso-8859-1" indent="yes"/>
 
     xsl = Nokogiri.XSLT(<<-EOXSL)
       <xsl:stylesheet version="1.0"
-                      xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+                      xmlns:xsl="https://www.w3.org/1999/XSL/Transform">
 
         <xsl:output encoding="UTF-8" indent="yes" method="xml" />
 

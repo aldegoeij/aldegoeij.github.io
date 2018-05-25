@@ -26,7 +26,7 @@ module Jekyll
 
       def fallback_data
         {
-          "@context" => "http://schema.org",
+          "@context" => "https://schema.org",
         }
       end
 

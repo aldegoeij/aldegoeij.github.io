@@ -32,17 +32,17 @@ class ScssRxTest < MiniTest::Test
     assert_match IDENT, "foo_-_bar"
     assert_match IDENT, "f012_23"
 
-    # http://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/escapes-003.xht
+    # https://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/escapes-003.xht
     assert_match IDENT, "c\\lass"
-    # http://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/escapes-004.xht
+    # https://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/escapes-004.xht
     assert_match IDENT, "c\\00006Cas\\000073"
-    # http://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/ident-001.xht
+    # https://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/ident-001.xht
     assert_match IDENT, "IdE6n-3t0_6"
-    # http://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/ident-006.xht
+    # https://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/ident-006.xht
     assert_match IDENT, "\\6000ident"
-    # http://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/ident-007.xht
+    # https://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/ident-007.xht
     assert_match IDENT, "iden\\6000t\\6000"
-    # http://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/ident-013.xht
+    # https://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/ident-013.xht
     assert_match IDENT, "\\-ident"
   end
 
@@ -62,7 +62,7 @@ class ScssRxTest < MiniTest::Test
     assert_no_match IDENT, "foo bar"
     assert_no_match IDENT, "foo~bar"
 
-    # http://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/escapes-008.xht
+    # https://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/escapes-008.xht
     assert_no_match IDENT, "c\\06C  ass"
     assert_no_match IDENT, "back\\67\n round"
   end

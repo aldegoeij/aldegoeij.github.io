@@ -6,7 +6,7 @@ module Nokogiri
       class TestNodeSetNamespaces < Nokogiri::TestCase
         def setup
           super
-          @xml = Nokogiri.XML('<foo xmlns:n0="http://example.com" />')
+          @xml = Nokogiri.XML('<foo xmlns:n0="https://example.com" />')
           @list = @xml.xpath('//namespace::*')
         end
 
@@ -26,7 +26,7 @@ module Nokogiri
         def test_reference_after_delete
           first = @list.first
           @list.delete(first)
-          assert_equal 'http://www.w3.org/XML/1998/namespace', first.href
+          assert_equal 'https://www.w3.org/XML/1998/namespace', first.href
         end        
       end
 
@@ -188,12 +188,12 @@ module Nokogiri
 
       def test_css_search_with_namespace
         fragment = Nokogiri::XML.fragment(<<-eoxml)
-          <html xmlns="http://www.w3.org/1999/xhtml">
+          <html xmlns="https://www.w3.org/1999/xhtml">
           <head></head>
           <body></body>
           </html>
         eoxml
-        assert fragment.children.search( 'body', { 'xmlns' => 'http://www.w3.org/1999/xhtml' })
+        assert fragment.children.search( 'body', { 'xmlns' => 'https://www.w3.org/1999/xhtml' })
       end
 
       def test_double_equal
@@ -270,7 +270,7 @@ module Nokogiri
 
       def test_xmlns_is_automatically_registered
         doc = Nokogiri::XML(<<-eoxml)
-          <root xmlns="http://tenderlovemaking.com/">
+          <root xmlns="https://tenderlovemaking.com/">
             <foo>
               <bar/>
             </foo>
@@ -432,17 +432,17 @@ module Nokogiri
       def test_nodeset_search_takes_namespace
         @xml = Nokogiri::XML.parse(<<-eoxml)
 <root>
- <car xmlns:part="http://general-motors.com/">
+ <car xmlns:part="https://general-motors.com/">
   <part:tire>Michelin Model XGV</part:tire>
  </car>
- <bicycle xmlns:part="http://schwinn.com/">
+ <bicycle xmlns:part="https://schwinn.com/">
   <part:tire>I'm a bicycle tire!</part:tire>
  </bicycle>
 </root>
         eoxml
         set = @xml/'root'
         assert_equal 1, set.length
-        bike_tire = set.search('//bike:tire', 'bike' => "http://schwinn.com/")
+        bike_tire = set.search('//bike:tire', 'bike' => "https://schwinn.com/")
         assert_equal 1, bike_tire.length
       end
 

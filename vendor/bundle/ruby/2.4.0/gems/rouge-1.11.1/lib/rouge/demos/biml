@@ -1,6 +1,6 @@
 <#@ template language="C#" #>
 <#@ import namespace="System.Data" #>
-<Biml xmlns="http://schemas.varigence.com/biml.xsd">
+<Biml xmlns="https://schemas.varigence.com/biml.xsd">
     <Connections>
         <!-- Creates a connection to the Adventure Works database -->
         <Connection

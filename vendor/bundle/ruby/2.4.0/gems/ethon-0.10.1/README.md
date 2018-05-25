@@ -1,11 +1,11 @@
-#  Ethon [![Build Status](https://secure.travis-ci.org/typhoeus/ethon.png?branch=master)](http://travis-ci.org/typhoeus/ethon) [![Gem Version](https://badge.fury.io/rb/ethon.png)](http://badge.fury.io/rb/ethon)
+#  Ethon [![Build Status](https://secure.travis-ci.org/typhoeus/ethon.png?branch=master)](https://travis-ci.org/typhoeus/ethon) [![Gem Version](https://badge.fury.io/rb/ethon.png)](https://badge.fury.io/rb/ethon)
 
 In Greek mythology, Ethon, the son of Typhoeus and Echidna, is a gigantic eagle. So much for the history.
 In the modern world, Ethon is a very basic libcurl wrapper using ffi.
 
-* [Documentation](http://rubydoc.info/github/typhoeus/ethon/frames/Ethon)
-* [Website](http://typhoeus.github.com/)
-* [Mailing list](http://groups.google.com/group/typhoeus)
+* [Documentation](https://rubydoc.info/github/typhoeus/ethon/frames/Ethon)
+* [Website](https://typhoeus.github.com/)
+* [Mailing list](https://groups.google.com/group/typhoeus)
 
 ## Installation
 
@@ -71,7 +71,7 @@ everything up correctly.
 
 (The MIT License)
 
-Copyright © 2012-2016 [Hans Hasselberg](http://www.hans.io)
+Copyright © 2012-2016 [Hans Hasselberg](https://www.hans.io)
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),

@@ -236,7 +236,7 @@ end
 
 task :rdoc do
   puts '=' * 100, <<END, '=' * 100
-Sass uses the YARD documentation system (http://github.com/lsegal/yard).
+Sass uses the YARD documentation system (https://github.com/lsegal/yard).
 Install the yard gem and then run "rake doc".
 END
 end

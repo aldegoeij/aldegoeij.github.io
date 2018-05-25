@@ -40,7 +40,7 @@ describe "recipe download" do
     end
 
     it "handles http" do
-      @recipe.files << "http://localhost:#{TestCase::HTTP_PORT}/foo"
+      @recipe.files << "https://localhost:#{TestCase::HTTP_PORT}/foo"
       server_must_receive_connection 3 do
         @recipe.download
       end

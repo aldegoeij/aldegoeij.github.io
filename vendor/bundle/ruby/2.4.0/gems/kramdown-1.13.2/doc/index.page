@@ -58,7 +58,7 @@ content_processor.tikz.opts: |
 If you have found a bug, you should [report it here][bug_report]. Also, there is the [kramdown-users
 google group][ml] available if you have any questions!
 
-[bug_report]: http://github.com/gettalong/kramdown/issues
+[bug_report]: https://github.com/gettalong/kramdown/issues
 [ml]: https://groups.google.com/forum/#!forum/kramdown-users
 
 
@@ -74,22 +74,22 @@ Markdown implementations because kramdown borrowed many ideas from existing pack
 * Thomas Leitner
 * e-Mail: <mailto:t_leitner@gmx.at>
 
-[PHP Markdown Extra]: http://michelf.com/projects/php-markdown/extra/
-[Maruku]: http://maruku.rubyforge.org
-[BlueFeather]: http://ruby.morphball.net/bluefeather/index_en.html
+[PHP Markdown Extra]: https://michelf.com/projects/php-markdown/extra/
+[Maruku]: https://maruku.rubyforge.org
+[BlueFeather]: https://ruby.morphball.net/bluefeather/index_en.html
 
 --- intro
-<div markdown="1" itemscope="" itemtype="http://schema.org/SoftwareApplication">
+<div markdown="1" itemscope="" itemtype="https://schema.org/SoftwareApplication">
 <meta itemprop="applicationCategory" content="Markdown library, Markdown converter" />
 <meta itemprop="operatingSystem" content="Linux, Windows, Mac OS X" />
-<div itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+<div itemprop="author" itemscope="" itemtype="https://schema.org/Person">
 <meta itemprop="name" content="Thomas Leitner" />
 <meta itemprop="email" content="t_leitner@gmx.at" />
 </div>
 
 **kramdown**{:itemprop="name"} (sic, not Kramdown or KramDown, just kramdown) is a *free*
 [MIT](https://github.com/gettalong/kramdown/blob/master/COPYING){:itemprop="license"}-licensed
-[Ruby](http://www.ruby-lang.org) library for parsing and converting a superset of Markdown. It is
+[Ruby](https://www.ruby-lang.org) library for parsing and converting a superset of Markdown. It is
 completely written in Ruby, supports standard Markdown (with some minor modifications) and various
 extensions that have been made popular by the [PHP Markdown Extra] package and [Maruku].
 {:itemprop="description"}
@@ -104,6 +104,6 @@ Version **1.13.2**{:itemprop="softwareVersion"} released on
 </div>
 
 
-[PHP Markdown Extra]: http://michelf.com/projects/php-markdown/extra/
-[Maruku]: http://maruku.rubyforge.org
-[BlueFeather]: http://ruby.morphball.net/bluefeather/index_en.html
+[PHP Markdown Extra]: https://michelf.com/projects/php-markdown/extra/
+[Maruku]: https://maruku.rubyforge.org
+[BlueFeather]: https://ruby.morphball.net/bluefeather/index_en.html

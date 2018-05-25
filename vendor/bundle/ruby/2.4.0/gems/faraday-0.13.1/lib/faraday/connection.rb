@@ -4,9 +4,9 @@ module Faraday
   #
   # Examples
   #
-  #   conn = Faraday::Connection.new 'http://sushi.com'
+  #   conn = Faraday::Connection.new 'https://sushi.com'
   #
-  #   # GET http://sushi.com/nigiri
+  #   # GET https://sushi.com/nigiri
   #   conn.get 'nigiri'
   #   # => #<Faraday::Response>
   #
@@ -466,7 +466,7 @@ module Faraday
     def find_default_proxy
       uri = ENV['http_proxy']
       if uri && !uri.empty?
-        uri = 'http://' + uri if uri !~ /^http/i
+        uri = 'https://' + uri if uri !~ /^http/i
         uri
       end
     end

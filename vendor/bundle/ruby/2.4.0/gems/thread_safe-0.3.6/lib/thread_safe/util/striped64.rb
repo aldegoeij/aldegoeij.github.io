@@ -4,7 +4,7 @@ module ThreadSafe
     # available in public domain.
     #
     # Original source code available here:
-    # http://gee.cs.oswego.edu/cgi-bin/viewcvs.cgi/jsr166/src/jsr166e/Striped64.java?revision=1.6
+    # https://gee.cs.oswego.edu/cgi-bin/viewcvs.cgi/jsr166/src/jsr166e/Striped64.java?revision=1.6
     #
     # Class holding common representation and mechanics for classes supporting
     # dynamic striping on 64bit values.

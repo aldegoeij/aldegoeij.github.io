@@ -208,7 +208,7 @@ Accepts one optional argument:
 
 - `level` - (optional) the severity threshold at which to begin logging. Uses
   Ruby's built-in
-  [`Logger`](http://www.ruby-doc.org/stdlib-2.1.0/libdoc/logger/rdoc/Logger.html)
+  [`Logger`](https://www.ruby-doc.org/stdlib-2.1.0/libdoc/logger/rdoc/Logger.html)
   levels.
 
 Log level defaults to `Logger::INFO`.

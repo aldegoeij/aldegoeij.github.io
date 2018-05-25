@@ -377,8 +377,8 @@ SCSS
   end
 
   def test_http_import
-    assert_equal("@import \"http://fonts.googleapis.com/css?family=Droid+Sans\";\n",
-      render("@import \"http://fonts.googleapis.com/css?family=Droid+Sans\";"))
+    assert_equal("@import \"https://fonts.googleapis.com/css?family=Droid+Sans\";\n",
+      render("@import \"https://fonts.googleapis.com/css?family=Droid+Sans\";"))
   end
 
   def test_protocol_relative_import
@@ -388,10 +388,10 @@ SCSS
 
   def test_import_with_interpolation
     assert_equal <<CSS, render(<<SCSS)
-@import url("http://fonts.googleapis.com/css?family=Droid+Sans");
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans");
 CSS
 $family: unquote("Droid+Sans");
-@import url("http://fonts.googleapis.com/css?family=\#{$family}");
+@import url("https://fonts.googleapis.com/css?family=\#{$family}");
 SCSS
   end
 
@@ -2287,16 +2287,16 @@ SCSS
 
   def test_moz_document_interpolation
     assert_equal <<CSS, render(<<SCSS)
-@-moz-document url(http://sass-lang.com/),
-               url-prefix(http://sass-lang.com/docs),
+@-moz-document url(https://sass-lang.com/),
+               url-prefix(https://sass-lang.com/docs),
                domain(sass-lang.com),
                domain("sass-lang.com") {
   .foo {
     a: b; } }
 CSS
 $domain: "sass-lang.com";
-@-moz-document url(http://\#{$domain}/),
-               url-prefix(http://\#{$domain}/docs),
+@-moz-document url(https://\#{$domain}/),
+               url-prefix(https://\#{$domain}/docs),
                domain(\#{$domain}),
                \#{domain($domain)} {
   .foo {a: b}
@@ -2341,7 +2341,7 @@ SCSS
 
   def test_random_directive_interpolation
     assert_equal <<CSS, render(<<SCSS)
-@foo url(http://sass-lang.com/),
+@foo url(https://sass-lang.com/),
      domain("sass-lang.com"),
      "foobarbaz",
      foobarbaz {
@@ -2349,7 +2349,7 @@ SCSS
     a: b; } }
 CSS
 $domain: "sass-lang.com";
-@foo url(http://\#{$domain}/),
+@foo url(https://\#{$domain}/),
      \#{domain($domain)},
      "foo\#{'ba' + 'r'}baz",
      foo\#{'ba' + 'r'}baz {
@@ -3766,10 +3766,10 @@ SCSS
     # Even though this is plain CSS, it only failed when given to the SCSS
     # parser.
     assert_equal(<<CSS, render(<<SCSS))
-[href^='http://'] {
+[href^='https://'] {
   color: red; }
 CSS
-[href^='http://'] {
+[href^='https://'] {
   color: red;
 }
 SCSS

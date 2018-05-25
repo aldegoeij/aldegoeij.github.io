@@ -77,7 +77,7 @@
 
 2011-02-09  Stuart Shelton  <srcshelton@gmail.com>
 
-	http://bugs.gentoo.org/show_bug.cgi?id=286911
+	https://bugs.gentoo.org/show_bug.cgi?id=286911
 	* src/mips/ffitarget.h: Clean up error messages.
 	* src/java_raw_api.c (ffi_java_translate_args): Cast raw arg to
 	ffi_raw*.

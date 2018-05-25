@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.date = "2017-06-05"
   s.description = "Simplistic port-like solution for developers. It provides a standard and simplified way to compile against dependency libraries without messing up your system.".freeze
   s.email = "mike.dalessio@gmail.com".freeze
-  s.homepage = "http://github.com/flavorjones/mini_portile".freeze
+  s.homepage = "https://github.com/flavorjones/mini_portile".freeze
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 1.9.2".freeze)
   s.rubygems_version = "2.6.11".freeze

@@ -3,7 +3,7 @@
 module Rouge
   module Themes
     # default base16 theme
-    # by Chris Kempson (http://chriskempson.com)
+    # by Chris Kempson (https://chriskempson.com)
     class Base16 < CSSTheme
       name 'base16'
 
@@ -83,7 +83,7 @@ module Rouge
       class Solarized < Base16
         name 'base16.solarized'
         light!
-        # author "Ethan Schoonover (http://ethanschoonover.com/solarized)"
+        # author "Ethan Schoonover (https://ethanschoonover.com/solarized)"
 
         palette base00: "#002b36"
         palette base01: "#073642"
@@ -107,7 +107,7 @@ module Rouge
         name 'base16.monokai'
         dark!
 
-        # author "Wimer Hazenberg (http://www.monokai.nl)"
+        # author "Wimer Hazenberg (https://www.monokai.nl)"
         palette base00: "#272822"
         palette base01: "#383830"
         palette base02: "#49483e"

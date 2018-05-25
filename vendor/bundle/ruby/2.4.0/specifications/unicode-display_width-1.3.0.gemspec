@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.email = "mail@janlelis.de".freeze
   s.extra_rdoc_files = ["README.md".freeze, "MIT-LICENSE.txt".freeze, "CHANGELOG.md".freeze]
   s.files = ["CHANGELOG.md".freeze, "MIT-LICENSE.txt".freeze, "README.md".freeze]
-  s.homepage = "http://github.com/janlelis/unicode-display_width".freeze
+  s.homepage = "https://github.com/janlelis/unicode-display_width".freeze
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 1.9.3".freeze)
   s.rubygems_version = "2.6.11".freeze

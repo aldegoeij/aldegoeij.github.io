@@ -161,10 +161,10 @@ describe Typhoeus::Response::Informations do
   end
 
   describe "#effective_url" do
-    let(:options) { { :effective_url => "http://www.example.com" } }
+    let(:options) { { :effective_url => "https://www.example.com" } }
 
     it "returns effective_url from options" do
-      expect(response.effective_url).to eq("http://www.example.com")
+      expect(response.effective_url).to eq("https://www.example.com")
     end
   end
 

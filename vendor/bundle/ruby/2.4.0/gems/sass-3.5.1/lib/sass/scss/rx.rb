@@ -3,7 +3,7 @@ module Sass
   module SCSS
     # A module containing regular expressions used
     # for lexing tokens in an SCSS document.
-    # Most of these are taken from [the CSS3 spec](http://www.w3.org/TR/css3-syntax/#lexical),
+    # Most of these are taken from [the CSS3 spec](https://www.w3.org/TR/css3-syntax/#lexical),
     # although some have been modified for various reasons.
     module RX
       # Takes a string and returns a CSS identifier
@@ -103,14 +103,14 @@ module Sass
 
       UNICODERANGE = /u\+(?:#{H}{1,6}-#{H}{1,6}|#{RANGE})/i
 
-      # Defined in http://www.w3.org/TR/css3-selectors/#lex
+      # Defined in https://www.w3.org/TR/css3-selectors/#lex
       PLUS = /#{W}\+/
       GREATER = /#{W}>/
       TILDE = /#{W}~/
       NOT = quote(":not(", Regexp::IGNORECASE)
 
       # Defined in https://developer.mozilla.org/en/CSS/@-moz-document as a
-      # non-standard version of http://www.w3.org/TR/css3-conditional/
+      # non-standard version of https://www.w3.org/TR/css3-conditional/
       URL_PREFIX = /url-prefix\(#{W}(?:#{STRING}|#{URL})#{W}\)/i
       DOMAIN = /domain\(#{W}(?:#{STRING}|#{URL})#{W}\)/i
 

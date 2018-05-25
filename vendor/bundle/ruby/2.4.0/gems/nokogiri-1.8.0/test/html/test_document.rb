@@ -443,8 +443,8 @@ eohtml
 
       def test_doc_type
         html = Nokogiri::HTML(<<-eohtml)
-        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-          <html xmlns="http://www.w3.org/1999/xhtml">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+          <html xmlns="https://www.w3.org/1999/xhtml">
             <body>
               <p>Rainbow Dash</p>
             </body>
@@ -452,8 +452,8 @@ eohtml
         eohtml
         assert_equal "html", html.internal_subset.name
         assert_equal "-//W3C//DTD XHTML 1.1//EN", html.internal_subset.external_id
-        assert_equal "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd", html.internal_subset.system_id
-        assert_equal "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">", html.to_s[0,97]
+        assert_equal "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd", html.internal_subset.system_id
+        assert_equal "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">", html.to_s[0,97]
       end
 
       def test_content_size

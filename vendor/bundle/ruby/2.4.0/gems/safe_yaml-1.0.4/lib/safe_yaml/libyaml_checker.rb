@@ -8,7 +8,7 @@ module SafeYAML
     SAFE_LIBYAML_VERSION = Gem::Version.new("0.1.6")
 
     KNOWN_PATCHED_LIBYAML_VERSIONS = Set.new([
-      # http://people.canonical.com/~ubuntu-security/cve/2014/CVE-2014-2525.html
+      # https://people.canonical.com/~ubuntu-security/cve/2014/CVE-2014-2525.html
       "0.1.4-2ubuntu0.12.04.3",
       "0.1.4-2ubuntu0.12.10.3",
       "0.1.4-2ubuntu0.13.10.3",

@@ -25,14 +25,14 @@ Rack::Test, and a Test adapter for stubbing requests by hand.
 
 ## API documentation
 
-Available at [rubydoc.info](http://www.rubydoc.info/gems/faraday).
+Available at [rubydoc.info](https://www.rubydoc.info/gems/faraday).
 
 ## Usage
 
 ### Basic Use
 
 ```ruby
-response = Faraday.get 'http://sushi.com/nigiri/sake.json'
+response = Faraday.get 'https://sushi.com/nigiri/sake.json'
 ```
 A simple `get` request can be performed by using the syntax described above. This works if you don't need to set up anything; you can roll with just the default middleware
 stack and default adapter (see [Faraday::RackBuilder#initialize](https://github.com/lostisland/faraday/blob/master/lib/faraday/rack_builder.rb)).
@@ -40,15 +40,15 @@ stack and default adapter (see [Faraday::RackBuilder#initialize](https://github.
 A more flexible way to use Faraday is to start with a Connection object. If you want to keep the same defaults, you can use this syntax:
 
 ```ruby
-conn = Faraday.new(:url => 'http://www.example.com') 
-response = conn.get '/users'                 # GET http://www.example.com/users' 
+conn = Faraday.new(:url => 'https://www.example.com') 
+response = conn.get '/users'                 # GET https://www.example.com/users' 
 ```
 
 Connections can also take an options hash as a parameter or be configured by using a block. Checkout the section called [Advanced middleware usage](#advanced-middleware-usage) for more details about how to use this block for configurations.
 Since the default middleware stack uses url\_encoded middleware and default adapter, use them on building your own middleware stack.
 
 ```ruby
-conn = Faraday.new(:url => 'http://sushi.com') do |faraday|
+conn = Faraday.new(:url => 'https://sushi.com') do |faraday|
   faraday.request  :url_encoded             # form-encode POST params
   faraday.response :logger                  # log requests to STDOUT
   faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
@@ -56,7 +56,7 @@ end
 
 # Filter sensitive information from logs with a regex matcher
 
-conn = Faraday.new(:url => 'http://sushi.com/api_key=s3cr3t') do |faraday|
+conn = Faraday.new(:url => 'https://sushi.com/api_key=s3cr3t') do |faraday|
   faraday.request  :url_encoded             # form-encode POST params
   faraday.response :logger do | logger |
     logger.filter(/(api_key=)(\w+)/,'\1[REMOVED]')
@@ -70,19 +70,19 @@ Once you have the connection object, use it to make HTTP requests. You can pass 
 ```ruby
 ## GET ##
 
-response = conn.get '/nigiri/sake.json'     # GET http://sushi.com/nigiri/sake.json
+response = conn.get '/nigiri/sake.json'     # GET https://sushi.com/nigiri/sake.json
 response.body
 
-conn.get '/nigiri', { :name => 'Maguro' }   # GET http://sushi.com/nigiri?name=Maguro
+conn.get '/nigiri', { :name => 'Maguro' }   # GET https://sushi.com/nigiri?name=Maguro
 
-conn.get do |req|                           # GET http://sushi.com/search?page=2&limit=100  
+conn.get do |req|                           # GET https://sushi.com/search?page=2&limit=100  
   req.url '/search', :page => 2
   req.params['limit'] = 100
 end
 
 ## POST ##
 
-conn.post '/nigiri', { :name => 'Maguro' }  # POST "name=maguro" to http://sushi.com/nigiri
+conn.post '/nigiri', { :name => 'Maguro' }  # POST "name=maguro" to https://sushi.com/nigiri
 ```
 
 Some configuration options can be adjusted per request:
@@ -133,7 +133,7 @@ conn.get do |req|
   # req.options.params_encoder = my_encoder
   req.params['roll'] = ['california', 'philadelphia']
 end
-# GET 'http://sushi.com?roll=california&roll=philadelphia'
+# GET 'https://sushi.com?roll=california&roll=philadelphia'
 ```
 
 The value of Faraday `params_encoder` can be any object that responds to:
@@ -348,13 +348,13 @@ But before you start coding, please read our [Contributing Guide](https://github
 Copyright (c) 2009-2017 [Rick Olson](mailto:technoweenie@gmail.com), Zack Hobson.
 See [LICENSE][] for details.
 
-[net_http]:     http://ruby-doc.org/stdlib/libdoc/net/http/rdoc/Net/HTTP.html
+[net_http]:     https://ruby-doc.org/stdlib/libdoc/net/http/rdoc/Net/HTTP.html
 [persistent]:   https://github.com/drbrain/net-http-persistent
 [travis]:       https://travis-ci.org/lostisland/faraday
 [excon]:        https://github.com/excon/excon#readme
-[patron]:       http://toland.github.io/patron/
+[patron]:       https://toland.github.io/patron/
 [eventmachine]: https://github.com/igrigorik/em-http-request#readme
 [httpclient]:   https://github.com/nahi/httpclient
-[jruby]:        http://jruby.org/
-[rubinius]:     http://rubini.us/
+[jruby]:        https://jruby.org/
+[rubinius]:     https://rubini.us/
 [license]:      LICENSE.md

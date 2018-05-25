@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.email = "t_leitner@gmx.at".freeze
   s.executables = ["kramdown".freeze]
   s.files = ["bin/kramdown".freeze]
-  s.homepage = "http://kramdown.gettalong.org".freeze
+  s.homepage = "https://kramdown.gettalong.org".freeze
   s.licenses = ["MIT".freeze]
   s.rdoc_options = ["--main".freeze, "lib/kramdown/document.rb".freeze]
   s.rubygems_version = "2.6.11".freeze

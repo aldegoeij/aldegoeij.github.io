@@ -1,7 +1,7 @@
 /*
   This is a version (aka dlmalloc) of malloc/free/realloc written by
   Doug Lea and released to the public domain, as explained at
-  http://creativecommons.org/licenses/publicdomain.  Send questions,
+  https://creativecommons.org/licenses/publicdomain.  Send questions,
   comments, complaints, performance data, etc to dl@cs.oswego.edu
 
 * Version 2.8.3 Thu Sep 22 11:16:15 2005  Doug Lea  (dl at gee)
@@ -112,7 +112,7 @@
        minimal protection in concurrent environments, and to provide a
        basis for extensions.  If you are using malloc in a concurrent
        program, consider instead using ptmalloc, which is derived from
-       a version of this malloc. (See http://www.malloc.de).
+       a version of this malloc. (See https://www.malloc.de).
 
   System requirements: Any combination of MORECORE and/or MMAP/MUNMAP
        This malloc can use unix sbrk or any emulation (invoked using
@@ -124,7 +124,7 @@
        like memset.
 
   Compliance: I believe it is compliant with the Single Unix Specification
-       (See http://www.unix.org). Also SVID/XPG, ANSI C, and probably
+       (See https://www.unix.org). Also SVID/XPG, ANSI C, and probably
        others as well.
 
 * Overview of algorithms
@@ -166,7 +166,7 @@
   ignored.
 
   For a longer but out of date high-level description, see
-     http://gee.cs.oswego.edu/dl/html/malloc.html
+     https://gee.cs.oswego.edu/dl/html/malloc.html
 
 * MSPACES
   If MSPACES is defined, then in addition to malloc, free, etc.,
@@ -2028,7 +2028,7 @@ typedef struct malloc_segment* msegmentptr;
     conservatively use 32 bits per map word, even if on 64bit system.
     For a good description of some of the bit-based techniques used
     here, see Henry S. Warren Jr's book "Hacker's Delight" (and
-    supplement at http://hackersdelight.org/). Many of these are
+    supplement at https://hackersdelight.org/). Many of these are
     intended to reduce the branchiness of paths through malloc etc, as
     well as to reduce the number of memory locations read or written.
 
@@ -2410,7 +2410,7 @@ static size_t traverse_and_check(mstate m);
   that the mstate controlling malloc/free is intact.  This is a
   streamlined version of the approach described by William Robertson
   et al in "Run-time Detection of Heap-based Overflows" LISA'03
-  http://www.usenix.org/events/lisa03/tech/robertson.html The footer
+  https://www.usenix.org/events/lisa03/tech/robertson.html The footer
   of an inuse chunk holds the xor of its mstate and a random seed,
   that is checked upon calls to free() and realloc().  This is
   (probablistically) unguessable from outside the program, but can be

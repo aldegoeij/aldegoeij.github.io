@@ -148,7 +148,7 @@ EOF
       test_relative_and_absolute_path :test_document_dtd_loading_with_nonet do
         # Make sure that we don't include remote entities unless NOENT is set to true
         html = %Q[<?xml version="1.0" encoding="UTF-8" ?>
-                  <!DOCTYPE document SYSTEM "http://foo.bar.com/">
+                  <!DOCTYPE document SYSTEM "https://foo.bar.com/">
                     <document>
                       <body>&bar;</body>
                     </document>
@@ -159,9 +159,9 @@ EOF
         end
         assert_kind_of Nokogiri::XML::EntityReference, doc.xpath('//body').first.children.first
         if Nokogiri.uses_libxml?
-          assert_equal ["ERROR: Attempt to load network entity http://foo.bar.com/", "4:34: ERROR: Entity 'bar' not defined"], doc.errors.map(&:to_s)
+          assert_equal ["ERROR: Attempt to load network entity https://foo.bar.com/", "4:34: ERROR: Entity 'bar' not defined"], doc.errors.map(&:to_s)
         else
-          assert_equal ["Attempt to load network entity http://foo.bar.com/"], doc.errors.map(&:to_s)
+          assert_equal ["Attempt to load network entity https://foo.bar.com/"], doc.errors.map(&:to_s)
         end
       end
       # TODO: can we retreive a resource pointing to localhost when NONET is set to true ?
@@ -188,7 +188,7 @@ EOF
       test_relative_and_absolute_path :test_more_sax_entity_reference do
         # Make sure that we don't include entity references unless NOENT is set to true
         html = %Q[<?xml version="1.0" encoding="UTF-8" ?>
-                  <!DOCTYPE document SYSTEM "http://foo.bar.com/">
+                  <!DOCTYPE document SYSTEM "https://foo.bar.com/">
                     <document>
                       <body>&bar;</body>
                     </document>

@@ -166,7 +166,7 @@ module Octokit
       #
       # Optionally pass <tt>author</tt> and <tt>committer</tt> hashes in <tt>options</tt>
       # if you'd like manual control over those parameters. If absent, details will be
-      # inferred from the authenticated user. See <a href="http://developer.github.com/v3/git/commits/">GitHub's documentation</a>
+      # inferred from the authenticated user. See <a href="https://developer.github.com/v3/git/commits/">GitHub's documentation</a>
       # for details about how to format committer identities.
       #
       # @param repo [Integer, String, Hash, Repository] A GitHub repository

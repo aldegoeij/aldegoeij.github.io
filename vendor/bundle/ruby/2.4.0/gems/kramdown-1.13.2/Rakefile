@@ -194,7 +194,7 @@ EOF
 
       s.author = 'Thomas Leitner'
       s.email = 't_leitner@gmx.at'
-      s.homepage = "http://kramdown.gettalong.org"
+      s.homepage = "https://kramdown.gettalong.org"
     end
 
 

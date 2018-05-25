@@ -5,7 +5,7 @@ module Rouge
     class IO < RegexLexer
       tag 'io'
       title "Io"
-      desc 'The IO programming language (http://iolanguage.com)'
+      desc 'The IO programming language (https://iolanguage.com)'
       mimetypes 'text/x-iosrc'
       filenames '*.io'
 

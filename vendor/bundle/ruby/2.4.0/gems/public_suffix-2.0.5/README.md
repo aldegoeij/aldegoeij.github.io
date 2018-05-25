@@ -174,7 +174,7 @@ Report issues or feature requests to [GitHub Issues](https://github.com/weppos/p
 
 - [Homepage](https://simonecarletti.com/code/publicsuffix-ruby)
 - [Repository](https://github.com/weppos/publicsuffix-ruby)
-- [API Documentation](http://rubydoc.info/gems/public_suffix)
+- [API Documentation](https://rubydoc.info/gems/public_suffix)
 - [Introducing the Public Suffix List library for Ruby](https://simonecarletti.com/blog/2010/06/public-suffix-list-library-for-ruby/)
 
 

@@ -26,7 +26,7 @@ module Nokogiri
         @ns = @xml.root.namespaces
 
         # TODO: Maybe I should move this to the original code.
-        @ns["nokogiri"] = "http://www.nokogiri.org/default_ns/ruby/extensions_functions"
+        @ns["nokogiri"] = "https://www.nokogiri.org/default_ns/ruby/extensions_functions"
 
         @handler = Class.new {
           attr_reader :things
@@ -309,7 +309,7 @@ module Nokogiri
       end
 
       def test_custom_xpath_handler_with_args_under_gc_pressure
-        # see http://github.com/sparklemotion/nokogiri/issues/#issue/345
+        # see https://github.com/sparklemotion/nokogiri/issues/#issue/345
         tool_inspector = Class.new do
           def name_equals(nodeset, name, *args)
             nodeset.all? do |node|
@@ -381,7 +381,7 @@ END
       def test_very_specific_xml_xpath_making_problems_in_jruby
         # manually merges pull request #681
         xml_string = %q{<?xml version="1.0" encoding="UTF-8"?>
-        <ONIXMessage xmlns:elibri="http://elibri.com.pl/ns/extensions" release="3.0" xmlns="http://www.editeur.org/onix/3.0/reference">
+        <ONIXMessage xmlns:elibri="https://elibri.com.pl/ns/extensions" release="3.0" xmlns="https://www.editeur.org/onix/3.0/reference">
           <Product>
             <RecordReference>a</RecordReference>
           </Product>
@@ -394,7 +394,7 @@ END
 
       def test_xpath_after_attribute_change
         xml_string = %q{<?xml version="1.0" encoding="UTF-8"?>
-        <mods version="3.0" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <mods version="3.0" xsi:schemaLocation="https://www.loc.gov/mods/v3 https://www.loc.gov/standards/mods/v3/mods-3-0.xsd" xmlns="https://www.loc.gov/mods/v3" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
           <titleInfo>
               <nonSort>THE</nonSort>
               <title xml:lang="eng">ARTICLE TITLE HYDRANGEA ARTICLE 1</title>
@@ -406,7 +406,7 @@ END
         </mods>}
 
         xml_doc = Nokogiri::XML(xml_string)
-        ns_hash = {'mods'=>'http://www.loc.gov/mods/v3'}
+        ns_hash = {'mods'=>'https://www.loc.gov/mods/v3'}
         node = xml_doc.at_xpath('//mods:titleInfo[1]',ns_hash)
         node['lang'] = 'english'
         assert_equal 1, xml_doc.xpath('//mods:titleInfo[1]/@lang',ns_hash).length
@@ -415,7 +415,7 @@ END
 
       def test_xpath_after_element_removal
         xml_string = %q{<?xml version="1.0" encoding="UTF-8"?>
-        <mods version="3.0" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <mods version="3.0" xsi:schemaLocation="https://www.loc.gov/mods/v3 https://www.loc.gov/standards/mods/v3/mods-3-0.xsd" xmlns="https://www.loc.gov/mods/v3" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
           <titleInfo>
               <nonSort>THE</nonSort>
               <title xml:lang="eng">ARTICLE TITLE HYDRANGEA ARTICLE 1</title>
@@ -427,7 +427,7 @@ END
         </mods>}
 
         xml_doc = Nokogiri::XML(xml_string)
-        ns_hash = {'mods'=>'http://www.loc.gov/mods/v3'}
+        ns_hash = {'mods'=>'https://www.loc.gov/mods/v3'}
         node = xml_doc.at_xpath('//mods:titleInfo[1]',ns_hash)
         node.remove
         assert_equal 1, xml_doc.xpath('//mods:titleInfo',ns_hash).length

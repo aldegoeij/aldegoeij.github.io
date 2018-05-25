@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.email = ["tobi@leetsoft.com".freeze]
   s.extra_rdoc_files = ["History.md".freeze, "README.md".freeze]
   s.files = ["History.md".freeze, "README.md".freeze]
-  s.homepage = "http://www.liquidmarkup.org".freeze
+  s.homepage = "https://www.liquidmarkup.org".freeze
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.1.0".freeze)
   s.rubygems_version = "2.6.11".freeze

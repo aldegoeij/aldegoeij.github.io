@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.email = ["jneen@jneen.net".freeze]
   s.executables = ["rougify".freeze]
   s.files = ["bin/rougify".freeze]
-  s.homepage = "http://rouge.jneen.net/".freeze
+  s.homepage = "https://rouge.jneen.net/".freeze
   s.licenses = ["MIT, 2-clause BSD".freeze]
   s.rubyforge_project = "rouge".freeze
   s.rubygems_version = "2.6.11".freeze

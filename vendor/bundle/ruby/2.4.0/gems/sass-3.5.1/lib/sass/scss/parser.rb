@@ -421,7 +421,7 @@ module Sass
         block(node(Sass::Tree::MediaNode.new(expr!(:media_query_list).to_a), start_pos), :directive)
       end
 
-      # http://www.w3.org/TR/css3-mediaqueries/#syntax
+      # https://www.w3.org/TR/css3-mediaqueries/#syntax
       def media_query_list
         query = media_query
         return unless query
@@ -501,7 +501,7 @@ module Sass
       end
 
       # The document directive is specified in
-      # http://www.w3.org/TR/css3-conditional/, but Gecko allows the
+      # https://www.w3.org/TR/css3-conditional/, but Gecko allows the
       # `url-prefix` and `domain` functions to omit quotation marks, contrary to
       # the standard.
       #
@@ -556,7 +556,7 @@ module Sass
         node(Sass::Tree::ErrorNode.new(sass_script(:parse)), start_pos)
       end
 
-      # http://www.w3.org/TR/css3-conditional/
+      # https://www.w3.org/TR/css3-conditional/
       def supports_directive(name, start_pos)
         condition = expr!(:supports_condition)
         node = Sass::Tree::SupportsNode.new(name, condition)

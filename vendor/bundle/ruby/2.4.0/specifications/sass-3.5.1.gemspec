@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.email = "sass-lang@googlegroups.com".freeze
   s.executables = ["sass".freeze, "sass-convert".freeze, "scss".freeze]
   s.files = ["bin/sass".freeze, "bin/sass-convert".freeze, "bin/scss".freeze]
-  s.homepage = "http://sass-lang.com/".freeze
+  s.homepage = "https://sass-lang.com/".freeze
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.0.0".freeze)
   s.rubyforge_project = "sass".freeze

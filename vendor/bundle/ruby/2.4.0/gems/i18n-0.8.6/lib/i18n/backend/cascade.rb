@@ -26,7 +26,7 @@
 # of scopes for a particular key.
 #
 # Thanks to Clemens Kofler for the initial idea and implementation! See
-# http://github.com/clemens/i18n-cascading-backend
+# https://github.com/clemens/i18n-cascading-backend
 
 module I18n
   module Backend

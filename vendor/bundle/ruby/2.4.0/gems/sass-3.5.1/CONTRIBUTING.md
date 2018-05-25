@@ -1,6 +1,6 @@
 Contributions are welcomed. Please see the following site for guidelines:
 
-[http://sass-lang.com/community#Contribute](http://sass-lang.com/community#Contribute)
+[https://sass-lang.com/community#Contribute](https://sass-lang.com/community#Contribute)
 
 * [Branches](#main-development-branches)
   * [Feature Branches](#feature-branches)
@@ -86,7 +86,7 @@ tag in that version series.
 
 ## Versioning
 
-Starting with version 3.5.0, Sass uses [semantic versioning](http://semver.org/)
+Starting with version 3.5.0, Sass uses [semantic versioning](https://semver.org/)
 to indicate the evolution of its language semantics as much as possible. This
 means that patch releases (such as 3.5.3) contain only bug fixes, minor releases
 (such as 3.6.0) contain backwards-compatible features, and only major releases
@@ -100,7 +100,7 @@ like [`Sass::Engine`][Sass::Engine] stable, we don't have a strong distinction
 between public and private APIs and we need to be able to freely refactor our
 code.
 
-[Sass::Engine]: http://sass-lang.com/documentation/Sass/Engine.html
+[Sass::Engine]: https://sass-lang.com/documentation/Sass/Engine.html
 
 ### Making Breaking Changes
 

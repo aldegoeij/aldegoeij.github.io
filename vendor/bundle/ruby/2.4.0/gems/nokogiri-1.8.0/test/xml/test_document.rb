@@ -109,7 +109,7 @@ module Nokogiri
       def test_ignore_unknown_namespace
         doc = Nokogiri::XML(<<-eoxml)
         <xml>
-          <unknown:foo xmlns='http://hello.com/' />
+          <unknown:foo xmlns='https://hello.com/' />
           <bar />
         </xml>
         eoxml
@@ -180,13 +180,13 @@ module Nokogiri
       end
 
       def test_create_element_with_namespace
-        elm = @xml.create_element('foo',:'xmlns:foo' => 'http://tenderlovemaking.com')
-        assert_equal 'http://tenderlovemaking.com', elm.namespaces['xmlns:foo']
+        elm = @xml.create_element('foo',:'xmlns:foo' => 'https://tenderlovemaking.com')
+        assert_equal 'https://tenderlovemaking.com', elm.namespaces['xmlns:foo']
       end
 
       def test_create_element_with_hyphenated_namespace
-        elm = @xml.create_element('foo',:'xmlns:SOAP-ENC' => 'http://tenderlovemaking.com')
-        assert_equal 'http://tenderlovemaking.com', elm.namespaces['xmlns:SOAP-ENC']
+        elm = @xml.create_element('foo',:'xmlns:SOAP-ENC' => 'https://tenderlovemaking.com')
+        assert_equal 'https://tenderlovemaking.com', elm.namespaces['xmlns:SOAP-ENC']
       end
 
       def test_create_element_with_content
@@ -428,7 +428,7 @@ module Nokogiri
         doc = Nokogiri::XML::Document.new
 
         assert_raises NoMethodError do
-          doc.default_namespace = 'http://innernet.com/'
+          doc.default_namespace = 'https://innernet.com/'
         end
 
         assert_raises NoMethodError do
@@ -558,7 +558,7 @@ module Nokogiri
 
       def test_xmlns_is_automatically_registered
         doc = Nokogiri::XML(<<-eoxml)
-          <root xmlns="http://tenderlovemaking.com/">
+          <root xmlns="https://tenderlovemaking.com/">
             <foo>
               bar
             </foo>
@@ -577,7 +577,7 @@ module Nokogiri
 
       def test_xmlns_is_registered_for_nodesets
         doc = Nokogiri::XML(<<-eoxml)
-          <root xmlns="http://tenderlovemaking.com/">
+          <root xmlns="https://tenderlovemaking.com/">
             <foo>
               <bar>
                 baz
@@ -745,27 +745,27 @@ module Nokogiri
 
       def test_find_with_namespace
         doc = Nokogiri::XML.parse(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'>
           <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>
         </x>
         eoxml
 
         ctx = Nokogiri::XML::XPathContext.new(doc)
-        ctx.register_ns 'tenderlove', 'http://tenderlovemaking.com/'
+        ctx.register_ns 'tenderlove', 'https://tenderlovemaking.com/'
         set = ctx.evaluate('//tenderlove:foo')
         assert_equal 1, set.length
         assert_equal 'foo', set.first.name
 
         # It looks like only the URI is important:
         ctx = Nokogiri::XML::XPathContext.new(doc)
-        ctx.register_ns 'america', 'http://tenderlovemaking.com/'
+        ctx.register_ns 'america', 'https://tenderlovemaking.com/'
         set = ctx.evaluate('//america:foo')
         assert_equal 1, set.length
         assert_equal 'foo', set.first.name
 
         # Its so important that a missing slash will cause it to return nothing
         ctx = Nokogiri::XML::XPathContext.new(doc)
-        ctx.register_ns 'america', 'http://tenderlovemaking.com'
+        ctx.register_ns 'america', 'https://tenderlovemaking.com'
         set = ctx.evaluate('//america:foo')
         assert_equal 0, set.length
       end
@@ -849,10 +849,10 @@ module Nokogiri
 
       def test_remove_namespaces
         doc = Nokogiri::XML <<-EOX
-          <root xmlns:a="http://a.flavorjon.es/" xmlns:b="http://b.flavorjon.es/">
+          <root xmlns:a="https://a.flavorjon.es/" xmlns:b="https://b.flavorjon.es/">
             <a:foo>hello from a</a:foo>
             <b:foo>hello from b</b:foo>
-            <container xmlns:c="http://c.flavorjon.es/">
+            <container xmlns:c="https://c.flavorjon.es/">
               <c:foo c:attr='attr-value'>hello from c</c:foo>
             </container>
           </root>
@@ -866,13 +866,13 @@ module Nokogiri
         assert_equal 0, doc.xpath("//foo").length
         assert_equal 1, doc.xpath("//a:foo").length
         assert_equal 1, doc.xpath("//a:foo").length
-        assert_equal 1, doc.xpath("//x:foo", "x" => "http://c.flavorjon.es/").length
+        assert_equal 1, doc.xpath("//x:foo", "x" => "https://c.flavorjon.es/").length
         assert_match %r{foo c:attr}, doc.to_xml
-        doc.at_xpath("//x:foo", "x" => "http://c.flavorjon.es/").tap do |node|
+        doc.at_xpath("//x:foo", "x" => "https://c.flavorjon.es/").tap do |node|
           assert_equal nil,          node["attr"]
           assert_equal "attr-value", node["c:attr"]
           assert_equal nil,          node.attribute_with_ns("attr", nil)
-          assert_equal "attr-value", node.attribute_with_ns("attr", "http://c.flavorjon.es/").value
+          assert_equal "attr-value", node.attribute_with_ns("attr", "https://c.flavorjon.es/").value
           assert_equal "attr-value", node.attributes["attr"].value
         end
 
@@ -883,13 +883,13 @@ module Nokogiri
         assert_equal 3, doc.xpath("//foo").length
         assert_equal 0, doc.xpath("//a:foo", namespaces).length
         assert_equal 0, doc.xpath("//a:foo", namespaces).length
-        assert_equal 0, doc.xpath("//x:foo", "x" => "http://c.flavorjon.es/").length
+        assert_equal 0, doc.xpath("//x:foo", "x" => "https://c.flavorjon.es/").length
         assert_match %r{foo attr}, doc.to_xml
         doc.at_xpath("//container/foo").tap do |node|
           assert_equal "attr-value", node["attr"]
           assert_equal nil,          node["c:attr"]
           assert_equal "attr-value", node.attribute_with_ns("attr", nil).value
-          assert_equal nil,          node.attribute_with_ns("attr", "http://c.flavorjon.es/")
+          assert_equal nil,          node.attribute_with_ns("attr", "https://c.flavorjon.es/")
           assert_equal "attr-value", node.attributes["attr"].value # doesn't change!
         end
       end

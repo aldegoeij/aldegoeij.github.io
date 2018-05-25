@@ -38,10 +38,10 @@ class TestConvertXPath < Nokogiri::TestCase
   end
 
   def test_filter_text
-    assert_syntactical_equivalence("a[text()]", ".//a[normalize-space(child::text())]", "<a href=\"http://tenderlovemaking.com\">Tender Lovemaking</a>") do |j|
+    assert_syntactical_equivalence("a[text()]", ".//a[normalize-space(child::text())]", "<a href=\"https://tenderlovemaking.com\">Tender Lovemaking</a>") do |j|
       j.first.to_s
     end
-    assert_syntactical_equivalence("a[text()='Tender Lovemaking']", ".//a[normalize-space(child::text()) = 'Tender Lovemaking']", "<a href=\"http://tenderlovemaking.com\">Tender Lovemaking</a>") do |j|
+    assert_syntactical_equivalence("a[text()='Tender Lovemaking']", ".//a[normalize-space(child::text()) = 'Tender Lovemaking']", "<a href=\"https://tenderlovemaking.com\">Tender Lovemaking</a>") do |j|
       j.first.to_s
     end
     assert_syntactical_equivalence("a/text()", ".//a/child::text()", "Tender Lovemaking") do |j|
@@ -53,9 +53,9 @@ class TestConvertXPath < Nokogiri::TestCase
   end
 
   def test_filter_by_attr
-    assert_syntactical_equivalence("a[@href='http://blog.geminigeek.com/wordpress-theme']",
-                                   ".//a[@href = 'http://blog.geminigeek.com/wordpress-theme']",
-                                   "http://blog.geminigeek.com/wordpress-theme") do |j|
+    assert_syntactical_equivalence("a[@href='https://blog.geminigeek.com/wordpress-theme']",
+                                   ".//a[@href = 'https://blog.geminigeek.com/wordpress-theme']",
+                                   "https://blog.geminigeek.com/wordpress-theme") do |j|
       j.first["href"]
     end
   end
@@ -81,10 +81,10 @@ class TestConvertXPath < Nokogiri::TestCase
   end
 
   def test_css_tags
-    assert_syntactical_equivalence("div li a", ".//div//li//a", "http://brobinius.org/") do |j|
+    assert_syntactical_equivalence("div li a", ".//div//li//a", "https://brobinius.org/") do |j|
       j.first.inner_text
     end
-    assert_syntactical_equivalence("div li > a", ".//div//li/a", "http://brobinius.org/") do |j|
+    assert_syntactical_equivalence("div li > a", ".//div//li/a", "https://brobinius.org/") do |j|
       j.first.inner_text
     end
     assert_syntactical_equivalence("h1 ~ small", ".//small[preceding-sibling::h1]", "The act of making love, tenderly.") do |j|

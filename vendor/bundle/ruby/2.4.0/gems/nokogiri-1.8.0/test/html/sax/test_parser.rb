@@ -78,8 +78,8 @@ module Nokogiri
           # JRuby version uses NekoHTML which inserts empty "head" elements.
           #
           # Currently following features are set:
-          # "http://cyberneko.org/html/properties/names/elems" => "lower"
-          # "http://cyberneko.org/html/properties/names/attrs" => "lower"
+          # "https://cyberneko.org/html/properties/names/elems" => "lower"
+          # "https://cyberneko.org/html/properties/names/attrs" => "lower"
           if Nokogiri.uses_libxml?
             assert_equal([["html", []], ["body", []], ["p", []], ["p", []]],
                          @parser.document.start_elements)

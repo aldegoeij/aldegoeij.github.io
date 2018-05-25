@@ -145,7 +145,7 @@ module Octokit
       # @param repo [Integer, String, Repository, Hash] A GitHub repository
       # @param number [Integer] Number ID of the milestone
       # @return [Array<Sawyer::Resource>] A list of the labels across the milestone
-      # @see  http://developer.github.com/v3/issues/labels/#get-labels-for-every-issue-in-a-milestone
+      # @see  https://developer.github.com/v3/issues/labels/#get-labels-for-every-issue-in-a-milestone
       # @example List all labels for milestone #2 on octokit/octokit.rb
       #   Octokit.labels_for_milestone("octokit/octokit.rb", 2)
       def labels_for_milestone(repo, number, options = {})

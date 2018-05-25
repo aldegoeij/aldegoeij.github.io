@@ -1,6 +1,6 @@
 ## multipart-post
 
-* http://github.com/nicksieger/multipart-post
+* https://github.com/nicksieger/multipart-post
 
 ![build status](https://travis-ci.org/nicksieger/multipart-post.png)
 
@@ -21,7 +21,7 @@ supports other methods besides POST.
 
     require 'net/http/post/multipart'
 
-    url = URI.parse('http://www.example.com/upload')
+    url = URI.parse('https://www.example.com/upload')
     File.open("./image.jpg") do |jpg|
       req = Net::HTTP::Post::Multipart.new url.path,
         "file" => UploadIO.new(jpg, "image/jpeg", "image.jpg")
@@ -35,7 +35,7 @@ UploadIO values:
 
     require 'net/http/post/multipart'
 
-    url = URI.parse('http://www.example.com/upload')
+    url = URI.parse('https://www.example.com/upload')
     req = Net::HTTP::Post::Multipart.new url.path,
       "file1" => UploadIO.new(File.new("./image.jpg"), "image/jpeg", "image.jpg"),
       "file2" => UploadIO.new(File.new("./image2.jpg"), "image/jpeg", "image2.jpg")

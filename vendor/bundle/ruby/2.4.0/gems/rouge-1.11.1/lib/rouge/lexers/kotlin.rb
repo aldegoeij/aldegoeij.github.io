@@ -4,7 +4,7 @@ module Rouge
   module Lexers
     class Kotlin < RegexLexer
       title "Kotlin"
-      desc "Kotlin <http://kotlinlang.org>"
+      desc "Kotlin <https://kotlinlang.org>"
 
       tag 'kotlin'
       filenames '*.kt'

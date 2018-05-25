@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'typhoeus/adapters/faraday'
 
 describe Faraday::Adapter::Typhoeus do
-  let(:base_url) { "http://localhost:3001" }
+  let(:base_url) { "https://localhost:3001" }
   let(:adapter) { described_class.new }
   let(:request) { Typhoeus::Request.new(base_url) }
   let(:conn) do
@@ -162,7 +162,7 @@ describe Faraday::Adapter::Typhoeus do
       let(:env) { { :request => { :proxy => { :uri => double(:scheme => 'http', :host => "localhost", :port => "3001") } } } }
 
       it "sets proxy" do
-        expect(request.options[:proxy]).to eq("http://localhost:3001")
+        expect(request.options[:proxy]).to eq("https://localhost:3001")
       end
 
       context "when username and password" do

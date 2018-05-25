@@ -12,10 +12,10 @@ ExecJS supports these runtimes:
 * [therubyrhino](https://github.com/cowboyd/therubyrhino) - Mozilla
   Rhino embedded within JRuby
 * [Duktape.rb](https://github.com/judofyr/duktape.rb) - Duktape JavaScript interpreter
-* [Node.js](http://nodejs.org/)
+* [Node.js](https://nodejs.org/)
 * Apple JavaScriptCore - Included with Mac OS X
-* [Microsoft Windows Script Host](http://msdn.microsoft.com/en-us/library/9bbdkx3k.aspx) (JScript)
-* [Google V8](http://code.google.com/p/v8/)
+* [Microsoft Windows Script Host](https://msdn.microsoft.com/en-us/library/9bbdkx3k.aspx) (JScript)
+* [Google V8](https://code.google.com/p/v8/)
 * [mini_racer](https://github.com/discourse/mini_racer) - Google V8
   embedded within Ruby
 
@@ -32,7 +32,7 @@ A longer example, demonstrating how to invoke the CoffeeScript compiler:
 ``` ruby
 require "execjs"
 require "open-uri"
-source = open("http://coffeescript.org/extras/coffee-script.js").read
+source = open("https://coffeescript.org/extras/coffee-script.js").read
 
 context = ExecJS.compile(source)
 context.call("CoffeeScript.compile", "square = (x) -> x * x", bare: true)

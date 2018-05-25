@@ -102,7 +102,7 @@ describe Ethon::Easy do
   describe "#dup" do
     let!(:easy) do
       easy = Ethon::Easy.new
-      easy.url = "http://localhost:3001/"
+      easy.url = "https://localhost:3001/"
       easy.on_complete { 'on_complete' }
       easy.on_headers { 'on_headers' }
       easy.response_body = 'test_body'

@@ -29,7 +29,7 @@ module Octokit
       # @see https://developer.github.com/v3/migration/source_imports/#start-an-import
       #
       # @example
-      #   @client.start_source_import("octokit/octokit.rb", "http://svn.mycompany.com/svn/myproject", {
+      #   @client.start_source_import("octokit/octokit.rb", "https://svn.mycompany.com/svn/myproject", {
       #    :vcs           => "subversion",
       #    :vcs_username" => "octocat",
       #    :vcs_password  => "secret"

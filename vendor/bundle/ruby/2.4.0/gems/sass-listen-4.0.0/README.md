@@ -4,7 +4,7 @@ This is a fork of the official version `3.0.x` branch. Sass need to support olde
 versions of ruby than Guard wants to support on an ongoing basis, so we are releasing
 updates as needed for critical fixes and will support ruby 2.0 and
 greater for as long as Sass users need it. Our blog has more information about
-ths [Ruby version policy for Sass](http://blog.sass-lang.com/posts/560719).
+ths [Ruby version policy for Sass](https://blog.sass-lang.com/posts/560719).
 
 # Listen
 
@@ -37,7 +37,7 @@ Pull requests or help is very welcome for these.
 
 ## Install
 
-The simplest way to install Listen is to use [Bundler](http://bundler.io).
+The simplest way to install Listen is to use [Bundler](https://bundler.io).
 
 ```ruby
 gem 'listen', '~> 3.0' # NOTE: for TCP functionality, use '~> 2.10' for now
@@ -249,18 +249,18 @@ See also [Tips and Techniques](https://github.com/guard/listen/wiki/Tips-and-Tec
 
 ## Development
 
-* Documentation hosted at [RubyDoc](http://rubydoc.info/github/guard/listen/master/frames).
+* Documentation hosted at [RubyDoc](https://rubydoc.info/github/guard/listen/master/frames).
 * Source hosted at [GitHub](https://github.com/guard/listen).
 
 Pull requests are very welcome! Please try to follow these simple rules if applicable:
 
 * Please create a topic branch for every separate change you make.
 * Make sure your patches are well tested. All specs must pass on [Travis CI](https://travis-ci.org/guard/listen).
-* Update the [Yard](http://yardoc.org/) documentation.
+* Update the [Yard](https://yardoc.org/) documentation.
 * Update the [README](https://github.com/guard/listen/blob/master/README.md).
 * Please **do not change** the version number.
 
-For questions please join us in our [Google group](http://groups.google.com/group/guard-dev) or on
+For questions please join us in our [Google group](https://groups.google.com/group/guard-dev) or on
 `#guard` (irc.freenode.net).
 
 ## Acknowledgments

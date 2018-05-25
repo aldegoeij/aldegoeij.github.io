@@ -1,7 +1,7 @@
 # RFC 4646/47 compliant Locale tag implementation that parses locale tags to
 # subtags such as language, script, region, variant etc.
 #
-# For more information see by http://en.wikipedia.org/wiki/IETF_language_tag
+# For more information see by https://en.wikipedia.org/wiki/IETF_language_tag
 #
 # Rfc4646::Parser does not implement grandfathered tags.
 

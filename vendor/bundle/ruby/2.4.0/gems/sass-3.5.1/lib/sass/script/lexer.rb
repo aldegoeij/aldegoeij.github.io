@@ -132,7 +132,7 @@ module Sass
           true => /(#{URLCHAR}*?)(#{W}\)|#\{)/
         },
         # Defined in https://developer.mozilla.org/en/CSS/@-moz-document as a
-        # non-standard version of http://www.w3.org/TR/css3-conditional/
+        # non-standard version of https://www.w3.org/TR/css3-conditional/
         :url_prefix => {
           false => /url-prefix\(#{W}(#{URLCHAR}*?)(#{W}\)|#\{)/,
           true => /(#{URLCHAR}*?)(#{W}\)|#\{)/
@@ -366,7 +366,7 @@ MESSAGE
         # give up and throw an error.
         #
         # IDs in properties are used in the Basic User Interface Module
-        # (http://www.w3.org/TR/css3-ui/).
+        # (https://www.w3.org/TR/css3-ui/).
         return unless scan(REGULAR_EXPRESSIONS[:id])
         if @scanner[0] =~ /^\#[0-9a-fA-F]+$/
           if @scanner[0].length == 4 || @scanner[0].length == 7

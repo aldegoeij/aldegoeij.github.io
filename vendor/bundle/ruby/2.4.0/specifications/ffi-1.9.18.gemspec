@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.email = "wmeissner@gmail.com".freeze
   s.extensions = ["ext/ffi_c/extconf.rb".freeze]
   s.files = ["ext/ffi_c/extconf.rb".freeze]
-  s.homepage = "http://wiki.github.com/ffi/ffi".freeze
+  s.homepage = "https://wiki.github.com/ffi/ffi".freeze
   s.licenses = ["BSD-3-Clause".freeze]
   s.rdoc_options = ["--exclude=ext/ffi_c/.*\\.o$".freeze, "--exclude=ffi_c\\.(bundle|so)$".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 1.8.7".freeze)

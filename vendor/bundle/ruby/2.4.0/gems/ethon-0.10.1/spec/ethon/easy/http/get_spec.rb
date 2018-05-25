@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Ethon::Easy::Http::Get do
   let(:easy) { Ethon::Easy.new }
-  let(:url) { "http://localhost:3001/" }
+  let(:url) { "https://localhost:3001/" }
   let(:params) { nil }
   let(:form) { nil }
   let(:options) { {} }
@@ -37,7 +37,7 @@ describe Ethon::Easy::Http::Get do
       end
 
       context "when url already contains params" do
-        let(:url) { "http://localhost:3001/?query=here" }
+        let(:url) { "https://localhost:3001/?query=here" }
         let(:params) { {:a => "1&b=2"} }
 
         it "returns ok" do
@@ -49,7 +49,7 @@ describe Ethon::Easy::Http::Get do
         end
 
         it "requests parameterized url" do
-          expect(easy.effective_url).to eq("http://localhost:3001/?query=here&a=1%26b%3D2")
+          expect(easy.effective_url).to eq("https://localhost:3001/?query=here&a=1%26b%3D2")
         end
       end
 
@@ -65,7 +65,7 @@ describe Ethon::Easy::Http::Get do
         end
 
         it "requests parameterized url" do
-          expect(easy.effective_url).to eq("http://localhost:3001/?a=1%26b%3D2")
+          expect(easy.effective_url).to eq("https://localhost:3001/?a=1%26b%3D2")
         end
       end
 
@@ -82,7 +82,7 @@ describe Ethon::Easy::Http::Get do
         end
 
         it "requests parameterized url" do
-          expect(easy.effective_url).to eq("http://localhost:3001/?a=1%26b%3D2")
+          expect(easy.effective_url).to eq("https://localhost:3001/?a=1%26b%3D2")
         end
       end
 

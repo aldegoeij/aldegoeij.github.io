@@ -100,7 +100,7 @@ module Nokogiri
 
       def test_string_io
         io = StringIO.new(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'>
           <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>
         </x>
         eoxml
@@ -134,7 +134,7 @@ module Nokogiri
 
       def test_in_memory
         assert Nokogiri::XML::Reader(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'>
           <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>
         </x>
         eoxml
@@ -142,7 +142,7 @@ module Nokogiri
 
       def test_reader_holds_on_to_string
         xml = <<-eoxml
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'>
           <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>
         </x>
         eoxml
@@ -152,7 +152,7 @@ module Nokogiri
 
       def test_default?
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'>
           <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>
         </x>
         eoxml
@@ -163,7 +163,7 @@ module Nokogiri
 
       def test_value?
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'>
           <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>
         </x>
         eoxml
@@ -174,7 +174,7 @@ module Nokogiri
 
       def test_read_error_document
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'>
           <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>
           <foo>
         </x>
@@ -206,7 +206,7 @@ module Nokogiri
 
       def test_attributes?
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'>
           <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>
         </x>
         eoxml
@@ -217,25 +217,25 @@ module Nokogiri
 
       def test_attributes
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'
-           xmlns='http://mothership.connection.com/'
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'
+           xmlns='https://mothership.connection.com/'
            >
           <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>
         </x>
         eoxml
         assert_equal({}, reader.attributes)
-        assert_equal [{'xmlns:tenderlove'=>'http://tenderlovemaking.com/',
-                       'xmlns'=>'http://mothership.connection.com/'},
+        assert_equal [{'xmlns:tenderlove'=>'https://tenderlovemaking.com/',
+                       'xmlns'=>'https://mothership.connection.com/'},
                       {}, {"awesome"=>"true"}, {}, {"awesome"=>"true"}, {},
-                      {'xmlns:tenderlove'=>'http://tenderlovemaking.com/',
-                       'xmlns'=>'http://mothership.connection.com/'}],
+                      {'xmlns:tenderlove'=>'https://tenderlovemaking.com/',
+                       'xmlns'=>'https://mothership.connection.com/'}],
           reader.map(&:attributes)
       end
 
       def test_attribute_roundtrip
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'
-           xmlns='http://mothership.connection.com/'
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'
+           xmlns='https://mothership.connection.com/'
            >
           <tenderlove:foo awesome='true' size='giant'>snuggles!</tenderlove:foo>
         </x>
@@ -249,19 +249,19 @@ module Nokogiri
 
       def test_attribute_at
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'>
           <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>
         </x>
         eoxml
         assert_nil reader.attribute_at(nil)
         assert_nil reader.attribute_at(0)
-        assert_equal ['http://tenderlovemaking.com/', nil, 'true', nil, 'true', nil, 'http://tenderlovemaking.com/'],
+        assert_equal ['https://tenderlovemaking.com/', nil, 'true', nil, 'true', nil, 'https://tenderlovemaking.com/'],
           reader.map { |x| x.attribute_at(0) }
       end
 
       def test_attribute
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'>
           <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>
         </x>
         eoxml
@@ -273,7 +273,7 @@ module Nokogiri
 
       def test_attribute_length
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'>
           <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>
         </x>
         eoxml
@@ -283,7 +283,7 @@ module Nokogiri
 
       def test_depth
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'>
           <tenderlove:foo>snuggles!</tenderlove:foo>
         </x>
         eoxml
@@ -304,7 +304,7 @@ module Nokogiri
 
       def test_xml_version
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'>
           <tenderlove:foo>snuggles!</tenderlove:foo>
         </x>
         eoxml
@@ -326,7 +326,7 @@ module Nokogiri
 
       def test_value
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+        <x xmlns:tenderlove='https://tenderlovemaking.com/'>
           <tenderlove:foo>snuggles!</tenderlove:foo>
         </x>
         eoxml
@@ -337,7 +337,7 @@ module Nokogiri
 
       def test_prefix
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:edi='http://ecommerce.example.org/schema'>
+        <x xmlns:edi='https://ecommerce.example.org/schema'>
           <edi:foo>hello</edi:foo>
         </x>
         eoxml
@@ -392,16 +392,16 @@ module Nokogiri
 
       def test_ns_uri
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:edi='http://ecommerce.example.org/schema'>
+        <x xmlns:edi='https://ecommerce.example.org/schema'>
           <edi:foo>hello</edi:foo>
         </x>
         eoxml
         assert_nil reader.namespace_uri
         assert_equal([nil,
                       nil,
-                      "http://ecommerce.example.org/schema",
+                      "https://ecommerce.example.org/schema",
                       nil,
-                      "http://ecommerce.example.org/schema",
+                      "https://ecommerce.example.org/schema",
                       nil,
                       nil],
                       reader.map(&:namespace_uri))
@@ -409,7 +409,7 @@ module Nokogiri
 
       def test_namespaced_attributes
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:edi='http://ecommerce.example.org/schema' xmlns:commons="http://rets.org/xsd/RETSCommons">
+        <x xmlns:edi='https://ecommerce.example.org/schema' xmlns:commons="https://rets.org/xsd/RETSCommons">
           <edi:foo commons:street-number="43">hello</edi:foo>
           <y edi:name="francis" bacon="87"/>
         </x>
@@ -428,7 +428,7 @@ module Nokogiri
 
       def test_local_name
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:edi='http://ecommerce.example.org/schema'>
+        <x xmlns:edi='https://ecommerce.example.org/schema'>
           <edi:foo>hello</edi:foo>
         </x>
         eoxml
@@ -439,7 +439,7 @@ module Nokogiri
 
       def test_name
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-        <x xmlns:edi='http://ecommerce.example.org/schema'>
+        <x xmlns:edi='https://ecommerce.example.org/schema'>
           <edi:foo>hello</edi:foo>
         </x>
         eoxml
@@ -450,9 +450,9 @@ module Nokogiri
 
       def test_base_uri
         reader = Nokogiri::XML::Reader.from_memory(<<-eoxml)
-          <x xml:base="http://base.example.org/base/">
+          <x xml:base="https://base.example.org/base/">
             <link href="link"/>
-            <other xml:base="http://other.example.org/"/>
+            <other xml:base="https://other.example.org/"/>
             <relative xml:base="relative">
               <link href="stuff" />
             </relative>
@@ -460,25 +460,25 @@ module Nokogiri
         eoxml
 
         assert_nil reader.base_uri
-        assert_equal(["http://base.example.org/base/",
-                      "http://base.example.org/base/",
-                      "http://base.example.org/base/",
-                      "http://base.example.org/base/",
-                      "http://other.example.org/",
-                      "http://base.example.org/base/",
-                      "http://base.example.org/base/relative",
-                      "http://base.example.org/base/relative",
-                      "http://base.example.org/base/relative",
-                      "http://base.example.org/base/relative",
-                      "http://base.example.org/base/relative",
-                      "http://base.example.org/base/",
-                      "http://base.example.org/base/"],
+        assert_equal(["https://base.example.org/base/",
+                      "https://base.example.org/base/",
+                      "https://base.example.org/base/",
+                      "https://base.example.org/base/",
+                      "https://other.example.org/",
+                      "https://base.example.org/base/",
+                      "https://base.example.org/base/relative",
+                      "https://base.example.org/base/relative",
+                      "https://base.example.org/base/relative",
+                      "https://base.example.org/base/relative",
+                      "https://base.example.org/base/relative",
+                      "https://base.example.org/base/",
+                      "https://base.example.org/base/"],
                       reader.map(&:base_uri))
       end
 
       def test_xlink_href_without_base_uri
         reader = Nokogiri::XML::Reader(<<-eoxml)
-          <x xmlns:xlink="http://www.w3.org/1999/xlink">
+          <x xmlns:xlink="https://www.w3.org/1999/xlink">
             <link xlink:href="#other">Link</link>
             <other id="other">Linked Element</other>
           </x>
@@ -495,8 +495,8 @@ module Nokogiri
 
       def test_xlink_href_with_base_uri
         reader = Nokogiri::XML::Reader(<<-eoxml)
-          <x xml:base="http://base.example.org/base/"
-             xmlns:xlink="http://www.w3.org/1999/xlink">
+          <x xml:base="https://base.example.org/base/"
+             xmlns:xlink="https://www.w3.org/1999/xlink">
             <link xlink:href="#other">Link</link>
             <other id="other">Linked Element</other>
           </x>
@@ -504,7 +504,7 @@ module Nokogiri
 
         reader.each do |node|
           if node.node_type == Nokogiri::XML::Reader::TYPE_ELEMENT
-            assert_equal node.base_uri, "http://base.example.org/base/"
+            assert_equal node.base_uri, "https://base.example.org/base/"
           end
         end
       end

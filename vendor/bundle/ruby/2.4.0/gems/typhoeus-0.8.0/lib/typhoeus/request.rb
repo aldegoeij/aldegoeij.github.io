@@ -105,7 +105,7 @@ module Typhoeus
     #
     # @return [ Typhoeus::Request ] The request.
     #
-    # @note See {http://rubydoc.info/github/typhoeus/ethon/Ethon/Easy/Options Ethon::Easy::Options} for more options.
+    # @note See {https://rubydoc.info/github/typhoeus/ethon/Ethon/Easy/Options Ethon::Easy::Options} for more options.
     #
     # @see Typhoeus::Hydra
     # @see Typhoeus::Response

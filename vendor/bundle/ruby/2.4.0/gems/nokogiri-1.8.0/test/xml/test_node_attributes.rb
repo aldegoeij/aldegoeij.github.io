@@ -5,7 +5,7 @@ module Nokogiri
     class TestNodeAttributes < Nokogiri::TestCase
       def test_attribute_with_ns
         doc = Nokogiri::XML <<-eoxml
-          <root xmlns:tlm='http://tenderlovemaking.com/'>
+          <root xmlns:tlm='https://tenderlovemaking.com/'>
             <node tlm:foo='bar' foo='baz' />
           </root>
         eoxml
@@ -13,7 +13,7 @@ module Nokogiri
         node = doc.at('node')
 
         assert_equal 'bar',
-          node.attribute_with_ns('foo', 'http://tenderlovemaking.com/').value
+          node.attribute_with_ns('foo', 'https://tenderlovemaking.com/').value
       end
 
       def test_prefixed_attributes
@@ -43,7 +43,7 @@ module Nokogiri
         assert_equal 'en-GB', node['xml:lang']
         assert_equal 'en-GB', node.attributes['lang'].value
         assert_equal nil, node['lang']
-        assert_equal 'http://www.w3.org/XML/1998/namespace', node.attributes['lang'].namespace.href
+        assert_equal 'https://www.w3.org/XML/1998/namespace', node.attributes['lang'].namespace.href
 
         assert_equal 'bazz', node['foo:bar']
         assert_equal 'bazz', node.attributes['bar'].value
@@ -84,14 +84,14 @@ module Nokogiri
 
       def test_namespace_key?
         doc = Nokogiri::XML <<-eoxml
-          <root xmlns:tlm='http://tenderlovemaking.com/'>
+          <root xmlns:tlm='https://tenderlovemaking.com/'>
             <node tlm:foo='bar' foo='baz' />
           </root>
         eoxml
 
         node = doc.at('node')
 
-        assert node.namespaced_key?('foo', 'http://tenderlovemaking.com/')
+        assert node.namespaced_key?('foo', 'https://tenderlovemaking.com/')
         assert node.namespaced_key?('foo', nil)
         assert !node.namespaced_key?('foo', 'foo')
       end

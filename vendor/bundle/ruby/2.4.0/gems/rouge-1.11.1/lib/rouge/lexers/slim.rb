@@ -3,7 +3,7 @@
 module Rouge
   module Lexers
     # A lexer for the Slim tempalte language
-    # @see http://slim-lang.org
+    # @see https://slim-lang.org
     class Slim < RegexLexer
       include Indentation
 

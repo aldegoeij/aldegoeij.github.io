@@ -63,12 +63,12 @@ end
 
 describe "higher level operations" do
   memory_leak_test("a simple request") do
-    Ethon::Easy.new(:url => "http://localhost:3001/",
+    Ethon::Easy.new(:url => "https://localhost:3001/",
                     :forbid_reuse => true).perform
   end
 
   memory_leak_test("a request with headers") do
-    Ethon::Easy.new(:url => "http://localhost:3001/",
+    Ethon::Easy.new(:url => "https://localhost:3001/",
                     :headers => { "Content-Type" => "application/json",
                                   "Something" => "1",
                                   "Else" => "qwerty",
@@ -77,13 +77,13 @@ describe "higher level operations" do
   end
 
   memory_leak_test("a request with headers and params") do
-    easy = Ethon::Easy.new(:url => "http://localhost:3001/",
+    easy = Ethon::Easy.new(:url => "https://localhost:3001/",
                     :headers => { "Content-Type" => "application/json",
                                   "Something" => "1",
                                   "Else" => "qwerty",
                                   "Long-String" => "aassddffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz"},
                     :forbid_reuse => true)
-    easy.http_request("http://localhost:3001/",
+    easy.http_request("https://localhost:3001/",
                       :get,
                       :params => { "param1" => "value1",
                                    "param2" => "value2",
@@ -92,13 +92,13 @@ describe "higher level operations" do
   end
 
   memory_leak_test("a request with headers, params, and body") do
-    easy = Ethon::Easy.new(:url => "http://localhost:3001/",
+    easy = Ethon::Easy.new(:url => "https://localhost:3001/",
                     :headers => { "Content-Type" => "application/json",
                                   "Something" => "1",
                                   "Else" => "qwerty",
                                   "Long-String" => "aassddffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz"},
                     :forbid_reuse => true)
-    easy.http_request("http://localhost:3001/",
+    easy.http_request("https://localhost:3001/",
                       :get,
                       :params => { "param1" => "value1",
                                    "param2" => "value2",

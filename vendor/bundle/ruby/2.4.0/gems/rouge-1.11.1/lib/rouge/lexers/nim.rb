@@ -5,7 +5,7 @@ module Rouge
     class Nim < RegexLexer
       # This is pretty much a 1-1 port of the pygments NimrodLexer class
       title "Nim"
-      desc "The Nim programming language (http://nim-lang.org/)"
+      desc "The Nim programming language (https://nim-lang.org/)"
 
       tag 'nim'
       aliases 'nimrod'

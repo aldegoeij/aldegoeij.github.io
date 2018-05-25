@@ -6,7 +6,7 @@
 #    you may not use this file except in compliance with the License.
 #    You may obtain a copy of the License at
 #
-#        http://www.apache.org/licenses/LICENSE-2.0
+#        https://www.apache.org/licenses/LICENSE-2.0
 #
 #    Unless required by applicable law or agreed to in writing, software
 #    distributed under the License is distributed on an "AS IS" BASIS,
@@ -22,7 +22,7 @@ require "addressable/uri"
 module Addressable
   ##
   # This is an implementation of a URI template based on
-  # RFC 6570 (http://tools.ietf.org/html/rfc6570).
+  # RFC 6570 (https://tools.ietf.org/html/rfc6570).
   class Template
     # Constants used throughout the template code.
     anything =
@@ -320,22 +320,22 @@ module Addressable
     #   end
     #
     #   uri = Addressable::URI.parse(
-    #     "http://example.com/search/an+example+search+query/"
+    #     "https://example.com/search/an+example+search+query/"
     #   )
     #   Addressable::Template.new(
-    #     "http://example.com/search/{query}/"
+    #     "https://example.com/search/{query}/"
     #   ).extract(uri, ExampleProcessor)
     #   #=> {"query" => "an example search query"}
     #
-    #   uri = Addressable::URI.parse("http://example.com/a/b/c/")
+    #   uri = Addressable::URI.parse("https://example.com/a/b/c/")
     #   Addressable::Template.new(
-    #     "http://example.com/{first}/{second}/"
+    #     "https://example.com/{first}/{second}/"
     #   ).extract(uri, ExampleProcessor)
     #   #=> {"first" => "a", "second" => "b/c"}
     #
-    #   uri = Addressable::URI.parse("http://example.com/a/b/c/")
+    #   uri = Addressable::URI.parse("https://example.com/a/b/c/")
     #   Addressable::Template.new(
-    #     "http://example.com/{first}/{-list|/|second}/"
+    #     "https://example.com/{first}/{-list|/|second}/"
     #   ).extract(uri)
     #   #=> {"first" => "a", "second" => ["b", "c"]}
     def extract(uri, processor=nil)
@@ -382,28 +382,28 @@ module Addressable
     #   end
     #
     #   uri = Addressable::URI.parse(
-    #     "http://example.com/search/an+example+search+query/"
+    #     "https://example.com/search/an+example+search+query/"
     #   )
     #   match = Addressable::Template.new(
-    #     "http://example.com/search/{query}/"
+    #     "https://example.com/search/{query}/"
     #   ).match(uri, ExampleProcessor)
     #   match.variables
     #   #=> ["query"]
     #   match.captures
     #   #=> ["an example search query"]
     #
-    #   uri = Addressable::URI.parse("http://example.com/a/b/c/")
+    #   uri = Addressable::URI.parse("https://example.com/a/b/c/")
     #   match = Addressable::Template.new(
-    #     "http://example.com/{first}/{+second}/"
+    #     "https://example.com/{first}/{+second}/"
     #   ).match(uri, ExampleProcessor)
     #   match.variables
     #   #=> ["first", "second"]
     #   match.captures
     #   #=> ["a", "b/c"]
     #
-    #   uri = Addressable::URI.parse("http://example.com/a/b/c/")
+    #   uri = Addressable::URI.parse("https://example.com/a/b/c/")
     #   match = Addressable::Template.new(
-    #     "http://example.com/{first}{/second*}/"
+    #     "https://example.com/{first}{/second*}/"
     #   ).match(uri)
     #   match.variables
     #   #=> ["first", "second"]
@@ -507,19 +507,19 @@ module Addressable
     #
     # @example
     #   Addressable::Template.new(
-    #     "http://example.com/{one}/{two}/"
+    #     "https://example.com/{one}/{two}/"
     #   ).partial_expand({"one" => "1"}).pattern
-    #   #=> "http://example.com/1/{two}/"
+    #   #=> "https://example.com/1/{two}/"
     #
     #   Addressable::Template.new(
-    #     "http://example.com/{?one,two}/"
+    #     "https://example.com/{?one,two}/"
     #   ).partial_expand({"one" => "1"}).pattern
-    #   #=> "http://example.com/?one=1{&two}/"
+    #   #=> "https://example.com/?one=1{&two}/"
     #
     #   Addressable::Template.new(
-    #     "http://example.com/{?one,two,three}/"
+    #     "https://example.com/{?one,two,three}/"
     #   ).partial_expand({"one" => "1", "three" => 3}).pattern
-    #   #=> "http://example.com/?one=1{&two}&three=3"
+    #   #=> "https://example.com/?one=1{&two}&three=3"
     def partial_expand(mapping, processor=nil, normalize_values=true)
       result = self.pattern.dup
       mapping = normalize_keys(mapping)
@@ -566,22 +566,22 @@ module Addressable
     #   end
     #
     #   Addressable::Template.new(
-    #     "http://example.com/search/{query}/"
+    #     "https://example.com/search/{query}/"
     #   ).expand(
     #     {"query" => "an example search query"},
     #     ExampleProcessor
     #   ).to_str
-    #   #=> "http://example.com/search/an+example+search+query/"
+    #   #=> "https://example.com/search/an+example+search+query/"
     #
     #   Addressable::Template.new(
-    #     "http://example.com/search/{query}/"
+    #     "https://example.com/search/{query}/"
     #   ).expand(
     #     {"query" => "an example search query"}
     #   ).to_str
-    #   #=> "http://example.com/search/an%20example%20search%20query/"
+    #   #=> "https://example.com/search/an%20example%20search%20query/"
     #
     #   Addressable::Template.new(
-    #     "http://example.com/search/{query}/"
+    #     "https://example.com/search/{query}/"
     #   ).expand(
     #     {"query" => "bogus!"},
     #     ExampleProcessor

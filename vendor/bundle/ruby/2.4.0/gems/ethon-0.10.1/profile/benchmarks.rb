@@ -14,8 +14,8 @@ LocalhostServer.new(TESTSERVER.new, 3000)
 LocalhostServer.new(TESTSERVER.new, 3001)
 LocalhostServer.new(TESTSERVER.new, 3002)
 
-url = 'http://localhost:3000/'.freeze
-uri = URI.parse('http://localhost:3000/').freeze
+url = 'https://localhost:3000/'.freeze
+uri = URI.parse('https://localhost:3000/').freeze
 ethon = Ethon::Easy.new(url: url)
 patron = Patron::Session.new
 patron_url = Patron::Session.new(base_url: url)
@@ -64,21 +64,21 @@ puts "[ 4 delayed Requests ]"
 Benchmark.ips do |x|
   x.report('net/http') do
     3.times do |i|
-      uri = URI.parse("http://localhost:300#{i}/?delay=1")
+      uri = URI.parse("https://localhost:300#{i}/?delay=1")
       Net::HTTP.get_response(uri)
     end
   end
 
   x.report("open-uri") do
     3.times do |i|
-      open("http://localhost:300#{i}/?delay=1")
+      open("https://localhost:300#{i}/?delay=1")
     end
   end
 
   x.report("patron") do
     sess = Patron::Session.new
     3.times do |i|
-      sess.base_url = "http://localhost:300#{i}/?delay=1"
+      sess.base_url = "https://localhost:300#{i}/?delay=1"
       sess.get("/")
     end
   end
@@ -86,7 +86,7 @@ Benchmark.ips do |x|
   x.report("Easy.perform") do
     easy = Ethon::Easy.new
     3.times do |i|
-      easy.url = "http://localhost:300#{i}/?delay=1"
+      easy.url = "https://localhost:300#{i}/?delay=1"
       easy.perform
     end
   end
@@ -95,7 +95,7 @@ Benchmark.ips do |x|
     multi = Ethon::Multi.new
     3.times do |i|
       easy = Ethon::Easy.new
-      easy.url = "http://localhost:300#{i}/?delay=1"
+      easy.url = "https://localhost:300#{i}/?delay=1"
       multi.add(easy)
     end
     multi.perform

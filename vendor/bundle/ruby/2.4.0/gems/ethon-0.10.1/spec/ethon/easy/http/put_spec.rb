@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Ethon::Easy::Http::Put do
   let(:easy) { Ethon::Easy.new }
-  let(:url) { "http://localhost:3001/" }
+  let(:url) { "https://localhost:3001/" }
   let(:params) { nil }
   let(:form) { nil }
   let(:options) { Hash.new }

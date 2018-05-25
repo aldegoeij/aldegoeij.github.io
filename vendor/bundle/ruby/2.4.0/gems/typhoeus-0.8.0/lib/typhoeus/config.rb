@@ -41,7 +41,7 @@ module Typhoeus
     #
     # @return [ Boolean ]
     #
-    # @see http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTVERBOSE
+    # @see https://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTVERBOSE
     attr_accessor :verbose
 
     # Defines whether requests are cached.

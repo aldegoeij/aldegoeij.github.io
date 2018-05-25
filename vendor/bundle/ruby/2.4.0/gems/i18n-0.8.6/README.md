@@ -4,7 +4,7 @@
 
 Ruby Internationalization and localization solution.
 
-[See the Rails Guide](http://guides.rubyonrails.org/i18n.html) for an example of its usage. (Note: This library can be used independently from Rails.)
+[See the Rails Guide](https://guides.rubyonrails.org/i18n.html) for an example of its usage. (Note: This library can be used independently from Rails.)
 
 Features:
 
@@ -69,10 +69,10 @@ follow the usual test setup and should be easy to grok.
 
 ## Authors
 
-* [Sven Fuchs](http://www.artweb-design.de)
-* [Joshua Harvey](http://www.workingwithrails.com/person/759-joshua-harvey)
-* [Stephan Soller](http://www.arkanis-development.de)
-* [Saimon Moore](http://saimonmoore.net)
+* [Sven Fuchs](https://www.artweb-design.de)
+* [Joshua Harvey](https://www.workingwithrails.com/person/759-joshua-harvey)
+* [Stephan Soller](https://www.arkanis-development.de)
+* [Saimon Moore](https://saimonmoore.net)
 * [Matt Aimonetti](https://matt.aimonetti.net/)
 
 ## Contributors

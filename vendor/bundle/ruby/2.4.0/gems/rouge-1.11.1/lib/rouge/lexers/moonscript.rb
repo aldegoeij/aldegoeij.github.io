@@ -6,7 +6,7 @@ module Rouge
 
     class Moonscript < RegexLexer
       title "MoonScript"
-      desc "Moonscript (http://www.moonscript.org)"
+      desc "Moonscript (https://www.moonscript.org)"
       tag 'moonscript'
       aliases 'moon'
       filenames '*.moon'

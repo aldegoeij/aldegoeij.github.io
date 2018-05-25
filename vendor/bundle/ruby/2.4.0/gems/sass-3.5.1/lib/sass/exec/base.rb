@@ -19,7 +19,7 @@ module Sass::Exec
         parse
       rescue Exception => e
         # Exit code 65 indicates invalid data per
-        # http://www.freebsd.org/cgi/man.cgi?query=sysexits. Setting it via
+        # https://www.freebsd.org/cgi/man.cgi?query=sysexits. Setting it via
         # at_exit is a bit of a hack, but it allows us to rethrow when --trace
         # is active and get both the built-in exception formatting and the
         # correct exit code.

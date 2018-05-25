@@ -22,7 +22,7 @@ module Octokit
 
       # Get a gitignore template.
       #
-      # Use the raw {http://developer.github.com/v3/media/ media type} to get
+      # Use the raw {https://developer.github.com/v3/media/ media type} to get
       # the raw contents.
       #
       # @param template_name [String] Name of the template. Template names are

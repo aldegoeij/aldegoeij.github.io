@@ -2,7 +2,7 @@ module Faraday
   # Used to setup urls, params, headers, and the request body in a sane manner.
   #
   #   @connection.post do |req|
-  #     req.url 'http://localhost', 'a' => '1' # 'http://localhost?a=1'
+  #     req.url 'https://localhost', 'a' => '1' # 'https://localhost?a=1'
   #     req.headers['b'] = '2' # Header
   #     req.params['c']  = '3' # GET Param
   #     req['b']         = '2' # also Header

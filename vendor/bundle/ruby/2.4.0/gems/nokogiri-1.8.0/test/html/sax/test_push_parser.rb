@@ -25,7 +25,7 @@ module Nokogiri
 
         def test_start_element
           @parser.<<(<<-eoxml)
-            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "https://www.w3.org/TR/REC-html40/loose.dtd">
             <html><head><body><p id="asdfasdf">
           eoxml
 

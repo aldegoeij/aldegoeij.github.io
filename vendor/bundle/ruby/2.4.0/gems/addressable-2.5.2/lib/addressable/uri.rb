@@ -6,7 +6,7 @@
 #    you may not use this file except in compliance with the License.
 #    You may obtain a copy of the License at
 #
-#        http://www.apache.org/licenses/LICENSE-2.0
+#        https://www.apache.org/licenses/LICENSE-2.0
 #
 #    Unless required by applicable law or agreed to in writing, software
 #    distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,8 +25,8 @@ require "public_suffix"
 module Addressable
   ##
   # This is an implementation of a URI parser based on
-  # <a href="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>,
-  # <a href="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>.
+  # <a href="https://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>,
+  # <a href="https://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>.
   class URI
     ##
     # Raised if something other than a uri is supplied.
@@ -35,7 +35,7 @@ module Addressable
 
     ##
     # Container for the character classes specified in
-    # <a href="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>.
+    # <a href="https://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>.
     module CharacterClasses
       ALPHA = "a-zA-Z"
       DIGIT = "0-9"
@@ -183,11 +183,11 @@ module Addressable
       }.merge(hints)
       case uri
       when /^http:\/+/
-        uri.gsub!(/^http:\/+/, "http://")
+        uri.gsub!(/^http:\/+/, "https://")
       when /^https:\/+/
         uri.gsub!(/^https:\/+/, "https://")
       when /^feed:\/+http:\/+/
-        uri.gsub!(/^feed:\/+http:\/+/, "feed:http://")
+        uri.gsub!(/^feed:\/+http:\/+/, "feed:https://")
       when /^feed:\/+/
         uri.gsub!(/^feed:\/+/, "feed://")
       when /^file:\/+/
@@ -250,8 +250,8 @@ module Addressable
     #   ).to_s
     #   #=> "file:///c:/windows/My%20Documents%20100%20/foo.txt"
     #
-    #   Addressable::URI.convert_path("http://example.com/").to_s
-    #   #=> "http://example.com/"
+    #   Addressable::URI.convert_path("https://example.com/").to_s
+    #   #=> "https://example.com/"
     def self.convert_path(path)
       # If we were given nil, return nil.
       return nil unless path
@@ -299,10 +299,10 @@ module Addressable
     # @return [Addressable::URI] The joined URI.
     #
     # @example
-    #   base = "http://example.com/"
+    #   base = "https://example.com/"
     #   uri = Addressable::URI.parse("relative/path")
     #   Addressable::URI.join(base, uri)
-    #   #=> #<Addressable::URI:0xcab390 URI:http://example.com/relative/path>
+    #   #=> #<Addressable::URI:0xcab390 URI:https://example.com/relative/path>
     def self.join(*uris)
       uri_objects = uris.collect do |uri|
         if !uri.respond_to?(:to_str)
@@ -333,7 +333,7 @@ module Addressable
     #   useful <code>String</code> values may be found in the
     #   <code>Addressable::URI::CharacterClasses</code> module. The default
     #   value is the reserved plus unreserved character classes specified in
-    #   <a href="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>.
+    #   <a href="https://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>.
     #
     # @param [Regexp] upcase_encoded
     #   A string of characters that may already be percent encoded, and whose
@@ -473,7 +473,7 @@ module Addressable
     #   set of useful <code>String</code> values may be found in the
     #   <code>Addressable::URI::CharacterClasses</code> module. The default
     #   value is the reserved plus unreserved character classes specified in
-    #   <a href="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>.
+    #   <a href="https://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>.
     #
     # @param [String] leave_encoded
     #   When <code>character_class</code> is a <code>String</code> then
@@ -1415,8 +1415,8 @@ module Addressable
     # Combines the scheme, user, password, host, and port components.
     # Primarily useful for HTTP and HTTPS.
     #
-    # For example, <code>"http://example.com/path?query"</code> would have a
-    # <code>site</code> value of <code>"http://example.com"</code>.
+    # For example, <code>"https://example.com/path?query"</code> would have a
+    # <code>site</code> value of <code>"https://example.com"</code>.
     #
     # @return [String] The components that identify a site.
     def site
@@ -1433,8 +1433,8 @@ module Addressable
     # Combines the scheme, user, password, host, and port components.
     # Primarily useful for HTTP and HTTPS.
     #
-    # For example, <code>"http://example.com/path?query"</code> would have a
-    # <code>site</code> value of <code>"http://example.com"</code>.
+    # For example, <code>"https://example.com/path?query"</code> would have a
+    # <code>site</code> value of <code>"https://example.com"</code>.
     #
     # @return [String] The normalized components that identify a site.
     def normalized_site
@@ -2150,7 +2150,7 @@ module Addressable
     ##
     # Creates a URI suitable for display to users. If semantic attacks are
     # likely, the application should try to detect these and warn the user.
-    # See <a href="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>,
+    # See <a href="https://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>,
     # section 7.6 for more information.
     #
     # @return [Addressable::URI] A URI suitable for display purposes.
@@ -2246,8 +2246,8 @@ module Addressable
     # @return [Addressable::URI] The URI with components omitted.
     #
     # @example
-    #   uri = Addressable::URI.parse("http://example.com/path?query")
-    #   #=> #<Addressable::URI:0xcc5e7a URI:http://example.com/path?query>
+    #   uri = Addressable::URI.parse("https://example.com/path?query")
+    #   #=> #<Addressable::URI:0xcc5e7a URI:https://example.com/path?query>
     #   uri.omit(:scheme, :authority)
     #   #=> #<Addressable::URI:0xcc4d86 URI:/path?query>
     def omit(*components)

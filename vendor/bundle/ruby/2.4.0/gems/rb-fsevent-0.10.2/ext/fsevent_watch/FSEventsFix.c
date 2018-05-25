@@ -53,7 +53,7 @@
  * THE SOFTWARE.
  *
  * Based on a realpath implementation from Apple libc 498.1.7, taken from
- * http://www.opensource.apple.com/source/Libc/Libc-498.1.7/stdlib/FreeBSD/realpath.c
+ * https://www.opensource.apple.com/source/Libc/Libc-498.1.7/stdlib/FreeBSD/realpath.c
  * and provided under the following license:
  *
  * Copyright (c) 2003 Constantin S. Svintsoff <kostik@iclub.nsu.ru>

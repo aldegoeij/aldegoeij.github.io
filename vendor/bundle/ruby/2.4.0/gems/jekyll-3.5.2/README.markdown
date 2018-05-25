@@ -47,7 +47,7 @@ these terms, please let a maintainer ([@parkr](https://github.com/parkr), [@envy
 
 ## Diving In
 
-* [Migrate](http://import.jekyllrb.com/docs/home/) from your previous system
+* [Migrate](https://import.jekyllrb.com/docs/home/) from your previous system
 * Learn how the [YAML Front Matter](https://jekyllrb.com/docs/frontmatter/) works
 * Put information on your site with [Variables](https://jekyllrb.com/docs/variables/)
 * Customize the [Permalinks](https://jekyllrb.com/docs/permalinks/) your posts are generated with

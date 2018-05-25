@@ -31,10 +31,10 @@ module Nokogiri
 
       VEHICLE_XML = <<-eoxml
         <root>
-          <car xmlns:part="http://general-motors.com/">
+          <car xmlns:part="https://general-motors.com/">
             <part:tire>Michelin Model XGV</part:tire>
           </car>
-          <bicycle xmlns:part="http://schwinn.com/">
+          <bicycle xmlns:part="https://schwinn.com/">
             <part:tire>I'm a bicycle tire!</part:tire>
           </bicycle>
         </root>
@@ -43,7 +43,7 @@ module Nokogiri
       def test_namespace
         doc = Nokogiri::XML(VEHICLE_XML.encode('Shift_JIS'), nil, 'Shift_JIS')
         assert_equal 'Shift_JIS', doc.encoding
-        n = doc.xpath('//part:tire', { 'part' => 'http://schwinn.com/' }).first
+        n = doc.xpath('//part:tire', { 'part' => 'https://schwinn.com/' }).first
         assert n
         assert_equal 'UTF-8', n.namespace.href.encoding.name
         assert_equal 'UTF-8', n.namespace.prefix.encoding.name

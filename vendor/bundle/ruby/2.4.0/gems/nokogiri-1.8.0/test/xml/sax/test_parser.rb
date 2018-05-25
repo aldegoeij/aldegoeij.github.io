@@ -76,15 +76,15 @@ module Nokogiri
 
         def test_namespace_declaration_order_is_saved
           @parser.parse <<-eoxml
-<root xmlns:foo='http://foo.example.com/' xmlns='http://example.com/'>
+<root xmlns:foo='https://foo.example.com/' xmlns='https://example.com/'>
   <a foo:bar='hello' />
 </root>
           eoxml
           assert_equal 2, @parser.document.start_elements_namespace.length
           el = @parser.document.start_elements_namespace.first
           namespaces = el.last
-          assert_equal ['foo', 'http://foo.example.com/'], namespaces.first
-          assert_equal [nil, 'http://example.com/'], namespaces.last
+          assert_equal ['foo', 'https://foo.example.com/'], namespaces.first
+          assert_equal [nil, 'https://example.com/'], namespaces.last
         end
 
         def test_bad_document_calls_error_handler
@@ -95,9 +95,9 @@ module Nokogiri
 
         def test_namespace_are_super_fun_to_parse
           @parser.parse <<-eoxml
-<root xmlns:foo='http://foo.example.com/'>
+<root xmlns:foo='https://foo.example.com/'>
   <a foo:bar='hello' />
-  <b xmlns:foo='http://bar.example.com/'>
+  <b xmlns:foo='https://bar.example.com/'>
     <a foo:bar='hello' />
   </b>
   <foo:bar>hello world</foo:bar>
@@ -113,14 +113,14 @@ module Nokogiri
           assert_equal 'bar', attribute.localname
           assert_equal 'foo', attribute.prefix
           assert_equal 'hello', attribute.value
-          assert_equal 'http://foo.example.com/', attribute.uri
+          assert_equal 'https://foo.example.com/', attribute.uri
         end
 
         def test_sax_v1_namespace_attribute_declarations
           @parser.parse <<-eoxml
-<root xmlns:foo='http://foo.example.com/' xmlns='http://example.com/'>
+<root xmlns:foo='https://foo.example.com/' xmlns='https://example.com/'>
   <a foo:bar='hello' />
-  <b xmlns:foo='http://bar.example.com/'>
+  <b xmlns:foo='https://bar.example.com/'>
     <a foo:bar='hello' />
   </b>
   <foo:bar>hello world</foo:bar>
@@ -129,15 +129,15 @@ module Nokogiri
           assert @parser.document.start_elements.length > 0
           elm = @parser.document.start_elements.first
           assert_equal 'root', elm.first
-          assert elm[1].include?(['xmlns:foo', 'http://foo.example.com/'])
-          assert elm[1].include?(['xmlns', 'http://example.com/'])
+          assert elm[1].include?(['xmlns:foo', 'https://foo.example.com/'])
+          assert elm[1].include?(['xmlns', 'https://example.com/'])
         end
 
         def test_sax_v1_namespace_nodes
           @parser.parse <<-eoxml
-<root xmlns:foo='http://foo.example.com/' xmlns='http://example.com/'>
+<root xmlns:foo='https://foo.example.com/' xmlns='https://example.com/'>
   <a foo:bar='hello' />
-  <b xmlns:foo='http://bar.example.com/'>
+  <b xmlns:foo='https://bar.example.com/'>
     <a foo:bar='hello' />
   </b>
   <foo:bar>hello world</foo:bar>
@@ -150,7 +150,7 @@ module Nokogiri
 
         def test_start_is_called_without_namespace
           @parser.parse(<<-eoxml)
-<root xmlns:foo='http://foo.example.com/' xmlns='http://example.com/'>
+<root xmlns:foo='https://foo.example.com/' xmlns='https://example.com/'>
 <foo:f><bar></foo:f>
 </root>
           eoxml
@@ -322,9 +322,9 @@ module Nokogiri
 
         def test_start_element_attrs_include_namespaces
           @parser.parse_memory(<<-eoxml)
-            <p xmlns:foo='http://foo.example.com/'>Paragraph 1</p>
+            <p xmlns:foo='https://foo.example.com/'>Paragraph 1</p>
           eoxml
-          assert_equal [["p", [['xmlns:foo', 'http://foo.example.com/']]]],
+          assert_equal [["p", [['xmlns:foo', 'https://foo.example.com/']]]],
                        @parser.document.start_elements
         end
 

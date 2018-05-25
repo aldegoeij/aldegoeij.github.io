@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.date = "2013-05-08"
   s.description = "Net::DNS is a pure Ruby DNS library, with a clean OO interface and an extensible API.".freeze
   s.email = ["ceresa@gmail.com".freeze, "weppos@weppos.net".freeze]
-  s.homepage = "http://github.com/bluemonk/net-dns".freeze
+  s.homepage = "https://github.com/bluemonk/net-dns".freeze
   s.required_ruby_version = Gem::Requirement.new(">= 1.8.7".freeze)
   s.rubyforge_project = "net-dns".freeze
   s.rubygems_version = "2.6.11".freeze

@@ -43,11 +43,11 @@
 
    More details on the raw and cloure API can be found in:
 
-   http://gcc.gnu.org/ml/java/1999-q3/msg00138.html
+   https://gcc.gnu.org/ml/java/1999-q3/msg00138.html
 
    and
 
-   http://gcc.gnu.org/ml/java/1999-q3/msg00174.html
+   https://gcc.gnu.org/ml/java/1999-q3/msg00174.html
    -------------------------------------------------------------------- */
 
 #ifndef LIBFFI_H

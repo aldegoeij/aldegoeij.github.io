@@ -7,7 +7,7 @@ sort_info: 5
 
 ## Dependencies
 
-Since kramdown is written in Ruby, you just need the [Ruby interpreter](http://www.ruby-lang.org),
+Since kramdown is written in Ruby, you just need the [Ruby interpreter](https://www.ruby-lang.org),
 version 1.8.5, 1.8.6, 1.8.7, 1.9.2, 1.9.3 or 2.x. There are no other dependencies.
 
 
@@ -51,7 +51,7 @@ enter `cmd` and click on `Ok`) and type in the following:
 
     gem install kramdown
 
-[RubyInstaller]: http://rubyinstaller.org
+[RubyInstaller]: https://rubyinstaller.org
 
 
 ## Generic Installation Instructions

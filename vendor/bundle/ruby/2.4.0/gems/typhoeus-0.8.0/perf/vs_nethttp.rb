@@ -3,7 +3,7 @@ require 'net/http'
 require 'open-uri'
 require 'benchmark'
 
-URL = "http://localhost:300"
+URL = "https://localhost:300"
 hydra = Typhoeus::Hydra.new(max_concurrency: 3)
 
 if defined? require_relative

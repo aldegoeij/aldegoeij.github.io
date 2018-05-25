@@ -6,7 +6,7 @@
 #    you may not use this file except in compliance with the License.
 #    You may obtain a copy of the License at
 #
-#        http://www.apache.org/licenses/LICENSE-2.0
+#        https://www.apache.org/licenses/LICENSE-2.0
 #
 #    Unless required by applicable law or agreed to in writing, software
 #    distributed under the License is distributed on an "AS IS" BASIS,
@@ -27,9 +27,9 @@ module Addressable
     # on the presence of libidn.  Which nobody ever seems to have installed.
     #
     # Original sources:
-    # http://github.com/staugaard/idn_actionmailer
-    # http://www.yoshidam.net/Ruby.html#unicode
-    # http://rubyforge.org/frs/?group_id=2550
+    # https://github.com/staugaard/idn_actionmailer
+    # https://www.yoshidam.net/Ruby.html#unicode
+    # https://rubyforge.org/frs/?group_id=2550
 
 
     UNICODE_TABLE = File.expand_path(

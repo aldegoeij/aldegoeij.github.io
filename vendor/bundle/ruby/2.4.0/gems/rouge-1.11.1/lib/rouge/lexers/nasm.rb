@@ -13,7 +13,7 @@ module Rouge
       ws = %r((?:\s|;.*?\n/)+)
       id = /[a-zA-Z_][a-zA-Z0-9_]*/
 
-      #todo: pull more instructions from: http://www.nasm.us/doc/nasmdocb.html
+      #todo: pull more instructions from: https://www.nasm.us/doc/nasmdocb.html
       #so far, we have sections 1.1 and 1.2
 
       def self.keywords

@@ -21,8 +21,8 @@ module Nokogiri
       def test_add_namespace
         node = @node.at('address')
         node.unlink
-        node.add_namespace('foo', 'http://tenderlovemaking.com')
-        assert_equal 'http://tenderlovemaking.com', node.namespaces['xmlns:foo']
+        node.add_namespace('foo', 'https://tenderlovemaking.com')
+        assert_equal 'https://tenderlovemaking.com', node.namespaces['xmlns:foo']
       end
 
       def test_write_to

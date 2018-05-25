@@ -2,7 +2,7 @@
 
 Ruby toolkit for the GitHub API.
 
-![logo](http://cl.ly/image/3Y013H0A2z3z/gundam-ruby.png)
+![logo](https://cl.ly/image/3Y013H0A2z3z/gundam-ruby.png)
 
 Upgrading? Check the [Upgrade Guide](#upgrading-guide) before bumping to a new
 [major version][semver].
@@ -59,8 +59,8 @@ Octokit.readme 'al3x/sovereign', :accept => 'application/vnd.github.html'
 ```
 
 
-[wrappers]: http://wynnnetherland.com/journal/what-makes-a-good-api-wrapper
-[github-api]: http://developer.github.com
+[wrappers]: https://wynnnetherland.com/journal/what-makes-a-good-api-wrapper
+[github-api]: https://developer.github.com
 
 ## Quick start
 
@@ -96,7 +96,7 @@ client = Octokit::Client.new(:login => 'defunkt', :password => 'c0d3b4ssssss!')
 client.user
 ```
 
-[API methods]: http://octokit.github.io/octokit.rb/method_list.html
+[API methods]: https://octokit.github.io/octokit.rb/method_list.html
 
 ### Consuming resources
 
@@ -191,7 +191,7 @@ client.create_authorization(:scopes => ["user"], :note => "Name of token")
 
 [Two-Factor Authentication](https://help.github.com/articles/about-two-factor-authentication) brings added security to the account by requiring more information to login.
 
-Using two-factor authentication for API calls is as simple as adding the [required header](http://developer.github.com/v3/auth/#working-with-two-factor-authentication) as an option:
+Using two-factor authentication for API calls is as simple as adding the [required header](https://developer.github.com/v3/auth/#working-with-two-factor-authentication) as an option:
 
 ```ruby
 client = Octokit::Client.new \
@@ -257,10 +257,10 @@ client = Octokit::Client.new \
 user = client.user 'defunkt'
 ```
 
-[auth]: http://developer.github.com/v3/#authentication
-[oauth]: http://developer.github.com/v3/oauth/
-[access scopes]: http://developer.github.com/v3/oauth/#scopes
-[app-creds]: http://developer.github.com/v3/#increasing-the-unauthenticated-rate-limit-for-oauth-applications
+[auth]: https://developer.github.com/v3/#authentication
+[oauth]: https://developer.github.com/v3/oauth/
+[access scopes]: https://developer.github.com/v3/oauth/#scopes
+[app-creds]: https://developer.github.com/v3/#increasing-the-unauthenticated-rate-limit-for-oauth-applications
 
 ## Pagination
 
@@ -292,7 +292,7 @@ issues.length
 `100`, and seek to not overstep your rate limit, you probably want to use a
 custom pattern for traversing large lists.
 
-[paginated]: http://developer.github.com/v3/#pagination
+[paginated]: https://developer.github.com/v3/#pagination
 
 ## Working with GitHub Enterprise
 
@@ -366,16 +366,16 @@ instances created with previous options.
 Every writable attribute in {Octokit::Configurable} can be set one at a time:
 
 ```ruby
-Octokit.api_endpoint = 'http://api.github.dev'
-Octokit.web_endpoint = 'http://github.dev'
+Octokit.api_endpoint = 'https://api.github.dev'
+Octokit.web_endpoint = 'https://github.dev'
 ```
 
 or in batch:
 
 ```ruby
 Octokit.configure do |c|
-  c.api_endpoint = 'http://api.github.dev'
-  c.web_endpoint = 'http://github.dev'
+  c.api_endpoint = 'https://api.github.dev'
+  c.web_endpoint = 'https://github.dev'
 end
 ```
 
@@ -386,10 +386,10 @@ attributes will look for a default value from the ENV before returning
 Octokit's default.
 
 ```ruby
-# Given $OCTOKIT_API_ENDPOINT is "http://api.github.dev"
+# Given $OCTOKIT_API_ENDPOINT is "https://api.github.dev"
 Octokit.api_endpoint
 
-# => "http://api.github.dev"
+# => "https://api.github.dev"
 ```
 
 Deprecation warnings and API endpoints in development preview warnings are
@@ -454,10 +454,10 @@ root.rels[:user_repositories].get :uri => { :user => "octokit" },
 Octokit 3.0 aims to be hypermedia-driven, removing the internal URL
 construction currently used throughout the client.
 
-[hypermedia]: http://en.wikipedia.org/wiki/Hypermedia
+[hypermedia]: https://en.wikipedia.org/wiki/Hypermedia
 [Sawyer]: https://github.com/lostisland/sawyer
 [Faraday]: https://github.com/lostisland/faraday
-[uri-templates]: http://tools.ietf.org/html/rfc6570
+[uri-templates]: https://tools.ietf.org/html/rfc6570
 
 ## Upgrading guide
 
@@ -643,7 +643,7 @@ when writing new specs.
   actual values in resources, try to assert the existence of a key or that a
   response is an Array. We're testing the client, not the API.
 
-[bootstrapping]: http://wynnnetherland.com/linked/2013012801/bootstrapping-consistency
+[bootstrapping]: https://wynnnetherland.com/linked/2013012801/bootstrapping-consistency
 [VCR]: https://github.com/vcr/vcr
 
 ## Supported Ruby Versions
@@ -686,8 +686,8 @@ Constraint][pvc] with two digits of precision. For example:
 
 The changes made between versions can be seen on the [project releases page][releases].
 
-[semver]: http://semver.org/
-[pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
+[semver]: https://semver.org/
+[pvc]: https://guides.rubygems.org/patterns/#pessimistic-version-constraint
 [releases]: https://github.com/octokit/octokit.rb/releases
 
 ## License

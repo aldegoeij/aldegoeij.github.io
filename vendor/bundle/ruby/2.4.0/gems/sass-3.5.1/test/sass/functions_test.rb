@@ -54,8 +54,8 @@ end
 
 class SassFunctionTest < MiniTest::Test
   # Tests taken from:
-  #   http://www.w3.org/Style/CSS/Test/CSS3/Color/20070927/html4/t040204-hsl-h-rotating-b.htm
-  #   http://www.w3.org/Style/CSS/Test/CSS3/Color/20070927/html4/t040204-hsl-values-b.htm
+  #   https://www.w3.org/Style/CSS/Test/CSS3/Color/20070927/html4/t040204-hsl-h-rotating-b.htm
+  #   https://www.w3.org/Style/CSS/Test/CSS3/Color/20070927/html4/t040204-hsl-values-b.htm
   File.read(File.dirname(__FILE__) + "/data/hsl-rgb.txt").split("\n\n").each do |chunk|
     hsls, rgbs = chunk.strip.split("====")
     hsls.strip.split("\n").zip(rgbs.strip.split("\n")) do |hsl, rgb|

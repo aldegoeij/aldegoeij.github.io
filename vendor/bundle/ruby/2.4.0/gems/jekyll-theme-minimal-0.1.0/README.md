@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/pages-themes/minimal.svg?branch=master)](https://travis-ci.org/pages-themes/minimal) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-minimal.svg)](https://badge.fury.io/rb/jekyll-theme-minimal)
 
-*Minimal is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/minimal), or even [use it today](#usage).*
+*Minimal is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](https://pages-themes.github.io/minimal), or even [use it today](#usage).*
 
 ![Thumbnail of minimal](thumbnail.png)
 
@@ -85,7 +85,7 @@ If you'd like to preview the theme locally (for example, in the process of propo
 2. `cd` into the theme's directory
 3. Run `script/bootstrap` to install the necessary dependencies
 4. Run `bundle exec jekyll serve` to start the preview server
-5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
+5. Visit [`localhost:4000`](https://localhost:4000) in your browser to preview the theme
 
 ### Running tests
 

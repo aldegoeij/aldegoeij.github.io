@@ -478,7 +478,7 @@ module Net
       # Another way to use this option is for some kind of spoofing attacks
       # towards weak nameservers, to probe the security of your network.
       # This includes specifing ranged attacks such as DoS and others. For
-      # a paper on DNS security, checks http://www.marcoceresa.com/security/
+      # a paper on DNS security, checks https://www.marcoceresa.com/security/
       #
       # Note that if you want to set a non-binded source address you need
       # root priviledges, as raw sockets will be used to generate packets.

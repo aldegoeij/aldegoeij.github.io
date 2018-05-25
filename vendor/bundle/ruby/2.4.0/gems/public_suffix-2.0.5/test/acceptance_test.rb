@@ -52,7 +52,7 @@ class AcceptanceTest < Minitest::Test
       # This case was covered in GH-15.
       # I decided to cover this case because it's not easily reproducible with URI.parse
       # and can lead to several false positives.
-      ["http://google.com",   false],
+      ["https://google.com",   false],
   ].freeze
 
   def test_rejected

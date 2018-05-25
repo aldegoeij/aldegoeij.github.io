@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.version     = FSEvent::VERSION
   s.authors     = ['Thibaud Guillaume-Gentil', 'Travis Tilley']
   s.email       = ['thibaud@thibaud.gg', 'ttilley@gmail.com']
-  s.homepage    = 'http://rubygems.org/gems/rb-fsevent'
+  s.homepage    = 'https://rubygems.org/gems/rb-fsevent'
   s.summary     = 'Very simple & usable FSEvents API'
   s.description = 'FSEvents API with Signals catching (without RubyCocoa)'
   s.license     = 'MIT'

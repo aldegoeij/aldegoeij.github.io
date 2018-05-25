@@ -67,7 +67,7 @@ describe Ethon::Easy::Operations do
     end
 
     context "when url" do
-      let(:url) { "http://localhost:3001/" }
+      let(:url) { "https://localhost:3001/" }
 
       it "returns ok" do
         expect(easy.return_code).to eq(:ok)
@@ -82,7 +82,7 @@ describe Ethon::Easy::Operations do
       end
 
       context "when request timed out" do
-        let(:url) { "http://localhost:3001/?delay=1" }
+        let(:url) { "https://localhost:3001/?delay=1" }
         let(:timeout) { 1 }
 
         it "returns operation_timedout" do
@@ -91,7 +91,7 @@ describe Ethon::Easy::Operations do
       end
 
       context "when connection timed out" do
-        let(:url) { "http://localhost:3009" }
+        let(:url) { "https://localhost:3009" }
         let(:connect_timeout) { 1 }
 
         it "returns couldnt_connect" do
@@ -100,7 +100,7 @@ describe Ethon::Easy::Operations do
       end
 
       context "when no follow location" do
-        let(:url) { "http://localhost:3001/redirect" }
+        let(:url) { "https://localhost:3001/redirect" }
         let(:follow_location) { false }
 
         it "doesn't follow" do
@@ -109,7 +109,7 @@ describe Ethon::Easy::Operations do
       end
 
       context "when follow location" do
-        let(:url) { "http://localhost:3001/redirect" }
+        let(:url) { "https://localhost:3001/redirect" }
         let(:follow_location) { true }
 
         it "follows" do
@@ -117,7 +117,7 @@ describe Ethon::Easy::Operations do
         end
 
         context "when infinite redirect loop" do
-          let(:url) { "http://localhost:3001/bad_redirect" }
+          let(:url) { "https://localhost:3001/bad_redirect" }
           let(:max_redirs) { 5 }
 
           context "when max redirect set" do
@@ -141,7 +141,7 @@ describe Ethon::Easy::Operations do
       before { easy.url = url }
 
       context "when basic auth" do
-        let(:url) { "http://localhost:3001/auth_basic/username/password" }
+        let(:url) { "https://localhost:3001/auth_basic/username/password" }
 
         context "when no user_pwd" do
           it "returns 401" do
@@ -176,7 +176,7 @@ describe Ethon::Easy::Operations do
       end
 
       context "when ntlm" do
-        let(:url) { "http://localhost:3001/auth_ntlm" }
+        let(:url) { "https://localhost:3001/auth_ntlm" }
         let(:http_auth) { :ntlm }
 
         context "when no user_pwd" do
@@ -197,7 +197,7 @@ describe Ethon::Easy::Operations do
 
     context "when protocols" do
       context "when asking for a allowed url" do
-        let(:url) { "http://localhost:3001" }
+        let(:url) { "https://localhost:3001" }
         let(:protocols) { :http }
 
         it "returns ok" do
@@ -206,7 +206,7 @@ describe Ethon::Easy::Operations do
       end
 
       context "when asking for a not allowed url" do
-        let(:url) { "http://localhost:3001" }
+        let(:url) { "https://localhost:3001" }
         let(:protocols) { :https }
 
         it "returns unsupported_protocol" do
@@ -220,7 +220,7 @@ describe Ethon::Easy::Operations do
         let(:protocols) { [:http, :https] }
 
         context "when http" do
-          let(:url) { "http://localhost:3001" }
+          let(:url) { "https://localhost:3001" }
 
           it "returns ok for http" do
             expect(easy.return_code).to be(:ok)
@@ -248,7 +248,7 @@ describe Ethon::Easy::Operations do
 
     context "when redir_protocols" do
       context "when redirecting to a not allowed url" do
-        let(:url) { "http://localhost:3001/redirect" }
+        let(:url) { "https://localhost:3001/redirect" }
         let(:follow_location) { true }
         let(:redir_protocols) { :https }
 

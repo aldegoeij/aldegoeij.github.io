@@ -143,7 +143,7 @@ module Nokogiri
       end
 
       def test_fragment_handler_does_not_regurge_on_invalid_attributes
-        iframe = %Q{<iframe style="width: 0%; height: 0px" src="http://someurl" allowtransparency></iframe>}
+        iframe = %Q{<iframe style="width: 0%; height: 0px" src="https://someurl" allowtransparency></iframe>}
         assert @html.at('div').fragment(iframe)
       end
 
@@ -183,7 +183,7 @@ module Nokogiri
 
         if RUBY_PLATFORM =~ /java/
           # NKF linebreak modes are not supported as of jruby 1.2
-          # see http://jira.codehaus.org/browse/JRUBY-3602 for status
+          # see https://jira.codehaus.org/browse/JRUBY-3602 for status
           assert_equal "<p>testparagraph\nfoobar</p>",
             nokogiri.at("p").to_html.gsub(/ /, '')
         else

@@ -5,7 +5,7 @@ module Nokogiri
     class TestNamespacesInCreatedDoc < Nokogiri::TestCase
       def setup
         super
-        @doc = Nokogiri::XML('<fruit xmlns="ns:fruit" xmlns:veg="ns:veg" xmlns:xlink="http://www.w3.org/1999/xlink"/>')
+        @doc = Nokogiri::XML('<fruit xmlns="ns:fruit" xmlns:veg="ns:veg" xmlns:xlink="https://www.w3.org/1999/xlink"/>')
         pear = @doc.create_element('pear')
         bosc = @doc.create_element('bosc')
         pear.add_child(bosc)
@@ -13,7 +13,7 @@ module Nokogiri
         @doc.root.add_child('<orange/>')
         carrot = @doc.create_element('veg:carrot')
         @doc.root << carrot
-        cheese = @doc.create_element('cheese', :xmlns => 'ns:dairy', :'xlink:href' => 'http://example.com/cheese/')
+        cheese = @doc.create_element('cheese', :xmlns => 'ns:dairy', :'xlink:href' => 'https://example.com/cheese/')
         carrot << cheese
         bacon = @doc.create_element('meat:bacon', :'xmlns:meat' => 'ns:meat')
         apple = @doc.create_element('apple')
@@ -45,7 +45,7 @@ module Nokogiri
         assert_equal 'ns:dairy', check_namespace(@doc.root.elements[2].elements[0])
       end
       def test_created_nondefault_attr_ns
-        assert_equal 'http://www.w3.org/1999/xlink', 
+        assert_equal 'https://www.w3.org/1999/xlink', 
           check_namespace(@doc.root.elements[2].elements[0].attribute_nodes.find { |a| a.name =~ /href/ })
       end
       def test_created_single_decl_ns_2
@@ -65,10 +65,10 @@ module Nokogiri
       end
 
       def test_created_namespaced_attribute_on_unparented_node
-        doc = Nokogiri::XML('<root xmlns:foo="http://foo.io"/>')
+        doc = Nokogiri::XML('<root xmlns:foo="https://foo.io"/>')
         node = @doc.create_element('obj', 'foo:attr' => 'baz')
         doc.root.add_child(node)
-        assert_equal 'http://foo.io', doc.root.children.first.attribute_nodes.first.namespace.href
+        assert_equal 'https://foo.io', doc.root.children.first.attribute_nodes.first.namespace.href
       end
     end
   end

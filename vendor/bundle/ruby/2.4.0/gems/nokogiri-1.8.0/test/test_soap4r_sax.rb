@@ -46,7 +46,7 @@ class TestSoap4rSax < Nokogiri::TestCase
         @element_started = true
       end
     end.new 'foo'
-    o.do_parse '<?xml version="1.0" ?><root xmlns="http://example.com/"/>'
+    o.do_parse '<?xml version="1.0" ?><root xmlns="https://example.com/"/>'
     assert o.element_started, 'element started'
   end
 end

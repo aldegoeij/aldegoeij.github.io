@@ -1,7 +1,7 @@
 require 'test_helper'
 
 # thanks to Masao's String extensions, some tests taken from Masao's tests
-# http://github.com/mutoh/gettext/blob/edbbe1fa8238fa12c7f26f2418403015f0270e47/test/test_string.rb
+# https://github.com/mutoh/gettext/blob/edbbe1fa8238fa12c7f26f2418403015f0270e47/test/test_string.rb
 
 class I18nInterpolateTest < I18n::TestCase
   test "String interpolates a hash argument w/ named placeholders" do

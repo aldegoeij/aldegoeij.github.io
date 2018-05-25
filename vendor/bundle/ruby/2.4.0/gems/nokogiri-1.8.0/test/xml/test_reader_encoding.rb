@@ -31,7 +31,7 @@ module Nokogiri
 
       def test_attribute
         xml = <<-eoxml
-          <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+          <x xmlns:tenderlove='https://tenderlovemaking.com/'>
             <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>
           </x>
         eoxml
@@ -76,7 +76,7 @@ module Nokogiri
 
       def test_prefix
         xml = <<-eoxml
-          <x xmlns:edi='http://ecommerce.example.org/schema'>
+          <x xmlns:edi='https://ecommerce.example.org/schema'>
             <edi:foo>hello</edi:foo>
           </x>
         eoxml
@@ -89,7 +89,7 @@ module Nokogiri
 
       def test_ns_uri
         xml = <<-eoxml
-          <x xmlns:edi='http://ecommerce.example.org/schema'>
+          <x xmlns:edi='https://ecommerce.example.org/schema'>
             <edi:foo>hello</edi:foo>
           </x>
         eoxml
@@ -102,7 +102,7 @@ module Nokogiri
 
       def test_local_name
         xml = <<-eoxml
-          <x xmlns:edi='http://ecommerce.example.org/schema'>
+          <x xmlns:edi='https://ecommerce.example.org/schema'>
             <edi:foo>hello</edi:foo>
           </x>
         eoxml

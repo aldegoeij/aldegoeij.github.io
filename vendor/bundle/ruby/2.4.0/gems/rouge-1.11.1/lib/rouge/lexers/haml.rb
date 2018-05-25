@@ -3,7 +3,7 @@
 module Rouge
   module Lexers
     # A lexer for the Haml templating system for Ruby.
-    # @see http://haml.info
+    # @see https://haml.info
     class Haml < RegexLexer
       include Indentation
 

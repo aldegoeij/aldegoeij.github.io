@@ -740,7 +740,7 @@ module Sass::Script
     # Creates a {Sass::Script::Value::Color Color} from hue, saturation, and
     # lightness values. Uses the algorithm from the [CSS3 spec][].
     #
-    # [CSS3 spec]: http://www.w3.org/TR/css3-color/#hsl-color
+    # [CSS3 spec]: https://www.w3.org/TR/css3-color/#hsl-color
     #
     # @see #hsla
     # @overload hsl($hue, $saturation, $lightness)
@@ -766,7 +766,7 @@ module Sass::Script
     # saturation, lightness, and alpha values. Uses the algorithm from
     # the [CSS3 spec][].
     #
-    # [CSS3 spec]: http://www.w3.org/TR/css3-color/#hsl-color
+    # [CSS3 spec]: https://www.w3.org/TR/css3-color/#hsl-color
     #
     # @see #hsl
     # @overload hsla($hue, $saturation, $lightness, $alpha)
@@ -807,7 +807,7 @@ module Sass::Script
     # Gets the red component of a color. Calculated from HSL where necessary via
     # [this algorithm][hsl-to-rgb].
     #
-    # [hsl-to-rgb]: http://www.w3.org/TR/css3-color/#hsl-color
+    # [hsl-to-rgb]: https://www.w3.org/TR/css3-color/#hsl-color
     #
     # @overload red($color)
     #   @param $color [Sass::Script::Value::Color]
@@ -823,7 +823,7 @@ module Sass::Script
     # Gets the green component of a color. Calculated from HSL where necessary
     # via [this algorithm][hsl-to-rgb].
     #
-    # [hsl-to-rgb]: http://www.w3.org/TR/css3-color/#hsl-color
+    # [hsl-to-rgb]: https://www.w3.org/TR/css3-color/#hsl-color
     #
     # @overload green($color)
     #   @param $color [Sass::Script::Value::Color]
@@ -839,7 +839,7 @@ module Sass::Script
     # Gets the blue component of a color. Calculated from HSL where necessary
     # via [this algorithm][hsl-to-rgb].
     #
-    # [hsl-to-rgb]: http://www.w3.org/TR/css3-color/#hsl-color
+    # [hsl-to-rgb]: https://www.w3.org/TR/css3-color/#hsl-color
     #
     # @overload blue($color)
     #   @param $color [Sass::Script::Value::Color]
@@ -856,8 +856,8 @@ module Sass::Script
     # specification][hsl]. Calculated from RGB where necessary via [this
     # algorithm][rgb-to-hsl].
     #
-    # [hsl]: http://en.wikipedia.org/wiki/HSL_and_HSV#Conversion_from_RGB_to_HSL_or_HSV
-    # [rgb-to-hsl]: http://en.wikipedia.org/wiki/HSL_and_HSV#Conversion_from_RGB_to_HSL_or_HSV
+    # [hsl]: https://en.wikipedia.org/wiki/HSL_and_HSV#Conversion_from_RGB_to_HSL_or_HSV
+    # [rgb-to-hsl]: https://en.wikipedia.org/wiki/HSL_and_HSV#Conversion_from_RGB_to_HSL_or_HSV
     #
     # @overload hue($color)
     #   @param $color [Sass::Script::Value::Color]
@@ -874,8 +874,8 @@ module Sass::Script
     # specification][hsl]. Calculated from RGB where necessary via [this
     # algorithm][rgb-to-hsl].
     #
-    # [hsl]: http://en.wikipedia.org/wiki/HSL_and_HSV#Conversion_from_RGB_to_HSL_or_HSV
-    # [rgb-to-hsl]: http://en.wikipedia.org/wiki/HSL_and_HSV#Conversion_from_RGB_to_HSL_or_HSV
+    # [hsl]: https://en.wikipedia.org/wiki/HSL_and_HSV#Conversion_from_RGB_to_HSL_or_HSV
+    # [rgb-to-hsl]: https://en.wikipedia.org/wiki/HSL_and_HSV#Conversion_from_RGB_to_HSL_or_HSV
     #
     # @overload saturation($color)
     #   @param $color [Sass::Script::Value::Color]
@@ -892,8 +892,8 @@ module Sass::Script
     # specification][hsl]. Calculated from RGB where necessary via [this
     # algorithm][rgb-to-hsl].
     #
-    # [hsl]: http://en.wikipedia.org/wiki/HSL_and_HSV#Conversion_from_RGB_to_HSL_or_HSV
-    # [rgb-to-hsl]: http://en.wikipedia.org/wiki/HSL_and_HSV#Conversion_from_RGB_to_HSL_or_HSV
+    # [hsl]: https://en.wikipedia.org/wiki/HSL_and_HSV#Conversion_from_RGB_to_HSL_or_HSV
+    # [rgb-to-hsl]: https://en.wikipedia.org/wiki/HSL_and_HSV#Conversion_from_RGB_to_HSL_or_HSV
     #
     # @overload lightness($color)
     #   @param $color [Sass::Script::Value::Color]
@@ -1668,7 +1668,7 @@ MESSAGE
     # * `units-level-3` indicates full support for unit arithmetic using units
     #   defined in the [Values and Units Level 3][] spec.
     #
-    # [Values and Units Level 3]: http://www.w3.org/TR/css3-values/
+    # [Values and Units Level 3]: https://www.w3.org/TR/css3-values/
     #
     # * `at-error` indicates that the Sass `@error` directive is supported.
     #
@@ -2398,7 +2398,7 @@ WARNING
     declare :call, [:name], :var_args => true, :var_kwargs => true
 
     # This function only exists as a workaround for IE7's [`content:
-    # counter` bug](http://jes.st/2013/ie7s-css-breaking-content-counter-bug/).
+    # counter` bug](https://jes.st/2013/ie7s-css-breaking-content-counter-bug/).
     # It works identically to any other plain-CSS function, except it
     # avoids adding spaces between the argument commas.
     #
@@ -2412,7 +2412,7 @@ WARNING
     declare :counter, [], :var_args => true
 
     # This function only exists as a workaround for IE7's [`content:
-    # counter` bug](http://jes.st/2013/ie7s-css-breaking-content-counter-bug/).
+    # counter` bug](https://jes.st/2013/ie7s-css-breaking-content-counter-bug/).
     # It works identically to any other plain-CSS function, except it
     # avoids adding spaces between the argument commas.
     #
@@ -2793,11 +2793,11 @@ WARNING
     declare :selector_unify, [:selector1, :selector2]
 
     # Returns the [simple
-    # selectors](http://dev.w3.org/csswg/selectors4/#simple) that
+    # selectors](https://dev.w3.org/csswg/selectors4/#simple) that
     # comprise the compound selector `$selector`.
     #
     # Note that `$selector` **must be** a [compound
-    # selector](http://dev.w3.org/csswg/selectors4/#compound). That
+    # selector](https://dev.w3.org/csswg/selectors4/#compound). That
     # means it cannot contain commas or spaces. It also means that
     # unlike other selector functions, this takes only strings, not
     # lists.

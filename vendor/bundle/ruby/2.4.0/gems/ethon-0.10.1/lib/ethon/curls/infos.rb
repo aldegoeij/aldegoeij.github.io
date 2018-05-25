@@ -20,7 +20,7 @@ module Ethon
         }
       end
 
-      # http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTDEBUGFUNCTION
+      # https://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTDEBUGFUNCTION
       # https://github.com/bagder/curl/blob/master/include/curl/curl.h#L378
       #
       # @example Return debug info types.

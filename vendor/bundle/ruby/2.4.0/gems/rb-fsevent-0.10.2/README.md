@@ -241,8 +241,8 @@ If the gem is re-compiled with the environment variable FWDEBUG set, then fseven
 
 ## Development
 
-* Source hosted at [GitHub](http://github.com/thibaudgg/rb-fsevent)
-* Report issues/Questions/Feature requests on [GitHub Issues](http://github.com/thibaudgg/rb-fsevent/issues)
+* Source hosted at [GitHub](https://github.com/thibaudgg/rb-fsevent)
+* Report issues/Questions/Feature requests on [GitHub Issues](https://github.com/thibaudgg/rb-fsevent/issues)
 
 Pull requests are quite welcome! Please ensure that your commits are in a topic branch for each individual changeset that can be reasonably isolated. It is also important to ensure that your changes are well tested... whether that means new tests, modified tests, or fixing a scenario where the existing tests currently fail. If you have rbenv and ruby-build, we have a helper task for running the testsuite in all of them:
 
@@ -254,6 +254,6 @@ The list of tested targets is currently:
 
 ## Authors
 
-* [Travis Tilley](http://github.com/ttilley)
-* [Thibaud Guillaume-Gentil](http://github.com/thibaudgg)
+* [Travis Tilley](https://github.com/ttilley)
+* [Thibaud Guillaume-Gentil](https://github.com/thibaudgg)
 * [Andrey Tarantsov](https://github.com/andreyvit)

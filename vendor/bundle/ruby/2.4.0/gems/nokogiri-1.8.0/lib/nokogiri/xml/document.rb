@@ -10,7 +10,7 @@ module Nokogiri
     #
     class Document < Nokogiri::XML::Node
       # I'm ignoring unicode characters here.
-      # See http://www.w3.org/TR/REC-xml-names/#ns-decl for more details.
+      # See https://www.w3.org/TR/REC-xml-names/#ns-decl for more details.
       NCNAME_START_CHAR = "A-Za-z_"
       NCNAME_CHAR       = NCNAME_START_CHAR + "\\-.0-9"
       NCNAME_RE         = /^xmlns(:[#{NCNAME_START_CHAR}][#{NCNAME_CHAR}]*)?$/

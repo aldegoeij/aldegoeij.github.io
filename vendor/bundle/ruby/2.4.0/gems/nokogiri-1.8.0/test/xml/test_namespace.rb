@@ -6,7 +6,7 @@ module Nokogiri
       def setup
         super
         @xml = Nokogiri::XML <<-eoxml
-          <root xmlns="http://tenderlovemaking.com/" xmlns:foo="bar">
+          <root xmlns="https://tenderlovemaking.com/" xmlns:foo="bar">
             <awesome/>
           </root>
         eoxml
@@ -46,7 +46,7 @@ module Nokogiri
       def test_namespace_node_href
         namespaces = @xml.root.namespace_definitions
         assert_equal [
-          'http://tenderlovemaking.com/',
+          'https://tenderlovemaking.com/',
           'bar'
         ], namespaces.map(&:href)
       end

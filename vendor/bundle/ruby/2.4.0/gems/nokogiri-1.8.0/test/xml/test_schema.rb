@@ -16,7 +16,7 @@ module Nokogiri
 
       def test_invalid_schema_do_not_raise_exceptions
         xsd = Nokogiri::XML::Schema.new <<EOF
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">
 	<xs:group name="foo1">
 		<xs:sequence>
 			<xs:element name="bar" type="xs:boolean" />

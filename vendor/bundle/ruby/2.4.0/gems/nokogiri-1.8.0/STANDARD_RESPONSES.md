@@ -24,7 +24,7 @@ Please provide us with:
   platform and versions of ruby, libxml2 and nokogiri.
 
 For more information about requesting help or reporting bugs, please
-take a look at http://bit.ly/nokohelp
+take a look at https://bit.ly/nokohelp
 
 Thank you so much!
 
@@ -42,6 +42,6 @@ Nokogiri promises someone will provide you with an answer in a timely
 manner.
 
 If you'd like to read up on Team Nokogiri's rationale for this policy,
-please go to http://bit.ly/nokohelp.
+please go to https://bit.ly/nokohelp.
 
 Thank you so much for understanding! And thank you for using Nokogiri.

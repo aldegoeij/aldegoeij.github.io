@@ -4,7 +4,7 @@ module Rouge
   module Lexers
     class LLVM < RegexLexer
       title "LLVM"
-      desc 'The LLVM Compiler Infrastructure (http://llvm.org/)'
+      desc 'The LLVM Compiler Infrastructure (https://llvm.org/)'
       tag 'llvm'
 
       filenames '*.ll'

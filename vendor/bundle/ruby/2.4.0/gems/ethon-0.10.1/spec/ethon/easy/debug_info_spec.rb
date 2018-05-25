@@ -4,7 +4,7 @@ describe Ethon::Easy::DebugInfo do
   let(:easy) { Ethon::Easy.new }
 
   before do
-    easy.url = "http://localhost:3001/"
+    easy.url = "https://localhost:3001/"
     easy.perform
   end
 

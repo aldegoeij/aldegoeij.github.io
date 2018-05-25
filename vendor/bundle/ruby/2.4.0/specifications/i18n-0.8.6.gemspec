@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.date = "2017-07-10"
   s.description = "New wave Internationalization support for Ruby.".freeze
   s.email = "rails-i18n@googlegroups.com".freeze
-  s.homepage = "http://github.com/svenfuchs/i18n".freeze
+  s.homepage = "https://github.com/svenfuchs/i18n".freeze
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 1.9.3".freeze)
   s.rubyforge_project = "[none]".freeze

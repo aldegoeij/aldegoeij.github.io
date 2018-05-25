@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.date = "2015-04-06"
   s.description = "    Ruby CoffeeScript is a bridge to the JS CoffeeScript compiler.\n".freeze
   s.email = "josh@joshpeek.com".freeze
-  s.homepage = "http://github.com/josh/ruby-coffee-script".freeze
+  s.homepage = "https://github.com/josh/ruby-coffee-script".freeze
   s.licenses = ["MIT".freeze]
   s.rubygems_version = "2.6.11".freeze
   s.summary = "Ruby CoffeeScript Compiler".freeze

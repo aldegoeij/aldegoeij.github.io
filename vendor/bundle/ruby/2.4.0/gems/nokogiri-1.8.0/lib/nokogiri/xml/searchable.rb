@@ -21,8 +21,8 @@ module Nokogiri
       #
       # A hash of namespace bindings may be appended:
       #
-      #   node.search('.//bike:tire', {'bike' => 'http://schwinn.com/'})
-      #   node.search('bike|tire', {'bike' => 'http://schwinn.com/'})
+      #   node.search('.//bike:tire', {'bike' => 'https://schwinn.com/'})
+      #   node.search('bike|tire', {'bike' => 'https://schwinn.com/'})
       #
       # For XPath queries, a hash of variable bindings may also be
       # appended to the namespace bindings. For example:
@@ -80,7 +80,7 @@ module Nokogiri
       #
       # A hash of namespace bindings may be appended. For example:
       #
-      #   node.css('bike|tire', {'bike' => 'http://schwinn.com/'})
+      #   node.css('bike|tire', {'bike' => 'https://schwinn.com/'})
       #
       # Custom CSS pseudo classes may also be defined.  To define
       # custom pseudo classes, create a class and implement the custom
@@ -128,7 +128,7 @@ module Nokogiri
       #
       # A hash of namespace bindings may be appended. For example:
       #
-      #   node.xpath('.//foo:name', {'foo' => 'http://example.org/'})
+      #   node.xpath('.//foo:name', {'foo' => 'https://example.org/'})
       #   node.xpath('.//xmlns:name', node.root.namespaces)
       #
       # A hash of variable bindings may also be appended to the namespace bindings. For example:

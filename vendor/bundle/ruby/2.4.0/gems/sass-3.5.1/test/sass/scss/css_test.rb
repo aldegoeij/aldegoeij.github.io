@@ -80,7 +80,7 @@ SCSS
   end
 
   def test_crazy_comments
-    # http://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/t040109-c17-comments-00-b.xht
+    # https://www.w3.org/Style/CSS/Test/CSS2.1/current/xhtml1/t040109-c17-comments-00-b.xht
     assert_equal <<CSS, render(<<SCSS)
 /* This is a CSS comment. */
 .one {
@@ -277,7 +277,7 @@ foo {
   c: 50%;
   d: "fraz bran";
   e: flanny-blanny-blan;
-  f: url(http://sass-lang.com);
+  f: url(https://sass-lang.com);
   g: U+ffa?;
   h: #aabbcc; }
 SCSS
@@ -447,9 +447,9 @@ SCSS
   ## Directives
 
   def test_namespace_directive
-    assert_parses '@namespace "http://www.w3.org/Profiles/xhtml1-strict";'
-    assert_parses '@namespace url(http://www.w3.org/Profiles/xhtml1-strict);'
-    assert_parses '@namespace html url("http://www.w3.org/Profiles/xhtml1-strict");'
+    assert_parses '@namespace "https://www.w3.org/Profiles/xhtml1-strict";'
+    assert_parses '@namespace url(https://www.w3.org/Profiles/xhtml1-strict);'
+    assert_parses '@namespace html url("https://www.w3.org/Profiles/xhtml1-strict");'
   end
 
   def test_media_directive
@@ -601,15 +601,15 @@ SCSS
 
   def test_moz_document_directive
     assert_equal <<CSS, render(<<SCSS)
-@-moz-document url(http://www.w3.org/),
-               url-prefix(http://www.w3.org/Style/),
+@-moz-document url(https://www.w3.org/),
+               url-prefix(https://www.w3.org/Style/),
                domain(mozilla.org),
                regexp("^https:.*") {
   .foo {
     a: b; } }
 CSS
-@-moz-document url(http://www.w3.org/),
-               url-prefix(http://www.w3.org/Style/),
+@-moz-document url(https://www.w3.org/),
+               url-prefix(https://www.w3.org/Style/),
                domain(mozilla.org),
                regexp("^https:.*") {
   .foo {a: b}
@@ -737,7 +737,7 @@ SCSS
 
   ## Selectors
 
-  # Taken from http://dev.w3.org/csswg/selectors4/#overview
+  # Taken from https://dev.w3.org/csswg/selectors4/#overview
   def test_summarized_selectors_with_element
     assert_selector_parses('*')
     assert_selector_parses('E')
@@ -809,12 +809,12 @@ SCSS
 
     silence_warnings {assert_selector_parses('E /ns|foo/ F')}
 
-    # From http://dev.w3.org/csswg/css-scoping-1/
+    # From https://dev.w3.org/csswg/css-scoping-1/
     assert_selector_parses('E:host(s)')
     assert_selector_parses('E:host-context(s)')
   end
 
-  # Taken from http://dev.w3.org/csswg/selectors4/#overview, but without element
+  # Taken from https://dev.w3.org/csswg/selectors4/#overview, but without element
   # names.
   def test_more_summarized_selectors
     assert_selector_parses(':not(s)')
@@ -877,7 +877,7 @@ SCSS
     assert_selector_parses(':nth-child(n)')
     assert_selector_parses(':nth-last-child(n)')
 
-    # From http://dev.w3.org/csswg/css-scoping-1/
+    # From https://dev.w3.org/csswg/css-scoping-1/
     assert_selector_parses(':host(s)')
     assert_selector_parses(':host-context(s)')
   end

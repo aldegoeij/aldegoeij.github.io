@@ -483,7 +483,7 @@ module Sass::Script::Value
     # it efficient to figure out whether a set of units is mutually compatible
     # and what the conversion ratio is between two units.
     #
-    # These come from http://www.w3.org/TR/2012/WD-css3-values-20120308/.
+    # These come from https://www.w3.org/TR/2012/WD-css3-values-20120308/.
     relative_sizes = [
       {
         'in' => Rational(1),

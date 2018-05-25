@@ -1,6 +1,6 @@
 /**
  * CoffeeScript Compiler v1.12.2
- * http://coffeescript.org
+ * https://coffeescript.org
  *
  * Copyright 2011, Jeremy Ashkenas
  * Released under the MIT License
@@ -43,7 +43,7 @@
     "test": "node ./bin/cake test",
     "test-harmony": "node --harmony ./bin/cake test"
   },
-  "homepage": "http://coffeescript.org",
+  "homepage": "https://coffeescript.org",
   "bugs": "https://github.com/jashkenas/coffeescript/issues",
   "repository": {
     "type": "git",

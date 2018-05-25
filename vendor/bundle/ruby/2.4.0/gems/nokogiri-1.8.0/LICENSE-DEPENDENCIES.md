@@ -26,7 +26,7 @@ present in any non-Windows releases.
 
 MIT
 
-http://xmlsoft.org/
+https://xmlsoft.org/
 
     Except where otherwise noted in the source code (e.g. the files hash.c,
     list.c and the trio files, which are covered by a similar licence but
@@ -57,7 +57,7 @@ http://xmlsoft.org/
 
 MIT
 
-http://xmlsoft.org/libxslt/
+https://xmlsoft.org/libxslt/
 
     Licence for libxslt except libexslt
     ----------------------------------------------------------------------
@@ -119,7 +119,7 @@ http://xmlsoft.org/libxslt/
 
 MIT
 
-http://iso-relax.sourceforge.net/
+https://iso-relax.sourceforge.net/
 
     Copyright (c) 2001-2002, SourceForge ISO-RELAX Project (ASAMI
     Tomoharu, Daisuke Okajima, Kohsuke Kawaguchi, and MURATA Makoto)
@@ -148,7 +148,7 @@ http://iso-relax.sourceforge.net/
 
 BSD-3-Clause
 
-http://www.thaiopensource.com/relaxng/jing.html
+https://www.thaiopensource.com/relaxng/jing.html
 
     Copyright (c) 2001-2003 Thai Open Source Software Center Ltd
     All rights reserved.
@@ -242,12 +242,12 @@ https://people.apache.org/~andyc/neko/doc/dtd/
 
 Apache 2.0
 
-http://nekohtml.sourceforge.net/
+https://nekohtml.sourceforge.net/
 
     
                                      Apache License
                                Version 2.0, January 2004
-                            http://www.apache.org/licenses/
+                            https://www.apache.org/licenses/
     
        TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
     
@@ -439,7 +439,7 @@ http://nekohtml.sourceforge.net/
        you may not use this file except in compliance with the License.
        You may obtain a copy of the License at
     
-           http://www.apache.org/licenses/LICENSE-2.0
+           https://www.apache.org/licenses/LICENSE-2.0
     
        Unless required by applicable law or agreed to in writing, software
        distributed under the License is distributed on an "AS IS" BASIS,
@@ -457,7 +457,7 @@ covers xalan.jar and serializer.jar
 
                                     Apache License
                                Version 2.0, January 2004
-                            http://www.apache.org/licenses/
+                            https://www.apache.org/licenses/
     
        TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
     
@@ -649,7 +649,7 @@ covers xalan.jar and serializer.jar
        you may not use this file except in compliance with the License.
        You may obtain a copy of the License at
     
-           http://www.apache.org/licenses/LICENSE-2.0
+           https://www.apache.org/licenses/LICENSE-2.0
     
        Unless required by applicable law or agreed to in writing, software
        distributed under the License is distributed on an "AS IS" BASIS,
@@ -667,7 +667,7 @@ https://xerces.apache.org/xerces2-j/
     
                                      Apache License
                                Version 2.0, January 2004
-                            http://www.apache.org/licenses/
+                            https://www.apache.org/licenses/
     
        TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
     
@@ -859,7 +859,7 @@ https://xerces.apache.org/xerces2-j/
        you may not use this file except in compliance with the License.
        You may obtain a copy of the License at
     
-           http://www.apache.org/licenses/LICENSE-2.0
+           https://www.apache.org/licenses/LICENSE-2.0
     
        Unless required by applicable law or agreed to in writing, software
        distributed under the License is distributed on an "AS IS" BASIS,
@@ -887,7 +887,7 @@ https://xerces.apache.org/xml-commons/
     
                                      Apache License
                                Version 2.0, January 2004
-                            http://www.apache.org/licenses/
+                            https://www.apache.org/licenses/
     
        TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
     
@@ -1079,7 +1079,7 @@ https://xerces.apache.org/xml-commons/
        you may not use this file except in compliance with the License.
        You may obtain a copy of the License at
     
-           http://www.apache.org/licenses/LICENSE-2.0
+           https://www.apache.org/licenses/LICENSE-2.0
     
        Unless required by applicable law or agreed to in writing, software
        distributed under the License is distributed on an "AS IS" BASIS,
@@ -1098,7 +1098,7 @@ and x64-mingw32.
 
 zlib license
 
-http://www.zlib.net/zlib_license.html
+https://www.zlib.net/zlib_license.html
 
       Copyright (C) 1995-2017 Jean-loup Gailly and Mark Adler
     

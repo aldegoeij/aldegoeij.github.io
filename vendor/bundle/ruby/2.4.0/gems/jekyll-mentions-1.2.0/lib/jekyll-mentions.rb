@@ -87,7 +87,7 @@ module Jekyll
 
       def default_mention_base
         if !ENV["SSL"].to_s.empty? && !ENV["GITHUB_HOSTNAME"].to_s.empty?
-          scheme = ENV["SSL"] == "true" ? "https://" : "http://"
+          scheme = ENV["SSL"] == "true" ? "https://" : "https://"
           "#{scheme}#{ENV["GITHUB_HOSTNAME"].chomp("/")}"
         else
           GITHUB_DOT_COM

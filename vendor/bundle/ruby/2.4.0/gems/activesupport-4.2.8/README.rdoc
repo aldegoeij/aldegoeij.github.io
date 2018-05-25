@@ -21,14 +21,14 @@ Source code can be downloaded as part of the Rails project on GitHub:
 
 Active Support is released under the MIT license:
 
-* http://www.opensource.org/licenses/MIT
+* https://www.opensource.org/licenses/MIT
 
 
 == Support
 
 API documentation is at:
 
-* http://api.rubyonrails.org
+* https://api.rubyonrails.org
 
 Bug reports can be filed for the Ruby on Rails project here:
 

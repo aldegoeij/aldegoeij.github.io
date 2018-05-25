@@ -19,7 +19,7 @@
 # * output formats: HTML, kramdown, LaTeX (and therefore PDF), PDF via Prawn
 #
 # All the documentation on the available input and output formats is available at
-# http://kramdown.gettalong.org.
+# https://kramdown.gettalong.org.
 #
 # == Usage
 #

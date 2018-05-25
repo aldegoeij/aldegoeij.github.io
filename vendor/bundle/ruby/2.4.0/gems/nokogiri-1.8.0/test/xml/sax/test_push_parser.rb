@@ -52,10 +52,10 @@ module Nokogiri
 
         def test_start_element_with_namespaces
           @parser.<<(<<-eoxml)
-            <p xmlns:foo="http://foo.example.com/">
+            <p xmlns:foo="https://foo.example.com/">
           eoxml
 
-          assert_equal [["p", [["xmlns:foo", "http://foo.example.com/"]]]],
+          assert_equal [["p", [["xmlns:foo", "https://foo.example.com/"]]]],
             @parser.document.start_elements
 
           @parser.<<(<<-eoxml)
@@ -69,7 +69,7 @@ module Nokogiri
 
         def test_start_element_ns
           @parser.<<(<<-eoxml)
-            <stream:stream xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams' version='1.0' size='large'></stream:stream>
+            <stream:stream xmlns='jabber:client' xmlns:stream='https://etherx.jabber.org/streams' version='1.0' size='large'></stream:stream>
           eoxml
 
           assert_equal 1, @parser.document.start_elements_namespace.length
@@ -81,16 +81,16 @@ module Nokogiri
             el[1].map { |x| [x.localname, x.value] }
 
           assert_equal 'stream', el[2]
-          assert_equal 'http://etherx.jabber.org/streams', el[3]
+          assert_equal 'https://etherx.jabber.org/streams', el[3]
           @parser.finish
         end
 
         def test_end_element_ns
           @parser.<<(<<-eoxml)
-            <stream:stream xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams' version='1.0'></stream:stream>
+            <stream:stream xmlns='jabber:client' xmlns:stream='https://etherx.jabber.org/streams' version='1.0'></stream:stream>
           eoxml
 
-          assert_equal [['stream', 'stream', 'http://etherx.jabber.org/streams']],
+          assert_equal [['stream', 'stream', 'https://etherx.jabber.org/streams']],
             @parser.document.end_elements_namespace
           @parser.finish
         end

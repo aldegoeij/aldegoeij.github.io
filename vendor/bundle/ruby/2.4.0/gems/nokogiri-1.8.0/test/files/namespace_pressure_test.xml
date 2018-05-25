@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_40lQMS73EeS1AYtvYpBbmA" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns="https://www.omg.org/bpmn20" xmlns:bpmn2="https://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="https://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="https://www.omg.org/spec/DD/20100524/DC" xmlns:di="https://www.omg.org/spec/DD/20100524/DI" xmlns:drools="https://www.jboss.org/drools" id="_40lQMS73EeS1AYtvYpBbmA" xsi:schemaLocation="https://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd https://www.jboss.org/drools drools.xsd" targetNamespace="https://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="__7A0D6B74-FB75-4981-B072-0A5131A2CE6E_toInputItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__7A0D6B74-FB75-4981-B072-0A5131A2CE6E_subjectInputItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__7A0D6B74-FB75-4981-B072-0A5131A2CE6E_bodyInputItem" structureRef="String"/>
@@ -24,7 +24,7 @@
         </drools:metaentry>
         <drools:metaentry>
           <drools:name>targetnamespace</drools:name>
-          <drools:value>http://www.omg.org/bpmn20</drools:value>
+          <drools:value>https://www.omg.org/bpmn20</drools:value>
         </drools:metaentry>
         <drools:metaentry>
           <drools:name>resourceId</drools:name>
@@ -32,11 +32,11 @@
         </drools:metaentry>
         <drools:metaentry>
           <drools:name>typelanguage</drools:name>
-          <drools:value>http://www.w3.org/2001/XMLSchema</drools:value>
+          <drools:value>https://www.w3.org/2001/XMLSchema</drools:value>
         </drools:metaentry>
         <drools:metaentry>
           <drools:name>expressionlanguage</drools:name>
-          <drools:value>http://www.w3.org/1999/XPath</drools:value>
+          <drools:value>https://www.w3.org/1999/XPath</drools:value>
         </drools:metaentry>
         <drools:metaentry>
           <drools:name>adhocprocess</drools:name>
@@ -167,7 +167,7 @@
 "typeName": "ns00019781845762014694http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}},
 "context": "null",
 "isValidated": "false",
@@ -175,7 +175,7 @@
 "typeName": "ns00019781845762014694http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}, 
 {
 "initData": {
@@ -200,7 +200,7 @@
 "typeName": "ns00019781845762014694http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}},
 "context": "null",
 "isValidated": "false",
@@ -208,7 +208,7 @@
 "typeName": "ns00019781845762014694http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}, 
 {
 "initData": {
@@ -233,7 +233,7 @@
 "typeName": "ns00019781845762014694http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}},
 "context": "null",
 "isValidated": "false",
@@ -241,7 +241,7 @@
 "typeName": "ns00019781845762014694http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}]
 },
 "context": "null",
@@ -250,7 +250,7 @@
 "typeName": "ns00019781845762014694http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}]
 }]
 ]]></drools:value>
@@ -470,7 +470,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}},
 "context": "null",
 "isValidated": "false",
@@ -478,7 +478,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}, 
 {
 "initData": {
@@ -503,7 +503,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}},
 "context": "null",
 "isValidated": "false",
@@ -511,7 +511,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}, 
 {
 "initData": {
@@ -536,7 +536,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}},
 "context": "null",
 "isValidated": "false",
@@ -544,7 +544,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}, 
 {
 "initData": {
@@ -569,7 +569,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}},
 "context": "null",
 "isValidated": "false",
@@ -577,7 +577,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}, 
 {
 "initData": {
@@ -602,7 +602,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}},
 "context": "null",
 "isValidated": "false",
@@ -610,7 +610,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}, 
 {
 "initData": {
@@ -635,7 +635,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}},
 "context": "null",
 "isValidated": "false",
@@ -643,7 +643,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}, 
 {
 "initData": {
@@ -668,7 +668,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}},
 "context": "null",
 "isValidated": "false",
@@ -676,7 +676,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}, 
 {
 "initData": {
@@ -701,7 +701,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}},
 "context": "null",
 "isValidated": "false",
@@ -709,7 +709,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}, 
 {
 "initData": {
@@ -734,7 +734,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}},
 "context": "null",
 "isValidated": "false",
@@ -742,7 +742,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}, 
 {
 "initData": {
@@ -767,7 +767,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}},
 "context": "null",
 "isValidated": "false",
@@ -775,7 +775,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}, 
 {
 "initData": {
@@ -800,7 +800,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}},
 "context": "null",
 "isValidated": "false",
@@ -808,7 +808,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}]
 },
 "context": "null",
@@ -817,7 +817,7 @@
 "typeName": "ns06429044451067909http___isoft_technology_de_odata_DPD_svc.com.isoft.dpd.model.DPDEntities",
 "args": {
 "name": "oData",
-"oDataServiceHost": "http://isoft-technology.de/odata/DPD.svc",
+"oDataServiceHost": "https://isoft-technology.de/odata/DPD.svc",
 "maxDataServiceVersion": "2.0"}}}]
 }]
 ]]></drools:value>
@@ -951,7 +951,7 @@
       <bpmn2:outgoing>_4054B828-4EB8-4340-B318-90CC78EB1209</bpmn2:outgoing>
     </bpmn2:callActivity>
     <bpmn2:sequenceFlow id="_E6F2E675-F1AB-4CE8-988F-845B9C345013" drools:bgcolor="#000000" drools:selectable="true" drools:probability1="99" drools:probability2="50" drools:repetition1="5" drools:repetition2="2" sourceRef="_D56D4095-0CB0-4E87-9A06-BF55B25904D1" targetRef="_AD18FADA-4FFD-4F01-8BA1-98F9AF578DDE">
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_40rW0C73EeS1AYtvYpBbmA" language="http://www.mvel.org/2.0"><![CDATA[data.b == 3]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_40rW0C73EeS1AYtvYpBbmA" language="https://www.mvel.org/2.0"><![CDATA[data.b == 3]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:exclusiveGateway id="_DC97D697-E940-4E48-8185-6BA92FA94418" drools:bgcolor="#f0e68c" drools:selectable="true" drools:bordercolor="#a67f00" drools:dg="" name="" gatewayDirection="Diverging">
       <bpmn2:incoming>_05393109-B58E-44C3-8BF2-00C4B2421310</bpmn2:incoming>
@@ -1073,7 +1073,7 @@
       <bpmn2:outgoing>_2C144E08-F30C-4F06-B84D-A9A848B7F99D</bpmn2:outgoing>
     </bpmn2:task>
     <bpmn2:sequenceFlow id="_4F965CA3-9A84-498F-A426-E5366BD31C5C" drools:bgcolor="#000000" drools:selectable="true" drools:probability1="80" drools:probability2="100" drools:repetition1="100" drools:repetition2="100" sourceRef="_DC97D697-E940-4E48-8185-6BA92FA94418" targetRef="_AE358313-9923-47D4-8D7F-2BD2DBD3C726">
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_40rW0S73EeS1AYtvYpBbmA" language="http://www.mvel.org/2.0"><![CDATA[true]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_40rW0S73EeS1AYtvYpBbmA" language="https://www.mvel.org/2.0"><![CDATA[true]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:exclusiveGateway id="_3627B530-52F6-4EFC-B9D1-FC3D28F7BC13" drools:bgcolor="#f0e68c" drools:selectable="true" drools:bordercolor="#a67f00" drools:dg="" name="" gatewayDirection="Converging">
       <bpmn2:incoming>_2C144E08-F30C-4F06-B84D-A9A848B7F99D</bpmn2:incoming>
@@ -1343,7 +1343,7 @@
       <bpmn2:outgoing>_9EF997A4-881E-401E-8D23-D4CC9317DFA9</bpmn2:outgoing>
     </bpmn2:task>
     <bpmn2:sequenceFlow id="_4D029375-58C1-40B9-ABFB-6984240DAF2A" drools:bgcolor="#000000" drools:selectable="true" drools:probability1="60" drools:probability2="40" drools:repetition1="3" drools:repetition2="5" sourceRef="_090E39D5-85C9-44D7-9BBC-0C3A91004BC0" targetRef="_60EE8970-2AC4-490C-9638-538EDF84F9F8">
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_40sk8C73EeS1AYtvYpBbmA" language="http://www.mvel.org/2.0"><![CDATA[true]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_40sk8C73EeS1AYtvYpBbmA" language="https://www.mvel.org/2.0"><![CDATA[true]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_9EF997A4-881E-401E-8D23-D4CC9317DFA9" drools:bgcolor="#000000" drools:selectable="true" drools:probability1="100" drools:probability2="100" drools:repetition1="100" drools:repetition2="100" sourceRef="_60EE8970-2AC4-490C-9638-538EDF84F9F8" targetRef="_090E39D5-85C9-44D7-9BBC-0C3A91004BC0"/>
   </bpmn2:process>

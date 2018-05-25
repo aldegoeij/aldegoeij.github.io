@@ -763,7 +763,7 @@ rbffi_Struct_Init(VALUE moduleFFI)
      *  my_struct = MyStruct.new
      *  my_struct[:value1] = 12
      *
-     * For more information, see http://github.com/ffi/ffi/wiki/Structs
+     * For more information, see https://github.com/ffi/ffi/wiki/Structs
      */
     rbffi_StructClass = rb_define_class_under(moduleFFI, "Struct", rb_cObject);
     StructClass = rbffi_StructClass; // put on a line alone to help RDoc

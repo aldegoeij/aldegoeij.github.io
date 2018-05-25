@@ -1,4 +1,4 @@
-<element name="addressBook" xmlns="http://relaxng.org/ns/structure/1.0">
+<element name="addressBook" xmlns="https://relaxng.org/ns/structure/1.0">
   <oneOrMore>
     <element name="card">
       <element name="name">

@@ -24,7 +24,7 @@ Once the gem is installed on your system, Jekyll will auto-require it. Just set 
 
 ## Contributing
 
-1. Fork it ( http://github.com/jekyll/jekyll-paginate/fork )
+1. Fork it ( https://github.com/jekyll/jekyll-paginate/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

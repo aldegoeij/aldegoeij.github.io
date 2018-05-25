@@ -29,6 +29,6 @@ about it
 </p>
 </script>
 
-<p><a href="http://example.com">http://example.com</a></p>
+<p><a href="https://example.com">https://example.com</a></p>
 
 <style> body > * { background-color: Red; } </style>

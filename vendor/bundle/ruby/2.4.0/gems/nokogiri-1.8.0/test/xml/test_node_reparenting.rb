@@ -190,17 +190,17 @@ module Nokogiri
               doc.root = item
 
               entry = Nokogiri::XML::Element.new('entry', doc)
-              entry.add_namespace('tlm', 'http://tenderlovemaking.com')
-              assert_equal 'http://tenderlovemaking.com', entry.namespaces['xmlns:tlm']
+              entry.add_namespace('tlm', 'https://tenderlovemaking.com')
+              assert_equal 'https://tenderlovemaking.com', entry.namespaces['xmlns:tlm']
               item.add_child(entry)
-              assert_equal 'http://tenderlovemaking.com', entry.namespaces['xmlns:tlm']
+              assert_equal 'https://tenderlovemaking.com', entry.namespaces['xmlns:tlm']
             end
           end
 
           describe "given a parent node with a default namespace" do
             before do
               @doc = Nokogiri::XML(<<-eoxml)
-                <root xmlns="http://tenderlovemaking.com/">
+                <root xmlns="https://tenderlovemaking.com/">
                   <first>
                   </first>
                 </root>
@@ -218,7 +218,7 @@ module Nokogiri
           describe "given a parent node with a default and non-default namespace" do
             before do
               @doc = Nokogiri::XML(<<-eoxml)
-                <root xmlns="http://tenderlovemaking.com/" xmlns:foo="http://flavorjon.es/">
+                <root xmlns="https://tenderlovemaking.com/" xmlns:foo="https://flavorjon.es/">
                   <first>
                   </first>
                 </root>
@@ -230,19 +230,19 @@ module Nokogiri
             describe "and a child with a namespace matching the parent's default namespace" do
               describe "and as the default prefix" do
                 before do
-                  @ns = @child.add_namespace(nil, 'http://tenderlovemaking.com/')
+                  @ns = @child.add_namespace(nil, 'https://tenderlovemaking.com/')
                   @child.namespace = @ns
                 end
 
                 it "inserts a node that inherits the parent's default namespace" do
                   @node.add_child(@child)
-                  assert reparented = @doc.at('//bar:second', "bar" => "http://tenderlovemaking.com/")
+                  assert reparented = @doc.at('//bar:second', "bar" => "https://tenderlovemaking.com/")
                   assert reparented.namespace_definitions.empty?
                   assert_equal @ns, reparented.namespace
                   assert_equal(
                     {
-                      "xmlns"     => "http://tenderlovemaking.com/",
-                      "xmlns:foo" => "http://flavorjon.es/",
+                      "xmlns"     => "https://tenderlovemaking.com/",
+                      "xmlns:foo" => "https://flavorjon.es/",
                     },
                     reparented.namespaces)
                 end
@@ -250,20 +250,20 @@ module Nokogiri
 
               describe "but with a different prefix" do
                 before do
-                  @ns = @child.add_namespace("baz", 'http://tenderlovemaking.com/')
+                  @ns = @child.add_namespace("baz", 'https://tenderlovemaking.com/')
                   @child.namespace = @ns
                 end
 
                 it "inserts a node that uses its own namespace" do
                   @node.add_child(@child)
-                  assert reparented = @doc.at('//bar:second', "bar" => "http://tenderlovemaking.com/")
+                  assert reparented = @doc.at('//bar:second', "bar" => "https://tenderlovemaking.com/")
                   assert reparented.namespace_definitions.include?(@ns)
                   assert_equal @ns, reparented.namespace
                   assert_equal(
                     {
-                      "xmlns"     => "http://tenderlovemaking.com/",
-                      "xmlns:foo" => "http://flavorjon.es/",
-                      "xmlns:baz" => "http://tenderlovemaking.com/",
+                      "xmlns"     => "https://tenderlovemaking.com/",
+                      "xmlns:foo" => "https://flavorjon.es/",
+                      "xmlns:baz" => "https://tenderlovemaking.com/",
                     },
                     reparented.namespaces)
                 end
@@ -279,13 +279,13 @@ module Nokogiri
 
                 it "inserts a node that inherits the matching parent namespace" do
                   @node.add_child(@child)
-                  assert reparented = @doc.at('//bar:second', "bar" => "http://flavorjon.es/")
+                  assert reparented = @doc.at('//bar:second', "bar" => "https://flavorjon.es/")
                   assert reparented.namespace_definitions.empty?
                   assert_equal @ns, reparented.namespace
                   assert_equal(
                     {
-                      "xmlns"     => "http://tenderlovemaking.com/",
-                      "xmlns:foo" => "http://flavorjon.es/",
+                      "xmlns"     => "https://tenderlovemaking.com/",
+                      "xmlns:foo" => "https://flavorjon.es/",
                     },
                     reparented.namespaces)
                 end
@@ -293,19 +293,19 @@ module Nokogiri
 
               describe "with the same prefix" do
                 before do
-                  @ns = @child.add_namespace("foo", 'http://flavorjon.es/')
+                  @ns = @child.add_namespace("foo", 'https://flavorjon.es/')
                   @child.namespace = @ns
                 end
 
                 it "inserts a node that uses the parent's namespace" do
                   @node.add_child(@child)
-                  assert reparented = @doc.at('//bar:second', "bar" => "http://flavorjon.es/")
+                  assert reparented = @doc.at('//bar:second', "bar" => "https://flavorjon.es/")
                   assert reparented.namespace_definitions.empty?
                   assert_equal @ns, reparented.namespace
                   assert_equal(
                     {
-                      "xmlns"     => "http://tenderlovemaking.com/",
-                      "xmlns:foo" => "http://flavorjon.es/",
+                      "xmlns"     => "https://tenderlovemaking.com/",
+                      "xmlns:foo" => "https://flavorjon.es/",
                     },
                     reparented.namespaces)
                 end
@@ -313,19 +313,19 @@ module Nokogiri
 
               describe "as the default prefix" do
                 before do
-                  @ns = @child.add_namespace(nil, 'http://flavorjon.es/')
+                  @ns = @child.add_namespace(nil, 'https://flavorjon.es/')
                   @child.namespace = @ns
                 end
 
                 it "inserts a node that keeps its namespace" do
                   @node.add_child(@child)
-                  assert reparented = @doc.at('//bar:second', "bar" => "http://flavorjon.es/")
+                  assert reparented = @doc.at('//bar:second', "bar" => "https://flavorjon.es/")
                   assert reparented.namespace_definitions.include?(@ns)
                   assert_equal @ns, reparented.namespace
                   assert_equal(
                     {
-                      "xmlns"     => "http://flavorjon.es/",
-                      "xmlns:foo" => "http://flavorjon.es/",
+                      "xmlns"     => "https://flavorjon.es/",
+                      "xmlns:foo" => "https://flavorjon.es/",
                     },
                     reparented.namespaces)
                 end
@@ -333,20 +333,20 @@ module Nokogiri
 
               describe "but with a different prefix" do
                 before do
-                  @ns = @child.add_namespace('baz', 'http://flavorjon.es/')
+                  @ns = @child.add_namespace('baz', 'https://flavorjon.es/')
                   @child.namespace = @ns
                 end
 
                 it "inserts a node that keeps its namespace" do
                   @node.add_child(@child)
-                  assert reparented = @doc.at('//bar:second', "bar" => "http://flavorjon.es/")
+                  assert reparented = @doc.at('//bar:second', "bar" => "https://flavorjon.es/")
                   assert reparented.namespace_definitions.include?(@ns)
                   assert_equal @ns, reparented.namespace
                   assert_equal(
                     {
-                      "xmlns"     =>"http://tenderlovemaking.com/",
-                      "xmlns:foo" =>"http://flavorjon.es/",
-                      "xmlns:baz" =>"http://flavorjon.es/",
+                      "xmlns"     =>"https://tenderlovemaking.com/",
+                      "xmlns:foo" =>"https://flavorjon.es/",
+                      "xmlns:baz" =>"https://flavorjon.es/",
                     },
                     reparented.namespaces)
                 end
@@ -355,22 +355,22 @@ module Nokogiri
 
             describe "and a child node with a default namespace not matching the parent's default namespace and a namespace matching a parent namespace but with a different prefix" do
               before do
-                @ns = @child.add_namespace(nil, 'http://example.org/')
+                @ns = @child.add_namespace(nil, 'https://example.org/')
                 @child.namespace = @ns
-                @ns2 = @child.add_namespace('baz', 'http://tenderlovemaking.com/')
+                @ns2 = @child.add_namespace('baz', 'https://tenderlovemaking.com/')
               end
 
               it "inserts a node that keeps its namespace" do
                 @node.add_child(@child)
-                assert reparented = @doc.at('//bar:second', "bar" => "http://example.org/")
+                assert reparented = @doc.at('//bar:second', "bar" => "https://example.org/")
                 assert reparented.namespace_definitions.include?(@ns)
                 assert reparented.namespace_definitions.include?(@ns2)
                 assert_equal @ns, reparented.namespace
                 assert_equal(
                   {
-                    "xmlns"     => "http://example.org/",
-                    "xmlns:foo" => "http://flavorjon.es/",
-                    "xmlns:baz" => "http://tenderlovemaking.com/",
+                    "xmlns"     => "https://example.org/",
+                    "xmlns:foo" => "https://flavorjon.es/",
+                    "xmlns:baz" => "https://tenderlovemaking.com/",
                   },
                   reparented.namespaces)
               end
@@ -462,7 +462,7 @@ module Nokogiri
           describe "when a document has a default namespace" do
             before do
               @fruits = Nokogiri::XML(<<-eoxml)
-                <fruit xmlns="http://fruits.org">
+                <fruit xmlns="https://fruits.org">
                   <apple />
                 </fruit>
               eoxml
@@ -481,7 +481,7 @@ module Nokogiri
 
         describe "unlinking a node and then reparenting it" do
           it "not blow up" do
-            # see http://github.com/sparklemotion/nokogiri/issues#issue/22
+            # see https://github.com/sparklemotion/nokogiri/issues#issue/22
             10.times do
               begin
                 doc = Nokogiri::XML <<-EOHTML
@@ -527,7 +527,7 @@ module Nokogiri
             # thanks to Nick Canzoneri @nickcanz for this test case!
             source_doc = Nokogiri::XML <<-EOX
 <?xml version="1.0" encoding="utf-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+<Wix xmlns="https://schemas.microsoft.com/wix/2006/wi">
     <Product>
         <Package />
         <Directory Id="TARGETDIR" Name="SourceDir">
@@ -541,7 +541,7 @@ EOX
 
             dest_doc = Nokogiri::XML <<-EOX
 <?xml version="1.0" encoding="utf-8"?>
-<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
+<Wix xmlns='https://schemas.microsoft.com/wix/2006/wi'>
   <Fragment Id='MSIComponents'>
       <DirectoryRef Id='InstallDir'>
       </DirectoryRef>

@@ -19,8 +19,8 @@ delete comments that they deem harassing or offensive.
 ## Issues
 
 Please read the
-["Getting Help" tutorial](http://www.nokogiri.org/tutorials/getting_help.html)
-at the [nokogiri.org](http://nokogiri.org) site.
+["Getting Help" tutorial](https://www.nokogiri.org/tutorials/getting_help.html)
+at the [nokogiri.org](https://nokogiri.org) site.
 
 If you're reporting an issue, it must contain:
 

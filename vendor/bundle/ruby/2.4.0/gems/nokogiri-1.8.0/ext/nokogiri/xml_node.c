@@ -155,7 +155,7 @@ static VALUE reparent_node_with(VALUE pivot_obj, VALUE reparentee_obj, pivot_rep
    * Check if nodes given are appropriate to have a parent-child
    * relationship, based on the DOM specification.
    *
-   * cf. http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-1590626202
+   * cf. https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#ID-1590626202
    */
   if (prf == xmlAddChild) {
     parent = pivot;
@@ -1433,7 +1433,7 @@ static VALUE in_context(VALUE self, VALUE _str, VALUE _options)
     xmlSetStructuredErrorFunc((void *)err, Nokogiri_error_array_pusher);
 
     /* Twiddle global variable because of a bug in libxml2.
-     * http://git.gnome.org/browse/libxml2/commit/?id=e20fb5a72c83cbfc8e4a8aa3943c6be8febadab7
+     * https://git.gnome.org/browse/libxml2/commit/?id=e20fb5a72c83cbfc8e4a8aa3943c6be8febadab7
      */
 #ifndef HTML_PARSE_NOIMPLIED
     htmlHandleOmittedElem(0);
@@ -1443,7 +1443,7 @@ static VALUE in_context(VALUE self, VALUE _str, VALUE _options)
      * does not exit cleanly with XML_ERR_OK, the list is freed.  This can
      * leave the child pointers in a bad state if they were originally empty.
      *
-     * http://git.gnome.org/browse/libxml2/tree/parser.c#n13177
+     * https://git.gnome.org/browse/libxml2/tree/parser.c#n13177
      * */
     error = xmlParseInNodeContext(node, StringValuePtr(_str),
 				  (int)RSTRING_LEN(_str),

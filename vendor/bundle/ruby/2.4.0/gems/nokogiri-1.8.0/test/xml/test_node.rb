@@ -257,7 +257,7 @@ module Nokogiri
 
       def test_inspect_ns
         xml = Nokogiri::XML(<<-eoxml) { |c| c.noblanks }
-          <root xmlns="http://tenderlovemaking.com/" xmlns:foo="bar">
+          <root xmlns="https://tenderlovemaking.com/" xmlns:foo="bar">
             <awesome/>
           </root>
         eoxml
@@ -281,7 +281,7 @@ module Nokogiri
 
       def test_namespace_definitions_when_some_exist
         xml = Nokogiri::XML <<-eoxml
-          <root xmlns="http://tenderlovemaking.com/" xmlns:foo="bar">
+          <root xmlns="https://tenderlovemaking.com/" xmlns:foo="bar">
             <awesome/>
           </root>
         eoxml
@@ -291,7 +291,7 @@ module Nokogiri
 
       def test_namespace_definitions_when_no_exist
         xml = Nokogiri::XML <<-eoxml
-          <root xmlns="http://tenderlovemaking.com/" xmlns:foo="bar">
+          <root xmlns="https://tenderlovemaking.com/" xmlns:foo="bar">
             <awesome/>
           </root>
         eoxml
@@ -374,7 +374,7 @@ module Nokogiri
 
       def test_node_added_to_root_should_get_namespace
         fruits = Nokogiri::XML(<<-eoxml)
-          <Fruit xmlns='http://www.fruits.org'>
+          <Fruit xmlns='https://www.fruits.org'>
           </Fruit>
         eoxml
         apple = fruits.fragment('<Apple/>')
@@ -404,64 +404,64 @@ module Nokogiri
 
       def test_add_namespace
         node = @xml.at('address')
-        node.add_namespace('foo', 'http://tenderlovemaking.com')
-        assert_equal 'http://tenderlovemaking.com', node.namespaces['xmlns:foo']
+        node.add_namespace('foo', 'https://tenderlovemaking.com')
+        assert_equal 'https://tenderlovemaking.com', node.namespaces['xmlns:foo']
       end
 
       def test_add_namespace_twice
         node = @xml.at('address')
-        ns = node.add_namespace('foo', 'http://tenderlovemaking.com')
-        ns2 = node.add_namespace('foo', 'http://tenderlovemaking.com')
+        ns = node.add_namespace('foo', 'https://tenderlovemaking.com')
+        ns2 = node.add_namespace('foo', 'https://tenderlovemaking.com')
         assert_equal ns, ns2
       end
 
       def test_add_default_ns
         node = @xml.at('address')
-        node.add_namespace(nil, 'http://tenderlovemaking.com')
-        assert_equal 'http://tenderlovemaking.com', node.namespaces['xmlns']
+        node.add_namespace(nil, 'https://tenderlovemaking.com')
+        assert_equal 'https://tenderlovemaking.com', node.namespaces['xmlns']
       end
 
       def test_add_multiple_namespaces
         node = @xml.at('address')
 
-        node.add_namespace(nil, 'http://tenderlovemaking.com')
-        assert_equal 'http://tenderlovemaking.com', node.namespaces['xmlns']
+        node.add_namespace(nil, 'https://tenderlovemaking.com')
+        assert_equal 'https://tenderlovemaking.com', node.namespaces['xmlns']
 
-        node.add_namespace('foo', 'http://tenderlovemaking.com')
-        assert_equal 'http://tenderlovemaking.com', node.namespaces['xmlns:foo']
+        node.add_namespace('foo', 'https://tenderlovemaking.com')
+        assert_equal 'https://tenderlovemaking.com', node.namespaces['xmlns:foo']
       end
 
       def test_default_namespace=
         node = @xml.at('address')
-        node.default_namespace = 'http://tenderlovemaking.com'
-        assert_equal 'http://tenderlovemaking.com', node.namespaces['xmlns']
+        node.default_namespace = 'https://tenderlovemaking.com'
+        assert_equal 'https://tenderlovemaking.com', node.namespaces['xmlns']
       end
 
       def test_namespace=
         node = @xml.at('address')
         assert_nil node.namespace
-        definition = node.add_namespace_definition 'bar', 'http://tlm.com/'
+        definition = node.add_namespace_definition 'bar', 'https://tlm.com/'
 
         node.namespace = definition
 
         assert_equal definition, node.namespace
 
         assert_equal node, @xml.at('//foo:address', {
-          'foo' => 'http://tlm.com/'
+          'foo' => 'https://tlm.com/'
         })
       end
 
       def test_add_namespace_with_nil_associates_node
         node = @xml.at('address')
         assert_nil node.namespace
-        definition = node.add_namespace_definition nil, 'http://tlm.com/'
+        definition = node.add_namespace_definition nil, 'https://tlm.com/'
         assert_equal definition, node.namespace
       end
 
       def test_add_namespace_does_not_associate_node
         node = @xml.at('address')
         assert_nil node.namespace
-        assert node.add_namespace_definition 'foo', 'http://tlm.com/'
+        assert node.add_namespace_definition 'foo', 'https://tlm.com/'
         assert_nil node.namespace
       end
 
@@ -911,48 +911,48 @@ module Nokogiri
       def test_namespace_search_with_xpath_and_hash
         xml = Nokogiri::XML.parse(<<-eoxml)
         <root>
-          <car xmlns:part="http://general-motors.com/">
+          <car xmlns:part="https://general-motors.com/">
             <part:tire>Michelin Model XGV</part:tire>
           </car>
-          <bicycle xmlns:part="http://schwinn.com/">
+          <bicycle xmlns:part="https://schwinn.com/">
             <part:tire>I'm a bicycle tire!</part:tire>
           </bicycle>
         </root>
         eoxml
 
-        tires = xml.xpath('//bike:tire', {'bike' => 'http://schwinn.com/'})
+        tires = xml.xpath('//bike:tire', {'bike' => 'https://schwinn.com/'})
         assert_equal 1, tires.length
       end
 
       def test_namespace_search_with_xpath_and_hash_with_symbol_keys
         xml = Nokogiri::XML.parse(<<-eoxml)
         <root>
-          <car xmlns:part="http://general-motors.com/">
+          <car xmlns:part="https://general-motors.com/">
             <part:tire>Michelin Model XGV</part:tire>
           </car>
-          <bicycle xmlns:part="http://schwinn.com/">
+          <bicycle xmlns:part="https://schwinn.com/">
             <part:tire>I'm a bicycle tire!</part:tire>
           </bicycle>
         </root>
         eoxml
 
-        tires = xml.xpath('//bike:tire', :bike => 'http://schwinn.com/')
+        tires = xml.xpath('//bike:tire', :bike => 'https://schwinn.com/')
         assert_equal 1, tires.length
       end
 
       def test_namespace_search_with_css
         xml = Nokogiri::XML.parse(<<-eoxml)
         <root>
-          <car xmlns:part="http://general-motors.com/">
+          <car xmlns:part="https://general-motors.com/">
             <part:tire>Michelin Model XGV</part:tire>
           </car>
-          <bicycle xmlns:part="http://schwinn.com/">
+          <bicycle xmlns:part="https://schwinn.com/">
             <part:tire>I'm a bicycle tire!</part:tire>
           </bicycle>
         </root>
         eoxml
 
-        tires = xml.css('bike|tire', 'bike' => 'http://schwinn.com/' )
+        tires = xml.css('bike|tire', 'bike' => 'https://schwinn.com/' )
         assert_equal 1, tires.length
       end
 
@@ -960,7 +960,7 @@ module Nokogiri
         # from #593
         xmlContent = <<-EOXML
 <?xml version="1.0"?>
-<ns1:el1 xmlns:ns1="http://blabla.com" >
+<ns1:el1 xmlns:ns1="https://blabla.com" >
   <ns1:el2 ns1:att="123">with namespace</ns1:el2 >
   <ns1:el2 att="noNameSpace">no namespace</ns1:el2 >
 </ns1:el1>
@@ -980,7 +980,7 @@ EOXML
         # from #593
         xmlContent = <<-EOXML
 <?xml version="1.0"?>
-<ns1:el1 xmlns:ns1="http://blabla.com" >
+<ns1:el1 xmlns:ns1="https://blabla.com" >
   <ns1:el2 ns1:att="123">with namespace</ns1:el2 >
   <ns1:el2 att="noNameSpace">no namespace</ns1:el2 >
 </ns1:el1>
@@ -998,68 +998,68 @@ EOXML
 
       def test_namespaces_should_include_all_namespace_definitions
         xml = Nokogiri::XML.parse(<<-EOF)
-        <x xmlns="http://quux.com/" xmlns:a="http://foo.com/" xmlns:b="http://bar.com/">
-          <y xmlns:c="http://bazz.com/">
+        <x xmlns="https://quux.com/" xmlns:a="https://foo.com/" xmlns:b="https://bar.com/">
+          <y xmlns:c="https://bazz.com/">
             <z>hello</z>
-            <a xmlns:c="http://newc.com/" />
+            <a xmlns:c="https://newc.com/" />
           </y>
         </x>
         EOF
 
         namespaces = xml.namespaces # Document#namespace
-        assert_equal({"xmlns"   => "http://quux.com/",
-                      "xmlns:a" => "http://foo.com/",
-                      "xmlns:b" => "http://bar.com/"}, namespaces)
+        assert_equal({"xmlns"   => "https://quux.com/",
+                      "xmlns:a" => "https://foo.com/",
+                      "xmlns:b" => "https://bar.com/"}, namespaces)
 
         namespaces = xml.root.namespaces
-        assert_equal({"xmlns"   => "http://quux.com/",
-                      "xmlns:a" => "http://foo.com/",
-                      "xmlns:b" => "http://bar.com/"}, namespaces)
+        assert_equal({"xmlns"   => "https://quux.com/",
+                      "xmlns:a" => "https://foo.com/",
+                      "xmlns:b" => "https://bar.com/"}, namespaces)
 
         namespaces = xml.at_xpath("//xmlns:y").namespaces
-        assert_equal({"xmlns"   => "http://quux.com/",
-                      "xmlns:a" => "http://foo.com/",
-                      "xmlns:b" => "http://bar.com/",
-                      "xmlns:c" => "http://bazz.com/"}, namespaces)
+        assert_equal({"xmlns"   => "https://quux.com/",
+                      "xmlns:a" => "https://foo.com/",
+                      "xmlns:b" => "https://bar.com/",
+                      "xmlns:c" => "https://bazz.com/"}, namespaces)
 
         namespaces = xml.at_xpath("//xmlns:z").namespaces
-        assert_equal({"xmlns"   => "http://quux.com/",
-                      "xmlns:a" => "http://foo.com/",
-                      "xmlns:b" => "http://bar.com/",
-                      "xmlns:c" => "http://bazz.com/"}, namespaces)
+        assert_equal({"xmlns"   => "https://quux.com/",
+                      "xmlns:a" => "https://foo.com/",
+                      "xmlns:b" => "https://bar.com/",
+                      "xmlns:c" => "https://bazz.com/"}, namespaces)
 
         namespaces = xml.at_xpath("//xmlns:a").namespaces
-        assert_equal({"xmlns"   => "http://quux.com/",
-                      "xmlns:a" => "http://foo.com/",
-                      "xmlns:b" => "http://bar.com/",
-                      "xmlns:c" => "http://newc.com/"}, namespaces)
+        assert_equal({"xmlns"   => "https://quux.com/",
+                      "xmlns:a" => "https://foo.com/",
+                      "xmlns:b" => "https://bar.com/",
+                      "xmlns:c" => "https://newc.com/"}, namespaces)
       end
 
       def test_namespace
         xml = Nokogiri::XML.parse(<<-EOF)
-        <x xmlns:a='http://foo.com/' xmlns:b='http://bar.com/'>
-          <y xmlns:c='http://bazz.com/'>
+        <x xmlns:a='https://foo.com/' xmlns:b='https://bar.com/'>
+          <y xmlns:c='https://bazz.com/'>
             <a:div>hello a</a:div>
             <b:div>hello b</b:div>
             <c:div x="1" b:y="2">hello c</c:div>
-            <div x="1" xmlns="http://ns.example.com/d"/>
+            <div x="1" xmlns="https://ns.example.com/d"/>
             <div x="1">hello moon</div>
           </y>
         </x>
         EOF
         set = xml.search("//y/*")
         assert_equal "a", set[0].namespace.prefix
-        assert_equal 'http://foo.com/', set[0].namespace.href
+        assert_equal 'https://foo.com/', set[0].namespace.href
         assert_equal "b", set[1].namespace.prefix
-        assert_equal 'http://bar.com/', set[1].namespace.href
+        assert_equal 'https://bar.com/', set[1].namespace.href
         assert_equal "c", set[2].namespace.prefix
-        assert_equal 'http://bazz.com/', set[2].namespace.href
+        assert_equal 'https://bazz.com/', set[2].namespace.href
         assert_equal nil, set[3].namespace.prefix # default namespace
-        assert_equal 'http://ns.example.com/d', set[3].namespace.href
+        assert_equal 'https://ns.example.com/d', set[3].namespace.href
         assert_equal nil, set[4].namespace # no namespace
 
         assert_equal 'b', set[2].attributes['y'].namespace.prefix
-        assert_equal 'http://bar.com/', set[2].attributes['y'].namespace.href
+        assert_equal 'https://bar.com/', set[2].attributes['y'].namespace.href
         assert_equal nil, set[2].attributes['x'].namespace
         assert_equal nil, set[3].attributes['x'].namespace
         assert_equal nil, set[4].attributes['x'].namespace
@@ -1130,23 +1130,23 @@ EOXML
 
       # issue 647
       def test_default_namespace_should_be_created
-        subject = Nokogiri::XML.parse('<foo xml:bar="http://bar.com"/>').root
+        subject = Nokogiri::XML.parse('<foo xml:bar="https://bar.com"/>').root
         ns = subject.attributes['bar'].namespace
         assert_not_nil ns
         assert_equal ns.class, Nokogiri::XML::Namespace
         assert_equal 'xml', ns.prefix
-        assert_equal "http://www.w3.org/XML/1998/namespace", ns.href
+        assert_equal "https://www.w3.org/XML/1998/namespace", ns.href
       end
 
       # issue 648
       def test_namespace_without_prefix_should_be_set
-        node = Nokogiri::XML.parse('<foo xmlns="http://bar.com"/>').root
+        node = Nokogiri::XML.parse('<foo xmlns="https://bar.com"/>').root
         subject = Nokogiri::XML::Node.new 'foo', node.document
         subject.namespace = node.namespace
         ns = subject.namespace
         assert_equal ns.class, Nokogiri::XML::Namespace
         assert_nil ns.prefix
-        assert_equal ns.href, "http://bar.com"
+        assert_equal ns.href, "https://bar.com"
       end
 
       # issue 695

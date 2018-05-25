@@ -10,8 +10,8 @@ module Nokogiri
         @xml = Nokogiri.XML(<<-EOXML)
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
- "http://www.w3.org/TR/MathML2/dtd/xhtml-math11-f.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+ "https://www.w3.org/TR/MathML2/dtd/xhtml-math11-f.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-type" content="application/xhtml+xml"/>
     <title>Foo</title>
@@ -32,13 +32,13 @@ EOXML
           end
         end
 
-        XSLT.register "http://e.org/functions", foo
+        XSLT.register "https://e.org/functions", foo
 
         xsl = Nokogiri.XSLT(<<-EOXSL)
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:f="http://e.org/functions"
+  xmlns:xsl="https://www.w3.org/1999/XSL/Transform"
+  xmlns:f="https://e.org/functions"
   extension-element-prefixes="f">
 
   <xsl:template match="text()">
@@ -79,11 +79,11 @@ EOXSL
           end
         end
 
-        xsl = Nokogiri.XSLT(<<-EOXSL, "http://e.org/functions" => foo)
+        xsl = Nokogiri.XSLT(<<-EOXSL, "https://e.org/functions" => foo)
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:f="http://e.org/functions"
+  xmlns:xsl="https://www.w3.org/1999/XSL/Transform"
+  xmlns:f="https://e.org/functions"
   extension-element-prefixes="f">
 
   <xsl:template match="text()">
@@ -105,11 +105,11 @@ EOXSL
           end
         end
 
-        xsl = Nokogiri.XSLT(<<-EOXSL, "http://e.org/functions" => foo)
+        xsl = Nokogiri.XSLT(<<-EOXSL, "https://e.org/functions" => foo)
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:f="http://e.org/functions"
+  xmlns:xsl="https://www.w3.org/1999/XSL/Transform"
+  xmlns:f="https://e.org/functions"
   extension-element-prefixes="f">
 
   <xsl:template match="text()">

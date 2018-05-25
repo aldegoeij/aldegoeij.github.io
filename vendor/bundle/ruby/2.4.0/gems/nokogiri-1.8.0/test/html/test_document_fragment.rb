@@ -208,7 +208,7 @@ module Nokogiri
           assert_equal "<span>foo<br /></span><span>bar</span><p></p>", fragment.to_xhtml
         else
           # FIXME: why are we doing this ? this violates the spec,
-          # see http://www.w3.org/TR/xhtml1/#C_2
+          # see https://www.w3.org/TR/xhtml1/#C_2
           assert_equal "<span>foo<br></span><span>bar</span><p></p>", fragment.to_xhtml
         end
       end

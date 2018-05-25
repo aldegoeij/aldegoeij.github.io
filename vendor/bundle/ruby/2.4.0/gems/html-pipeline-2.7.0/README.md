@@ -103,8 +103,8 @@ paraphrased snippets to get you started:
 # The context hash is how you pass options between different filters.
 # See individual filter source for explanation of options.
 context = {
-  :asset_root => "http://your-domain.com/where/your/images/live/icons",
-  :base_url   => "http://your-domain.com"
+  :asset_root => "https://your-domain.com/where/your/images/live/icons",
+  :base_url   => "https://your-domain.com"
 }
 
 # Pipeline providing sanitization and image hijacking but no mention
@@ -157,7 +157,7 @@ EmojiPipeline = Pipeline.new [
 * `AutolinkFilter` - auto_linking urls in HTML
 * `CamoFilter` - replace http image urls with [camo-fied](https://github.com/atmos/camo) https versions
 * `EmailReplyFilter` - util filter for working with emails
-* `EmojiFilter` - everyone loves [emoji](http://www.emoji-cheat-sheet.com/)!
+* `EmojiFilter` - everyone loves [emoji](https://www.emoji-cheat-sheet.com/)!
 * `HttpsFilter` - HTML Filter for replacing http github urls with https versions.
 * `ImageMaxWidthFilter` - link to full size image for large images
 * `MarkdownFilter` - convert markdown to html
@@ -192,7 +192,7 @@ _Note:_ See [Gemfile](/Gemfile) `:test` block for version requirements.
 
 ## Documentation
 
-Full reference documentation can be [found here](http://rubydoc.info/gems/html-pipeline/frames).
+Full reference documentation can be [found here](https://rubydoc.info/gems/html-pipeline/frames).
 
 ## Extending
 To write a custom filter, you need a class with a `call` method that inherits
@@ -222,7 +222,7 @@ end
 Now this filter can be used in a pipeline:
 
 ```ruby
-Pipeline.new [ RootRelativeFilter ], { :base_url => 'http://somehost.com' }
+Pipeline.new [ RootRelativeFilter ], { :base_url => 'https://somehost.com' }
 ```
 
 ### 3rd Party Extensions
@@ -243,7 +243,7 @@ Here are some extensions people have built:
 * [html-pipeline-wiki-link'](https://github.com/lifted-studios/html-pipeline-wiki-link) - WikiMedia-style wiki links
 * [task_list](https://github.com/github/task_list) - GitHub flavor Markdown Task List
 * [html-pipeline-rouge_filter](https://github.com/JuanitoFatas/html-pipeline-rouge_filter) - Syntax highlight with [Rouge](https://github.com/jneen/rouge/)
-* [html-pipeline-nico_link](https://github.com/rutan/html-pipeline-nico_link) - An HTML::Pipeline filter for [niconico](http://www.nicovideo.jp) description links
+* [html-pipeline-nico_link](https://github.com/rutan/html-pipeline-nico_link) - An HTML::Pipeline filter for [niconico](https://www.nicovideo.jp) description links
 * [html-pipeline-gitlab](https://gitlab.com/gitlab-org/html-pipeline-gitlab) - This gem implements various filters for html-pipeline used by GitLab
 * [html-pipeline-youtube](https://github.com/st0012/html-pipeline-youtube) - An HTML::Pipeline filter for YouTube links
 * [html-pipeline-flickr](https://github.com/st0012/html-pipeline-flickr) - An HTML::Pipeline filter for Flickr links
@@ -259,7 +259,7 @@ Here are some extensions people have built:
 
 Filters and Pipelines can be set up to be instrumented when called. The pipeline
 must be setup with an
-[ActiveSupport::Notifications](http://api.rubyonrails.org/classes/ActiveSupport/Notifications.html)
+[ActiveSupport::Notifications](https://api.rubyonrails.org/classes/ActiveSupport/Notifications.html)
 compatible service object and a name. New pipeline objects will default to the
 `HTML::Pipeline.default_instrumentation_service` object.
 
@@ -351,13 +351,13 @@ To see what has changed in recent versions, see the [CHANGELOG](https://github.c
 
 Thanks to all of [these contributors](https://github.com/jch/html-pipeline/graphs/contributors).
 
-Project is a member of the [OSS Manifesto](http://ossmanifesto.org/).
+Project is a member of the [OSS Manifesto](https://ossmanifesto.org/).
 
 ### Releasing A New Version
 
 This section is for gem maintainers to cut a new version of the gem.
 
-* create a new branch named `release-x.y.z` where `x.y.z` follows [semver](http://semver.org)
+* create a new branch named `release-x.y.z` where `x.y.z` follows [semver](https://semver.org)
 * update lib/html/pipeline/version.rb to next version number X.X.X
 * update CHANGELOG.md. Prepare a draft with `script/changelog`
 * push branch and create a new pull request

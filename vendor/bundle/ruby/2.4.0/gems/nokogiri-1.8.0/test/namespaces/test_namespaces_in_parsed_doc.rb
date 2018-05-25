@@ -6,13 +6,13 @@ module Nokogiri
       def setup
         super
         @doc = Nokogiri::XML <<-eoxml
-          <fruit xmlns="ns:fruit" xmlns:veg="ns:veg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <fruit xmlns="ns:fruit" xmlns:veg="ns:veg" xmlns:xlink="https://www.w3.org/1999/xlink">
               <pear>
                   <bosc/>
               </pear>
               <orange/>
               <veg:carrot>
-                  <cheese xmlns="ns:dairy" xlink:href="http://example.com/cheese/"/>
+                  <cheese xmlns="ns:dairy" xlink:href="https://example.com/cheese/"/>
               </veg:carrot>
               <meat:bacon xmlns:meat="ns:meat">
                   <apple count="2"/>
@@ -43,7 +43,7 @@ module Nokogiri
         assert_equal 'ns:dairy', check_namespace(@doc.root.elements[2].elements[0])
       end
       def test_parsed_nondefault_attr_ns
-        assert_equal 'http://www.w3.org/1999/xlink', 
+        assert_equal 'https://www.w3.org/1999/xlink', 
           check_namespace(@doc.root.elements[2].elements[0].attribute_nodes.find { |a| a.name =~ /href/ })
       end
       def test_parsed_single_decl_ns_2

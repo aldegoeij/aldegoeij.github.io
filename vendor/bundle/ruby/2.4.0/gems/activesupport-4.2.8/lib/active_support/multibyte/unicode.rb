@@ -6,7 +6,7 @@ module ActiveSupport
       extend self
 
       # A list of all available normalization forms.
-      # See http://www.unicode.org/reports/tr15/tr15-29.html for more
+      # See https://www.unicode.org/reports/tr15/tr15-29.html for more
       # information about normalization.
       NORMALIZATION_FORMS = [:c, :kc, :d, :kd]
 
@@ -261,7 +261,7 @@ module ActiveSupport
       #   Default is ActiveSupport::Multibyte.default_normalization_form.
       def normalize(string, form=nil)
         form ||= @default_normalization_form
-        # See http://www.unicode.org/reports/tr15, Table 1
+        # See https://www.unicode.org/reports/tr15, Table 1
         codepoints = string.codepoints.to_a
         case form
           when :d

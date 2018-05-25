@@ -32,7 +32,7 @@ Typhoeus.get("www.example.com", followlocation: true).headers
 #   }
 
 Typhoeus.get("www.example.com", followlocation: true).response_headers
-#=> "HTTP/1.0 302 Found\r\nLocation: http://www.iana.org/domains/example/ [...]"
+#=> "HTTP/1.0 302 Found\r\nLocation: https://www.iana.org/domains/example/ [...]"
 ```
 
 ### Params vs body
@@ -52,4 +52,4 @@ end
 
 ### Docs
 
-When in doubt, read the [docs](http://rubydoc.info/github/typhoeus/typhoeus/frames/Typhoeus) or the [code](https://www.github.com/typhoeus).
+When in doubt, read the [docs](https://rubydoc.info/github/typhoeus/typhoeus/frames/Typhoeus) or the [code](https://www.github.com/typhoeus).

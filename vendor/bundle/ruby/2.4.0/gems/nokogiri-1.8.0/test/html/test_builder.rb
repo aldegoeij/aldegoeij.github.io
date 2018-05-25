@@ -41,13 +41,13 @@ module Nokogiri
       end
 
       def test_href_with_attributes
-        uri = 'http://tenderlovemaking.com/'
+        uri = 'https://tenderlovemaking.com/'
         built = Nokogiri::XML::Builder.new {
           div {
             a('King Khan & The Shrines', :href => uri)
           }
         }
-        assert_equal 'http://tenderlovemaking.com/',
+        assert_equal 'https://tenderlovemaking.com/',
           built.doc.at('a')[:href]
       end
 

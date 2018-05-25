@@ -79,7 +79,7 @@ module Listen
         # INotify reports changes to files inside directories as events
         # on the directories themselves too.
         #
-        # @see http://linux.die.net/man/7/inotify
+        # @see https://linux.die.net/man/7/inotify
         _dir_event?(event) && (event.flags & [:close, :modify]).any?
       end
 

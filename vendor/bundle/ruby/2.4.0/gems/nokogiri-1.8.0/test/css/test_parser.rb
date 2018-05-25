@@ -7,8 +7,8 @@ module Nokogiri
         super
         @parser = Nokogiri::CSS::Parser.new
         @parser_with_ns = Nokogiri::CSS::Parser.new({
-          "xmlns" => "http://default.example.com/",
-          "hoge" => "http://hoge.example.com/",
+          "xmlns" => "https://default.example.com/",
+          "hoge" => "https://hoge.example.com/",
         })
       end
 

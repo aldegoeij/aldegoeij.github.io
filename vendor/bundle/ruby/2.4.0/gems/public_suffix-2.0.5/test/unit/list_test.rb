@@ -245,10 +245,10 @@ EOS
 
   def list
     @_list ||= PublicSuffix::List.parse(<<EOS)
-// com : http://en.wikipedia.org/wiki/.com
+// com : https://en.wikipedia.org/wiki/.com
 com
 
-// uk : http://en.wikipedia.org/wiki/.uk
+// uk : https://en.wikipedia.org/wiki/.uk
 *.uk
 *.sch.uk
 !bl.uk

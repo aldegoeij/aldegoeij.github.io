@@ -1361,7 +1361,7 @@ a {@extend %y}
 SCSS
 
     # A few pseudo-elements can be written as pseudo-elements for historical
-    # reasons. See http://www.w3.org/TR/selectors4/#pseudo-elements.
+    # reasons. See https://www.w3.org/TR/selectors4/#pseudo-elements.
     %w[first-line first-letter before after].each do |pseudo|
       assert_equal <<CSS, render(<<SCSS)
 a#bar, a#bar:#{pseudo} {

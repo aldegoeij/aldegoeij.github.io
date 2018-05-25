@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version = FFI::VERSION
   s.author = 'Wayne Meissner'
   s.email = 'wmeissner@gmail.com'
-  s.homepage = 'http://wiki.github.com/ffi/ffi'
+  s.homepage = 'https://wiki.github.com/ffi/ffi'
   s.summary = 'Ruby FFI'
   s.description = 'Ruby FFI library'
   s.files = %w(ffi.gemspec LICENSE COPYING README.md Rakefile) + Dir.glob("{ext,gen,lib,spec,libtest}/**/*").reject { |f| f =~ /(lib\/[12]\.[089]|\.s?[ao]$|\.bundle|\.dylib$)/ }

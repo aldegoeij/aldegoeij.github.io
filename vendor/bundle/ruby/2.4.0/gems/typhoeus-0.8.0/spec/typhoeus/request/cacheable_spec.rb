@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Typhoeus::Request::Cacheable do
   let(:cache) { MemoryCache.new }
   let(:options) { {} }
-  let(:request) { Typhoeus::Request.new("http://localhost:3001", options) }
+  let(:request) { Typhoeus::Request.new("https://localhost:3001", options) }
   let(:response) { Typhoeus::Response.new }
 
   before { Typhoeus::Config.cache = cache }

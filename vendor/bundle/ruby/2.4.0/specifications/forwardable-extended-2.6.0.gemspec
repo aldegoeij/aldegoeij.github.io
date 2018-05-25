@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.date = "2016-04-06"
   s.description = "Forwardable with hash, and instance variable extensions.".freeze
   s.email = ["jordon@envygeeks.io".freeze]
-  s.homepage = "http://github.com/envygeeks/forwardable-extended".freeze
+  s.homepage = "https://github.com/envygeeks/forwardable-extended".freeze
   s.licenses = ["MIT".freeze]
   s.rubygems_version = "2.6.11".freeze
   s.summary = "Forwardable with hash, and instance variable extensions.".freeze

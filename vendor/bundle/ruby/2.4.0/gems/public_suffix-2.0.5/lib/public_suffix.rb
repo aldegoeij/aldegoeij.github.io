@@ -47,7 +47,7 @@ module PublicSuffix
   #   # => PublicSuffix::DomainInvalid
   #
   # @example Parse an URL (not supported, only domains)
-  #   PublicSuffix.parse("http://www.google.com")
+  #   PublicSuffix.parse("https://www.google.com")
   #   # => PublicSuffix::DomainInvalid
   #
   #
@@ -108,7 +108,7 @@ module PublicSuffix
   #   # => true
   #
   # @example Check an URL (which is not a valid domain)
-  #   PublicSuffix.valid?("http://www.example.com")
+  #   PublicSuffix.valid?("https://www.example.com")
   #   # => false
   #
   #

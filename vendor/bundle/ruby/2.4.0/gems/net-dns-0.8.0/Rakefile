@@ -24,7 +24,7 @@ spec = Gem::Specification.new do |s|
 
   s.authors           = ["Marco Ceresa", "Simone Carletti"]
   s.email             = ["ceresa@gmail.com", "weppos@weppos.net"]
-  s.homepage          = "http://github.com/bluemonk/net-dns"
+  s.homepage          = "https://github.com/bluemonk/net-dns"
   s.rubyforge_project = "net-dns"
 
   s.add_development_dependency "rake",  "~> 10.0"

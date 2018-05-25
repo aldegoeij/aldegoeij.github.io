@@ -1,6 +1,6 @@
-[Maruku]: http://maruku.rubyforge.org
-[PHP Markdown Extra]: http://michelf.com/projects/php-markdown/extra/
-[Pandoc]: http://johnmacfarlane.net/pandoc/
-[MathJax]: http://www.mathjax.org
-[BlueCloth]: http://deveiate.org/projects/BlueCloth
-[RedCloth]: http://redcloth.org/
+[Maruku]: https://maruku.rubyforge.org
+[PHP Markdown Extra]: https://michelf.com/projects/php-markdown/extra/
+[Pandoc]: https://johnmacfarlane.net/pandoc/
+[MathJax]: https://www.mathjax.org
+[BlueCloth]: https://deveiate.org/projects/BlueCloth
+[RedCloth]: https://redcloth.org/

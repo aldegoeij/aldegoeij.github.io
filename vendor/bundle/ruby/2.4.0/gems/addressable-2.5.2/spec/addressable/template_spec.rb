@@ -5,7 +5,7 @@
 #    you may not use this file except in compliance with the License.
 #    You may obtain a copy of the License at
 #
-#        http://www.apache.org/licenses/LICENSE-2.0
+#        https://www.apache.org/licenses/LICENSE-2.0
 #
 #    Unless required by applicable law or agreed to in writing, software
 #    distributed under the License is distributed on an "AS IS" BASIS,
@@ -423,7 +423,7 @@ describe "Expansion" do
       :half  => "50%",
       :var   => "value",
       :who   => "fred",
-      :base  => "http://example.com/home/",
+      :base  => "https://example.com/home/",
       :path  => "/foo/bar",
       :list  => ["red", "green", "blue"],
       :keys  => {"semi" => ";","dot" => ".","comma" => ","},
@@ -488,7 +488,7 @@ describe "Expansion" do
       '{+hello}' => 'Hello%20World!',
       '{+half}' => '50%25',
       '{base}index' => 'http%3A%2F%2Fexample.com%2Fhome%2Findex',
-      '{+base}index' => 'http://example.com/home/index',
+      '{+base}index' => 'https://example.com/home/index',
       'O{+empty}X' => 'OX',
       'O{+undef}X' => 'OX',
       '{+path}/here' => '/foo/bar/here',
@@ -699,7 +699,7 @@ describe "Expansion" do
     }
   end
   context "non-string key in match data" do
-    subject {Addressable::Template.new("http://example.com/{one}")}
+    subject {Addressable::Template.new("https://example.com/{one}")}
 
     it "raises TypeError" do
       expect { subject.expand(Object.new => "1") }.to raise_error TypeError
@@ -744,7 +744,7 @@ describe Addressable::Template do
   end
 
   describe 'freeze' do
-    subject { Addressable::Template.new("http://example.com/{first}/{+second}/") }
+    subject { Addressable::Template.new("https://example.com/{first}/{+second}/") }
     it 'freezes the template' do
       expect(subject.freeze).to be_frozen
     end
@@ -753,25 +753,25 @@ describe Addressable::Template do
   describe "Matching" do
     let(:uri){
       Addressable::URI.parse(
-        "http://example.com/search/an-example-search-query/"
+        "https://example.com/search/an-example-search-query/"
       )
     }
     let(:uri2){
-      Addressable::URI.parse("http://example.com/a/b/c/")
+      Addressable::URI.parse("https://example.com/a/b/c/")
     }
     let(:uri3){
-      Addressable::URI.parse("http://example.com/;a=1;b=2;c=3;first=foo")
+      Addressable::URI.parse("https://example.com/;a=1;b=2;c=3;first=foo")
     }
     let(:uri4){
-      Addressable::URI.parse("http://example.com/?a=1&b=2&c=3&first=foo")
+      Addressable::URI.parse("https://example.com/?a=1&b=2&c=3&first=foo")
     }
     let(:uri5){
-      "http://example.com/foo"
+      "https://example.com/foo"
     }
     context "first uri with ExampleTwoProcessor" do
       subject {
         Addressable::Template.new(
-          "http://example.com/search/{query}/"
+          "https://example.com/search/{query}/"
         ).match(uri, ExampleTwoProcessor)
       }
       its(:variables){ should == ["query"] }
@@ -781,7 +781,7 @@ describe Addressable::Template do
     context "second uri with ExampleTwoProcessor" do
       subject {
         Addressable::Template.new(
-          "http://example.com/{first}/{+second}/"
+          "https://example.com/{first}/{+second}/"
         ).match(uri2, ExampleTwoProcessor)
       }
       its(:variables){ should == ["first", "second"] }
@@ -791,7 +791,7 @@ describe Addressable::Template do
     context "second uri with DumbProcessor" do
       subject {
         Addressable::Template.new(
-          "http://example.com/{first}/{+second}/"
+          "https://example.com/{first}/{+second}/"
         ).match(uri2, DumbProcessor)
       }
       its(:variables){ should == ["first", "second"] }
@@ -801,7 +801,7 @@ describe Addressable::Template do
     context "second uri" do
       subject {
         Addressable::Template.new(
-          "http://example.com/{first}{/second*}/"
+          "https://example.com/{first}{/second*}/"
         ).match(uri2)
       }
       its(:variables){ should == ["first", "second"] }
@@ -810,7 +810,7 @@ describe Addressable::Template do
     context "third uri" do
       subject {
         Addressable::Template.new(
-          "http://example.com/{;hash*,first}"
+          "https://example.com/{;hash*,first}"
         ).match(uri3)
       }
       its(:variables){ should == ["hash", "first"] }
@@ -823,7 +823,7 @@ describe Addressable::Template do
     context "fourth uri" do
       subject {
         Addressable::Template.new(
-          "http://example.com/{?hash*,first}"
+          "https://example.com/{?hash*,first}"
         ).match(uri4)
       }
       its(:variables){ should == ["hash", "first"] }
@@ -833,7 +833,7 @@ describe Addressable::Template do
     context "fifth uri" do
       subject {
         Addressable::Template.new(
-          "http://example.com/{path}{?hash*,first}"
+          "https://example.com/{path}{?hash*,first}"
         ).match(uri5)
       }
       its(:variables){ should == ["path", "hash", "first"] }
@@ -842,10 +842,10 @@ describe Addressable::Template do
   end
 
   describe 'match' do
-    subject { Addressable::Template.new('http://example.com/first/second/') }
+    subject { Addressable::Template.new('https://example.com/first/second/') }
     context 'when the URI is the same as the template' do
       it 'returns the match data itself with an empty mapping' do
-        uri = Addressable::URI.parse('http://example.com/first/second/')
+        uri = Addressable::URI.parse('https://example.com/first/second/')
         match_data = subject.match(uri)
         expect(match_data).to be_an Addressable::Template::MatchData
         expect(match_data.uri).to eq(uri)
@@ -859,11 +859,11 @@ describe Addressable::Template do
   describe "extract" do
     let(:template) {
       Addressable::Template.new(
-        "http://{host}{/segments*}/{?one,two,bogus}{#fragment}"
+        "https://{host}{/segments*}/{?one,two,bogus}{#fragment}"
       )
     }
-    let(:uri){ "http://example.com/a/b/c/?one=1&two=2#foo" }
-    let(:uri2){ "http://example.com/a/b/c/#foo" }
+    let(:uri){ "https://example.com/a/b/c/?one=1&two=2#foo" }
+    let(:uri2){ "https://example.com/a/b/c/#foo" }
     it "should be able to extract with queries" do
       expect(template.extract(uri)).to eq({
         "host" => "example.com",
@@ -921,69 +921,69 @@ describe Addressable::Template do
   describe "Partial expand with symbols" do
     context "partial_expand with two simple values" do
       subject {
-        Addressable::Template.new("http://example.com/{one}/{two}/")
+        Addressable::Template.new("https://example.com/{one}/{two}/")
       }
       it "builds a new pattern" do
         expect(subject.partial_expand(:one => "1").pattern).to eq(
-          "http://example.com/1/{two}/"
+          "https://example.com/1/{two}/"
         )
       end
     end
     context "partial_expand query with missing param in middle" do
       subject {
-        Addressable::Template.new("http://example.com/{?one,two,three}/")
+        Addressable::Template.new("https://example.com/{?one,two,three}/")
       }
       it "builds a new pattern" do
         expect(subject.partial_expand(:one => "1", :three => "3").pattern).to eq(
-          "http://example.com/?one=1{&two}&three=3/"
+          "https://example.com/?one=1{&two}&three=3/"
         )
       end
     end
     context "partial_expand form style query with missing param at beginning" do
       subject {
-        Addressable::Template.new("http://example.com/{?one,two}/")
+        Addressable::Template.new("https://example.com/{?one,two}/")
       }
       it "builds a new pattern" do
         expect(subject.partial_expand(:two => "2").pattern).to eq(
-          "http://example.com/?two=2{&one}/"
+          "https://example.com/?two=2{&one}/"
         )
       end
     end
     context "partial_expand with query string" do
       subject {
-        Addressable::Template.new("http://example.com/{?two,one}/")
+        Addressable::Template.new("https://example.com/{?two,one}/")
       }
       it "builds a new pattern" do
         expect(subject.partial_expand(:one => "1").pattern).to eq(
-          "http://example.com/?one=1{&two}/"
+          "https://example.com/?one=1{&two}/"
         )
       end
     end
     context "partial_expand with path operator" do
       subject {
-        Addressable::Template.new("http://example.com{/one,two}/")
+        Addressable::Template.new("https://example.com{/one,two}/")
       }
       it "builds a new pattern" do
         expect(subject.partial_expand(:one => "1").pattern).to eq(
-          "http://example.com/1{/two}/"
+          "https://example.com/1{/two}/"
         )
       end
     end
     context "partial expand with unicode values" do
       subject do
-        Addressable::Template.new("http://example.com/{resource}/{query}/")
+        Addressable::Template.new("https://example.com/{resource}/{query}/")
       end
       it "normalizes unicode by default" do
         template = subject.partial_expand("query" => "Cafe\u0301")
         expect(template.pattern).to eq(
-          "http://example.com/{resource}/Caf%C3%A9/"
+          "https://example.com/{resource}/Caf%C3%A9/"
         )
       end
 
       it "does not normalize unicode when byte semantics requested" do
         template = subject.partial_expand({"query" => "Cafe\u0301"}, nil, false)
         expect(template.pattern).to eq(
-          "http://example.com/{resource}/Cafe%CC%81/"
+          "https://example.com/{resource}/Cafe%CC%81/"
         )
       end
     end
@@ -991,41 +991,41 @@ describe Addressable::Template do
   describe "Partial expand with strings" do
     context "partial_expand with two simple values" do
       subject {
-        Addressable::Template.new("http://example.com/{one}/{two}/")
+        Addressable::Template.new("https://example.com/{one}/{two}/")
       }
       it "builds a new pattern" do
         expect(subject.partial_expand("one" => "1").pattern).to eq(
-          "http://example.com/1/{two}/"
+          "https://example.com/1/{two}/"
         )
       end
     end
     context "partial_expand query with missing param in middle" do
       subject {
-        Addressable::Template.new("http://example.com/{?one,two,three}/")
+        Addressable::Template.new("https://example.com/{?one,two,three}/")
       }
       it "builds a new pattern" do
         expect(subject.partial_expand("one" => "1", "three" => "3").pattern).to eq(
-          "http://example.com/?one=1{&two}&three=3/"
+          "https://example.com/?one=1{&two}&three=3/"
         )
       end
     end
     context "partial_expand with query string" do
       subject {
-        Addressable::Template.new("http://example.com/{?two,one}/")
+        Addressable::Template.new("https://example.com/{?two,one}/")
       }
       it "builds a new pattern" do
         expect(subject.partial_expand("one" => "1").pattern).to eq(
-          "http://example.com/?one=1{&two}/"
+          "https://example.com/?one=1{&two}/"
         )
       end
     end
     context "partial_expand with path operator" do
       subject {
-        Addressable::Template.new("http://example.com{/one,two}/")
+        Addressable::Template.new("https://example.com{/one,two}/")
       }
       it "builds a new pattern" do
         expect(subject.partial_expand("one" => "1").pattern).to eq(
-          "http://example.com/1{/two}/"
+          "https://example.com/1{/two}/"
         )
       end
     end
@@ -1033,26 +1033,26 @@ describe Addressable::Template do
   describe "Expand" do
     context "expand with unicode values" do
       subject do
-        Addressable::Template.new("http://example.com/search/{query}/")
+        Addressable::Template.new("https://example.com/search/{query}/")
       end
       it "normalizes unicode by default" do
         uri = subject.expand("query" => "Cafe\u0301").to_str
-        expect(uri).to eq("http://example.com/search/Caf%C3%A9/")
+        expect(uri).to eq("https://example.com/search/Caf%C3%A9/")
       end
 
       it "does not normalize unicode when byte semantics requested" do
         uri = subject.expand({ "query" => "Cafe\u0301" }, nil, false).to_str
-        expect(uri).to eq("http://example.com/search/Cafe%CC%81/")
+        expect(uri).to eq("https://example.com/search/Cafe%CC%81/")
       end
     end
     context "expand with a processor" do
       subject {
-        Addressable::Template.new("http://example.com/search/{query}/")
+        Addressable::Template.new("https://example.com/search/{query}/")
       }
       it "processes spaces" do
         expect(subject.expand({"query" => "an example search query"},
                       ExampleTwoProcessor).to_str).to eq(
-          "http://example.com/search/an+example+search+query/"
+          "https://example.com/search/an+example+search+query/"
         )
       end
       it "validates" do
@@ -1064,31 +1064,31 @@ describe Addressable::Template do
     end
     context "partial_expand query with missing param in middle" do
       subject {
-        Addressable::Template.new("http://example.com/{?one,two,three}/")
+        Addressable::Template.new("https://example.com/{?one,two,three}/")
       }
       it "builds a new pattern" do
         expect(subject.partial_expand("one" => "1", "three" => "3").pattern).to eq(
-          "http://example.com/?one=1{&two}&three=3/"
+          "https://example.com/?one=1{&two}&three=3/"
         )
       end
     end
     context "partial_expand with query string" do
       subject {
-        Addressable::Template.new("http://example.com/{?two,one}/")
+        Addressable::Template.new("https://example.com/{?two,one}/")
       }
       it "builds a new pattern" do
         expect(subject.partial_expand("one" => "1").pattern).to eq(
-          "http://example.com/?one=1{&two}/"
+          "https://example.com/?one=1{&two}/"
         )
       end
     end
     context "partial_expand with path operator" do
       subject {
-        Addressable::Template.new("http://example.com{/one,two}/")
+        Addressable::Template.new("https://example.com{/one,two}/")
       }
       it "builds a new pattern" do
         expect(subject.partial_expand("one" => "1").pattern).to eq(
-          "http://example.com/1{/two}/"
+          "https://example.com/1{/two}/"
         )
       end
     end
@@ -1246,9 +1246,9 @@ describe Addressable::Template do
         end
 
         context "issue #71" do
-          subject { Addressable::Template.new("http://cyberscore.dev/api/users{?username}") }
+          subject { Addressable::Template.new("https://cyberscore.dev/api/users{?username}") }
           it "can match" do
-            data = subject.match("http://cyberscore.dev/api/users?username=foobaz")
+            data = subject.match("https://cyberscore.dev/api/users?username=foobaz")
             expect(data.mapping["username"]).to eq("foobaz")
           end
           it "lists vars" do

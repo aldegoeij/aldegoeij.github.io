@@ -74,7 +74,7 @@ module PublicSuffix
 
     # Parse given +input+ treating the content as Public Suffix List.
     #
-    # See http://publicsuffix.org/format/ for more details about input format.
+    # See https://publicsuffix.org/format/ for more details about input format.
     #
     # @param  string [#each_line] The list to parse.
     # @param  private_domain [Boolean] whether to ignore the private domains section.

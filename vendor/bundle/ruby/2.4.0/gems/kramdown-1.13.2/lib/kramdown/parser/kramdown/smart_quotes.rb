@@ -41,7 +41,7 @@
 # === SmartyPants license:
 #
 # Copyright (c) 2003 John Gruber
-# (http://daringfireball.net)
+# (https://daringfireball.net)
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -104,12 +104,12 @@
 #
 # == Links
 #
-# John Gruber:: http://daringfireball.net
-# SmartyPants:: http://daringfireball.net/projects/smartypants
+# John Gruber:: https://daringfireball.net
+# SmartyPants:: https://daringfireball.net/projects/smartypants
 #
-# Chad Miller:: http://web.chad.org
+# Chad Miller:: https://web.chad.org
 #
-# Christian Neukirchen:: http://kronavita.de/chris
+# Christian Neukirchen:: https://kronavita.de/chris
 #
 #++
 #

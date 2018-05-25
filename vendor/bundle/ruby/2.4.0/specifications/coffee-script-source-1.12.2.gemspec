@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.date = "2016-12-16"
   s.description = "    CoffeeScript is a little language that compiles into JavaScript.\n    Underneath all of those embarrassing braces and semicolons,\n    JavaScript has always had a gorgeous object model at its heart.\n    CoffeeScript is an attempt to expose the good parts of JavaScript\n    in a simple way.\n".freeze
   s.email = "jashkenas@gmail.com".freeze
-  s.homepage = "http://coffeescript.org".freeze
+  s.homepage = "https://coffeescript.org".freeze
   s.licenses = ["MIT".freeze]
   s.rubyforge_project = "coffee-script-source".freeze
   s.rubygems_version = "2.6.11".freeze

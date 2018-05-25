@@ -1,12 +1,12 @@
 # rb-inotify
 
-This is a simple wrapper over the [inotify](http://en.wikipedia.org/wiki/Inotify) Linux kernel subsystem
+This is a simple wrapper over the [inotify](https://en.wikipedia.org/wiki/Inotify) Linux kernel subsystem
 for monitoring changes to files and directories.
-It uses the [FFI](http://wiki.github.com/ffi/ffi) gem to avoid having to compile a C extension.
+It uses the [FFI](https://wiki.github.com/ffi/ffi) gem to avoid having to compile a C extension.
 
-[API documentation is available on rdoc.info](http://rdoc.info/projects/nex3/rb-inotify).
+[API documentation is available on rdoc.info](https://rdoc.info/projects/nex3/rb-inotify).
 
-[![Build Status](https://secure.travis-ci.org/guard/rb-inotify.svg)](http://travis-ci.org/guard/rb-inotify)
+[![Build Status](https://secure.travis-ci.org/guard/rb-inotify.svg)](https://travis-ci.org/guard/rb-inotify)
 [![Code Climate](https://codeclimate.com/github/guard/rb-inotify.svg)](https://codeclimate.com/github/guard/rb-inotify)
 [![Coverage Status](https://coveralls.io/repos/guard/rb-inotify/badge.svg)](https://coveralls.io/r/guard/rb-inotify)
 
@@ -27,7 +27,7 @@ for the events you care about:
 
 Inotify can watch directories or individual files.
 It can pay attention to all sorts of events;
-for a full list, see [the inotify man page](http://www.tin.org/bin/man.cgi?section=7&topic=inotify).
+for a full list, see [the inotify man page](https://www.tin.org/bin/man.cgi?section=7&topic=inotify).
 
 Finally, you get at the events themselves:
 
@@ -82,7 +82,7 @@ so we can't use the notifier's file descriptor as a stand-in.
 Released under the MIT license.
 
 Copyright, 2009, by Nathan Weizenbaum.  
-Copyright, 2017, by [Samuel G. D. Williams](http://www.codeotaku.com/samuel-williams).
+Copyright, 2017, by [Samuel G. D. Williams](https://www.codeotaku.com/samuel-williams).
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

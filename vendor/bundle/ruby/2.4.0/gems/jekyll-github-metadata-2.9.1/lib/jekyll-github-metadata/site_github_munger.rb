@@ -48,7 +48,7 @@ module Jekyll
       end
 
       # Set the baseurl only if it is `nil` or `/`
-      # Baseurls should never be "/". See http://bit.ly/2s1Srid
+      # Baseurls should never be "/". See https://bit.ly/2s1Srid
       def should_set_baseurl?
         site.config["baseurl"].nil? || site.config["baseurl"] == "/"
       end

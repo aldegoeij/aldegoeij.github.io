@@ -26,7 +26,7 @@ You might need administrator privileges on your system to install the gem.
 
 ## API Documentation
 
-Visit the page http://rdoc.info/gems/net-dns
+Visit the page https://rdoc.info/gems/net-dns
 
 
 ## Trivial resolver

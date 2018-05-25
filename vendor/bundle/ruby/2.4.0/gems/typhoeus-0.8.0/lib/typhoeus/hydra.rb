@@ -11,7 +11,7 @@ module Typhoeus
 
   # Hydra manages making parallel HTTP requests. This
   # is achieved by using libcurls multi interface:
-  # http://curl.haxx.se/libcurl/c/libcurl-multi.html
+  # https://curl.haxx.se/libcurl/c/libcurl-multi.html
   # The benefits are that you don't have to worry running
   # the requests by yourself.
   #
@@ -69,7 +69,7 @@ module Typhoeus
     end
 
     # Create a new hydra. All
-    # {http://rubydoc.info/github/typhoeus/ethon/Ethon/Multi#initialize-instance_method Ethon::Multi#initialize}
+    # {https://rubydoc.info/github/typhoeus/ethon/Ethon/Multi#initialize-instance_method Ethon::Multi#initialize}
     # options are also available.
     #
     # @example Create a hydra.
@@ -84,7 +84,7 @@ module Typhoeus
     #  of max concurrent connections to create. Default is
     #  200.
     #
-    # @see http://rubydoc.info/github/typhoeus/ethon/Ethon/Multi#initialize-instance_method
+    # @see https://rubydoc.info/github/typhoeus/ethon/Ethon/Multi#initialize-instance_method
     #   Ethon::Multi#initialize
     def initialize(options = {})
       @options = options

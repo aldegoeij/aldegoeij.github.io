@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Ethon::Easy::Http::Custom do
   let(:easy) { Ethon::Easy.new }
-  let(:url) { "http://localhost:3001/" }
+  let(:url) { "https://localhost:3001/" }
   let(:params) { nil }
   let(:form) { nil }
   let(:custom) { described_class.new("PURGE", url, {:params => params, :body => form}) }
@@ -45,7 +45,7 @@ describe Ethon::Easy::Http::Custom do
         end
 
         it "requests parameterized url" do
-          expect(easy.response_body).to include('"REQUEST_URI":"http://localhost:3001/?a=1%26"')
+          expect(easy.response_body).to include('"REQUEST_URI":"https://localhost:3001/?a=1%26"')
         end
       end
     end
@@ -164,7 +164,7 @@ describe Ethon::Easy::Http::Custom do
         end
 
         it "url contains params" do
-          expect(easy.response_body).to include('"REQUEST_URI":"http://localhost:3001/?b=2"')
+          expect(easy.response_body).to include('"REQUEST_URI":"https://localhost:3001/?b=2"')
         end
 
         it "body contains form" do

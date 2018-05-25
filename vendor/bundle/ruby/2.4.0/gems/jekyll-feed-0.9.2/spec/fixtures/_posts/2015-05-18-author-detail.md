@@ -2,7 +2,7 @@
 excerpt: ""
 author:
   name: Ben
-  uri: "http://ben.balter.com"
+  uri: "https://ben.balter.com"
   email: ben@example.com
 ---
 

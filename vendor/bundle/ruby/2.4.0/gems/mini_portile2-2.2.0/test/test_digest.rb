@@ -29,7 +29,7 @@ class TestDigest < TestCase
 
   def download_with_digest(key, klass)
     @recipe.files << {
-      :url => "http://localhost:#{webrick.config[:Port]}/#{ERB::Util.url_encode(File.basename(tar_path))}",
+      :url => "https://localhost:#{webrick.config[:Port]}/#{ERB::Util.url_encode(File.basename(tar_path))}",
       key => klass.file(tar_path).hexdigest,
     }
     @recipe.download
@@ -37,7 +37,7 @@ class TestDigest < TestCase
 
   def download_with_wrong_digest(key)
     @recipe.files << {
-      :url => "http://localhost:#{webrick.config[:Port]}/#{ERB::Util.url_encode(File.basename(tar_path))}",
+      :url => "https://localhost:#{webrick.config[:Port]}/#{ERB::Util.url_encode(File.basename(tar_path))}",
       key => "0011223344556677",
     }
     assert_raises(RuntimeError){ @recipe.download }

@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.date = "2017-02-21"
   s.description = "A toolkit of support libraries and Ruby core extensions extracted from the Rails framework. Rich support for multibyte strings, internationalization, time zones, and testing.".freeze
   s.email = "david@loudthinking.com".freeze
-  s.homepage = "http://www.rubyonrails.org".freeze
+  s.homepage = "https://www.rubyonrails.org".freeze
   s.licenses = ["MIT".freeze]
   s.rdoc_options = ["--encoding".freeze, "UTF-8".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 1.9.3".freeze)

@@ -4,7 +4,7 @@ module Rouge
       tag 'tulip'
       aliases 'tlp'
       filenames '*.tlp'
-      desc 'The tulip programming language http://github.com/jneen/tulip'
+      desc 'The tulip programming language https://github.com/jneen/tulip'
 
       id = /\w[\w-]*/
 

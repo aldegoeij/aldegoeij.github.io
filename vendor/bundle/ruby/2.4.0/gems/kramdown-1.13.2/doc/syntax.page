@@ -948,7 +948,7 @@ The following kramdown fragment
     \end{align*}
     $$
 
-renders (using Javascript library [MathJax](http://www.mathjax.org/)) as
+renders (using Javascript library [MathJax](https://www.mathjax.org/)) as
 
 $$
 \begin{align*}
@@ -1174,7 +1174,7 @@ This is the easiest one to create: Just surround a web address or an email addre
 brackets and the address will be turned into a proper link. The address will be used as link target
 and as link text. For example:
 
-    Information can be found on the <http://example.com> homepage.
+    Information can be found on the <https://example.com> homepage.
     You can also mail me: <me.example@example.com>
 
 It is not possible to specify a different link text using automatic links -- use the other link
@@ -1191,7 +1191,7 @@ An inline style link can be created by surrounding the link text with square bra
 immediately by the link URL (and an optional title in single or double quotes preceded by at least
 one space) in normal parentheses. For example:
 
-    This is [a link](http://rubyforge.org) to a page.
+    This is [a link](https://rubyforge.org) to a page.
     A [link](../test "local URI") can also have a title.
     And [spaces](link with spaces.html)!
 
@@ -1211,7 +1211,7 @@ Notes:
 * Additional link attributes can be added by using a [span IAL](#span-ials) after the inline link,
   for example:
 
-      This is a [link](http://example.com){:hreflang="de"}
+      This is a [link](https://example.com){:hreflang="de"}
 
 ### Reference Links
 
@@ -1238,7 +1238,7 @@ after the reference link.
 The link definition can be put anywhere in the document. It does not appear in the output. A link
 definition looks like this:
 
-    [linkid]: http://www.example.com/ "Optional Title"
+    [linkid]: https://www.example.com/ "Optional Title"
 
 > Link definitions are, despite being described here, non-content block-level elements.
 {: .information}
@@ -1268,7 +1268,7 @@ you can escape the colon after the link identifier:
 Although link definitions are non-content block-level elements, [block IALs](#block-ials) can be
 used on them to specify additional attributes for the links:
 
-    [linkid]: http://example.com
+    [linkid]: https://example.com
     {:hreflang="de"}
 
 ### Images

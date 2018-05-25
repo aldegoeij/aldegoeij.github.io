@@ -15,7 +15,7 @@ describe Ethon::Easy::Header do
     context "when requesting" do
       before do
         easy.headers = headers
-        easy.url = "http://localhost:3001"
+        easy.url = "https://localhost:3001"
         easy.perform
       end
 

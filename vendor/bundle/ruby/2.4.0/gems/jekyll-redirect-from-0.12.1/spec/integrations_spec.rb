@@ -10,7 +10,7 @@ RSpec.describe "JekyllRedirectFrom integration tests" do
 
       it "exists in the built site" do
         expect(path).to exist
-        expect(contents).to match("http://jekyllrb.com/one_redirect_from.html")
+        expect(contents).to match("https://jekyllrb.com/one_redirect_from.html")
       end
     end
 
@@ -21,7 +21,7 @@ RSpec.describe "JekyllRedirectFrom integration tests" do
 
           it "exists in the built site" do
             expect(path).to exist
-            expect(contents).to match("http://jekyllrb.com/multiple_redirect_froms.html")
+            expect(contents).to match("https://jekyllrb.com/multiple_redirect_froms.html")
           end
         end
       end
@@ -41,7 +41,7 @@ RSpec.describe "JekyllRedirectFrom integration tests" do
 
       it "exists in the built site" do
         expect(path).to exist
-        expect(contents).to match("http://jekyllrb.com/foo")
+        expect(contents).to match("https://jekyllrb.com/foo")
       end
     end
   end
@@ -52,7 +52,7 @@ RSpec.describe "JekyllRedirectFrom integration tests" do
 
       it "exists in the built site" do
         expect(path).to exist
-        expect(contents).to match("http://jekyllrb.com/articles/redirect-me-plz.html")
+        expect(contents).to match("https://jekyllrb.com/articles/redirect-me-plz.html")
       end
     end
 
@@ -61,7 +61,7 @@ RSpec.describe "JekyllRedirectFrom integration tests" do
 
       it "exists in the built site" do
         expect(path).to exist
-        expect(contents).to match("http://www.zombo.com")
+        expect(contents).to match("https://www.zombo.com")
       end
     end
 
@@ -70,7 +70,7 @@ RSpec.describe "JekyllRedirectFrom integration tests" do
 
       it "exists in the built site" do
         expect(path).to exist
-        expect(contents).to match("http://jekyllrb.com/tags/our-projects/")
+        expect(contents).to match("https://jekyllrb.com/tags/our-projects/")
       end
     end
   end

@@ -368,7 +368,7 @@ module GitHubPages
       def normalize_host(domain)
         domain = domain.strip.chomp(".")
         host = Addressable::URI.parse(domain).host
-        host ||= Addressable::URI.parse("http://#{domain}").host
+        host ||= Addressable::URI.parse("https://#{domain}").host
         host unless host.to_s.empty?
       rescue Addressable::URI::InvalidURIError
         nil

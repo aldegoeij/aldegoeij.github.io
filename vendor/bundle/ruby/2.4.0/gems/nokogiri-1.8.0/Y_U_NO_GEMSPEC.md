@@ -1,4 +1,4 @@
-(note: this was originally a blog post published at http://blog.flavorjon.es/2012/03/y-u-no-gemspec.html)
+(note: this was originally a blog post published at https://blog.flavorjon.es/2012/03/y-u-no-gemspec.html)
 
 ## tl;dr
 
@@ -19,8 +19,8 @@ the historical record:
 * [Issue #274](https://github.com/sparklemotion/nokogiri/issues/274)
 * [Issue #371](https://github.com/sparklemotion/nokogiri/issues/371)
 * [A commit removing nokogiri.gemspec](https://github.com/sparklemotion/nokogiri/commit/7f17a643a05ca381d65131515b54d4a3a61ca2e1#commitcomment-667477)
-* [A nokogiri-talk thread](http://groups.google.com/group/nokogiri-talk/browse_thread/thread/4706b002e492d23f)
-* [Another nokogiri-talk thread](http://groups.google.com/group/nokogiri-talk/browse_thread/thread/0b201bb80ea3eea0)
+* [A nokogiri-talk thread](https://groups.google.com/group/nokogiri-talk/browse_thread/thread/4706b002e492d23f)
+* [Another nokogiri-talk thread](https://groups.google.com/group/nokogiri-talk/browse_thread/thread/0b201bb80ea3eea0)
 
 Sometimes people imply that we've forgotten, or that we don't know how to
 properly manage our codebase. Those people are super fun to respond
@@ -47,7 +47,7 @@ One common way to evaluate the _risk_ of an incident is:
 
     risk = probability x impact
 
-You can read more about this on [the internets](http://en.wikipedia.org/wiki/Risk_Matrix).
+You can read more about this on [the internets](https://en.wikipedia.org/wiki/Risk_Matrix).
 
 The _risk_ associated with a Nokogiri bug could be loosely defined by
 answering the questions:
@@ -132,7 +132,7 @@ it. Because it's not stable.
 ## But I Want to Do It Anyway
 
 Another option, is to email the [nokogiri-talk
-list](http://groups.google.com/group/nokogiri-talk) and ask for a
+list](https://groups.google.com/group/nokogiri-talk) and ask for a
 release candidate to be built. We're pretty accommodating if there's a
 bugfix that's a blocker for you. And if we can't release an RC, we'll
 tell you why.

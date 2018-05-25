@@ -69,7 +69,7 @@ module Jekyll
       (1..4).map { |scale| "#{url(scale)} #{scale}x" }.join(", ")
     end
 
-    # See http://primercss.io/avatars/#small-avatars
+    # See https://primercss.io/avatars/#small-avatars
     def classes
       size < 48 ? "avatar avatar-small" : "avatar"
     end

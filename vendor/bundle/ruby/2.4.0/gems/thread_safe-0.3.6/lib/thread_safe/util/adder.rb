@@ -4,7 +4,7 @@ module ThreadSafe
     # available in public domain.
     #
     # Original source code available here:
-    # http://gee.cs.oswego.edu/cgi-bin/viewcvs.cgi/jsr166/src/jsr166e/LongAdder.java?revision=1.8
+    # https://gee.cs.oswego.edu/cgi-bin/viewcvs.cgi/jsr166/src/jsr166e/LongAdder.java?revision=1.8
     #
     # One or more variables that together maintain an initially zero
     # sum. When updates (method +add+) are contended across threads,

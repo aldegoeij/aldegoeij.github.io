@@ -21,9 +21,9 @@ class TestProxy < TestCase
     end
 
     if username && password
-      yield "http://#{ERB::Util.url_encode(username)}:#{ERB::Util.url_encode(password)}@localhost:#{gs.addr[1]}"
+      yield "https://#{ERB::Util.url_encode(username)}:#{ERB::Util.url_encode(password)}@localhost:#{gs.addr[1]}"
     else
-      yield "http://localhost:#{gs.addr[1]}"
+      yield "https://localhost:#{gs.addr[1]}"
     end
 
     # Set timeout for reception of the request
@@ -49,7 +49,7 @@ class TestProxy < TestCase
 
   def test_http_proxy
     recipe = MiniPortile.new("test http_proxy", "1.0.0")
-    recipe.files << "http://myserver/path/to/tar.gz"
+    recipe.files << "https://myserver/path/to/tar.gz"
     request = with_dummy_proxy do |url, thread|
       ENV['http_proxy'] = url
       recipe.download rescue RuntimeError
@@ -60,7 +60,7 @@ class TestProxy < TestCase
 
   def test_http_proxy_with_basic_auth
     recipe = MiniPortile.new("test http_proxy", "1.0.0")
-    recipe.files << "http://myserver/path/to/tar.gz"
+    recipe.files << "https://myserver/path/to/tar.gz"
     request = with_dummy_proxy('user: @name', '@12: üMp') do |url, thread|
       ENV['http_proxy'] = url
       recipe.download  rescue RuntimeError

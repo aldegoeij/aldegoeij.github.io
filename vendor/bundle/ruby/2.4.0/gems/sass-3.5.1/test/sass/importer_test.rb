@@ -31,7 +31,7 @@ class ImporterTest < MiniTest::Test
     end
 
     def public_url(name, sourcemap_directory = nil)
-      "http://#{parse(name)}.example.com/style.scss"
+      "https://#{parse(name)}.example.com/style.scss"
     end
 
     private
@@ -217,7 +217,7 @@ SCSS
 {
 "version": 3,
 "mappings": "AAAA,QAAS;EACP,KAAK,EAAE,IAAI",
-"sources": ["http://orange.example.com/style.scss"],
+"sources": ["https://orange.example.com/style.scss"],
 "names": [],
 "file": "css_uri"
 }
@@ -279,7 +279,7 @@ JSON
 .foo {a: b}
 SCSS
 
-    _, sourcemap = engine.render_with_sourcemap('http://1.example.com/style.map')
+    _, sourcemap = engine.render_with_sourcemap('https://1.example.com/style.map')
 
     uri = Sass::Util.file_uri_from_path(File.absolute_path(filename_for_test(:scss)))
     assert_equal <<JSON.strip, sourcemap.to_json(:css_uri => 'css_uri')
@@ -306,7 +306,7 @@ JSON
 .foo {a: b}
 SCSS
 
-    _, sourcemap = engine.render_with_sourcemap('http://1.example.com/style.map')
+    _, sourcemap = engine.render_with_sourcemap('https://1.example.com/style.map')
 
     uri = Sass::Util.file_uri_from_path(File.absolute_path(filename_for_test(:scss)))
     assert_equal <<JSON.strip, sourcemap.to_json(:css_uri => 'css_uri', :css_path => 'css_path')
@@ -335,10 +335,10 @@ JSON
 .foo {a: b}
 SCSS
 
-    rendered, sourcemap = engine.render_with_sourcemap('http://1.example.com/style.map')
+    rendered, sourcemap = engine.render_with_sourcemap('https://1.example.com/style.map')
 
 
-    rendered, sourcemap = engine.render_with_sourcemap('http://map.example.com/map/style.map')
+    rendered, sourcemap = engine.render_with_sourcemap('https://map.example.com/map/style.map')
     assert_equal <<JSON.strip, sourcemap.to_json(:css_uri => css_uri, :sourcemap_path => sourcemap_path)
 {
 "version": 3,
@@ -366,7 +366,7 @@ JSON
 .foo {a: b}
 SCSS
 
-    _, sourcemap = engine.render_with_sourcemap('http://map.example.com/map/style.map')
+    _, sourcemap = engine.render_with_sourcemap('https://map.example.com/map/style.map')
     assert_equal <<JSON.strip, sourcemap.to_json(:css_path => css_path, :sourcemap_path => sourcemap_path)
 {
 "version": 3,

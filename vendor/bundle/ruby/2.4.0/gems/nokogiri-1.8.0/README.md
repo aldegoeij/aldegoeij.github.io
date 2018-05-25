@@ -1,8 +1,8 @@
 # Nokogiri
 
-* http://nokogiri.org
-* Installation: http://nokogiri.org/tutorials/installing_nokogiri.html
-* Tutorials:    http://nokogiri.org
+* https://nokogiri.org
+* Installation: https://nokogiri.org/tutorials/installing_nokogiri.html
+* Tutorials:    https://nokogiri.org
 * README:       https://github.com/sparklemotion/nokogiri
 * Mailing List: https://groups.google.com/group/nokogiri-talk
 * Bug Reports:  https://github.com/sparklemotion/nokogiri/issues
@@ -51,13 +51,13 @@ gem install nokogiri
 
 then please start troubleshooting here:
 
-> http://www.nokogiri.org/tutorials/installing_nokogiri.html
+> https://www.nokogiri.org/tutorials/installing_nokogiri.html
 
 There are currently 1,237 Stack Overflow questions about Nokogiri
 installation. The vast majority of them are out of date and therefore
 incorrect. __Please do not use Stack Overflow.__
 
-Instead, [tell us](http://nokogiri.org/tutorials/getting_help.html)
+Instead, [tell us](https://nokogiri.org/tutorials/getting_help.html)
 when the above instructions don't work for you. This allows us to both
 help you directly and improve the documentation.
 
@@ -68,16 +68,16 @@ Binary packages are available for some distributions.
 
 * Debian: https://packages.debian.org/sid/ruby-nokogiri
 * SuSE: https://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/
-* Fedora: http://s390.koji.fedoraproject.org/koji/packageinfo?packageID=6756
+* Fedora: https://s390.koji.fedoraproject.org/koji/packageinfo?packageID=6756
 
 
 ## Support
 
-There are open-source tutorials (to which we invite contributions!) here: http://nokogiri.org/tutorials
+There are open-source tutorials (to which we invite contributions!) here: https://nokogiri.org/tutorials
 
 * The Nokogiri mailing list is active: https://groups.google.com/group/nokogiri-talk
 * The Nokogiri bug tracker is here: https://github.com/sparklemotion/nokogiri/issues
-* Before filing a bug report, please read our submission guidelines: http://nokogiri.org/tutorials/getting_help.html
+* Before filing a bug report, please read our submission guidelines: https://nokogiri.org/tutorials/getting_help.html
 * The IRC channel is #nokogiri on freenode.
 
 
@@ -92,7 +92,7 @@ require 'nokogiri'
 require 'open-uri'
 
 # Fetch and parse HTML document
-doc = Nokogiri::HTML(open('http://www.nokogiri.org/tutorials/installing_nokogiri.html'))
+doc = Nokogiri::HTML(open('https://www.nokogiri.org/tutorials/installing_nokogiri.html'))
 
 puts "### Search for nodes by css"
 doc.css('nav ul.menu li a', 'article h2').each do |link|
@@ -119,14 +119,14 @@ end
 * In Nokogiri 1.6.0 and later libxml2 and libxslt are bundled with the
   gem, but if you want to use the system versions:
 
-  * First, check out [the long list](http://www.xmlsoft.org/news.html)
+  * First, check out [the long list](https://www.xmlsoft.org/news.html)
     of fixes and changes between releases before deciding to use any
     version older than is bundled with Nokogiri.
 
   * At install time, set the environment variable
     `NOKOGIRI_USE_SYSTEM_LIBRARIES` or else use the
     `--use-system-libraries` argument. (See
-    http://nokogiri.org/tutorials/installing_nokogiri.html#using_your_system_libraries
+    https://nokogiri.org/tutorials/installing_nokogiri.html#using_your_system_libraries
     for specifics.)
 
   * libxml2 >=2.6.21 with iconv support

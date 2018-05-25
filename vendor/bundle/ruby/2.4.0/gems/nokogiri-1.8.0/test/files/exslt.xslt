@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <xsl:stylesheet version="1.0"
-				xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-				xmlns:func="http://exslt.org/functions"
+				xmlns:xsl="https://www.w3.org/1999/XSL/Transform"
+				xmlns:func="https://exslt.org/functions"
 				xmlns:my="urn:my-functions"
-                xmlns:date="http://exslt.org/dates-and-times"
-                xmlns:math="http://exslt.org/math"
+                xmlns:date="https://exslt.org/dates-and-times"
+                xmlns:math="https://exslt.org/math"
 				extension-element-prefixes="func date"
                 >
 

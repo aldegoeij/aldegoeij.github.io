@@ -40,8 +40,8 @@ gem "typhoeus"
 
 ## Project Tracking
 
-* [Documentation](http://rubydoc.info/github/typhoeus/typhoeus/frames/Typhoeus) (GitHub master)
-* [Mailing list](http://groups.google.com/group/typhoeus)
+* [Documentation](https://rubydoc.info/github/typhoeus/typhoeus/frames/Typhoeus) (GitHub master)
+* [Mailing list](https://groups.google.com/group/typhoeus)
 
 ## Usage
 
@@ -69,14 +69,14 @@ When you want to send URL parameters, you can use `:params` hash to do so. Pleas
 Add a proxy url to the list of options:
 
 ```ruby
-options = {proxy: 'http://myproxy.org'}
+options = {proxy: 'https://myproxy.org'}
 req = Typhoeus::Request.new(url, options)
 ```
 
 If your proxy requires authentication, add it with `proxyuserpwd` option key:
 
 ```ruby
-options = {proxy: 'http://proxyurl.com', proxyuserpwd: 'user:password'}
+options = {proxy: 'https://proxyurl.com', proxyuserpwd: 'user:password'}
 req = Typhoeus::Request.new(url, options)
 ```
 
@@ -167,7 +167,7 @@ and use Mime::Types to set the content type.
 
 ```ruby
 Typhoeus.post(
-  "http://localhost:3000/posts",
+  "https://localhost:3000/posts",
   body: {
     title: "test post",
     content: "this is my test",
@@ -208,13 +208,13 @@ Generally, you should be running requests through hydra. Here is how that looks:
 ```ruby
 hydra = Typhoeus::Hydra.hydra
 
-first_request = Typhoeus::Request.new("http://example.com/posts/1")
+first_request = Typhoeus::Request.new("https://example.com/posts/1")
 first_request.on_complete do |response|
   third_url = response.body
   third_request = Typhoeus::Request.new(third_url)
   hydra.queue third_request
 end
-second_request = Typhoeus::Request.new("http://example.com/posts/2")
+second_request = Typhoeus::Request.new("https://example.com/posts/2")
 
 hydra.queue first_request
 hydra.queue second_request
@@ -402,8 +402,8 @@ Typhoeus.get("www.example.com", timeout: 1).timed_out?
 
 Timed out responses also have their success? method return false.
 
-There are two different timeouts available: [`timeout`](http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTTIMEOUT)
-and [`connecttimeout`](http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCONNECTTIMEOUT).
+There are two different timeouts available: [`timeout`](https://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTTIMEOUT)
+and [`connecttimeout`](https://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTCONNECTTIMEOUT).
 `timeout` is the time limit for the entire request in seconds.
 `connecttimeout` is the time limit for just the connection phase, again in seconds.
 
@@ -455,13 +455,13 @@ If you just want cookies enabled, you need to pass the same filename for both op
 
 ### Other CURL options
 
-Are available and documented [here](http://rubydoc.info/github/typhoeus/ethon/Ethon/Easy/Options)
+Are available and documented [here](https://rubydoc.info/github/typhoeus/ethon/Ethon/Easy/Options)
 
 ### SSL
 
 SSL comes built in to libcurl so it’s in Typhoeus as well. If you pass in a
 url with "https" it should just work assuming that you have your [cert
-bundle](http://curl.haxx.se/docs/caextract.html) in order and the server is
+bundle](https://curl.haxx.se/docs/caextract.html) in order and the server is
 verifiable. You must also have libcurl built with SSL support enabled. You can
 check that by doing this:
 
@@ -494,7 +494,7 @@ Typhoeus.get("https://www.example.com", ssl_verifyhost: 0)
 It’s sometimes useful to see verbose output from curl. You can enable it on a per-request basis:
 
 ```ruby
-Typhoeus.get("http://example.com", verbose: true)
+Typhoeus.get("https://example.com", verbose: true)
 ```
 
 or globally:
@@ -525,17 +525,17 @@ bundle exec rake
 ```
 ## Semantic Versioning
 
-This project conforms to [semver](http://semver.org/).
+This project conforms to [semver](https://semver.org/).
 
 ## LICENSE
 
 (The MIT License)
 
-Copyright © 2009-2010 [Paul Dix](http://www.pauldix.net/)
+Copyright © 2009-2010 [Paul Dix](https://www.pauldix.net/)
 
 Copyright © 2011-2012 [David Balatero](https://github.com/dbalatero/)
 
-Copyright © 2012-2014 [Hans Hasselberg](http://github.com/i0rek/)
+Copyright © 2012-2014 [Hans Hasselberg](https://github.com/i0rek/)
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),

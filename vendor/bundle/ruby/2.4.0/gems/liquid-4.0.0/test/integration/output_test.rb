@@ -115,8 +115,8 @@ class OutputTest < Minitest::Test
   end
 
   def test_link_to
-    text = %( {{ 'Typo' | link_to: 'http://typo.leetsoft.com' }} )
-    expected = %( <a href="http://typo.leetsoft.com">Typo</a> )
+    text = %( {{ 'Typo' | link_to: 'https://typo.leetsoft.com' }} )
+    expected = %( <a href="https://typo.leetsoft.com">Typo</a> )
 
     assert_equal expected, Template.parse(text).render!(@assigns, filters: [FunnyFilter])
   end

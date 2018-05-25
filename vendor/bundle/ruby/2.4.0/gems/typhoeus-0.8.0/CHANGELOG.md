@@ -2,17 +2,17 @@
 
 ## Master
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.7.3...master)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.7.3...master)
 
 ## 0.7.3
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.7.2...v0.7.3)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.7.2...v0.7.3)
 
 * Add on_body callbacks individually to allow Ethon to recognize the return code
 
 ## 0.7.2
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.7.1...v0.7.2)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.7.1...v0.7.2)
 
 * Allow arrays to be passed to Expectation#and_return
   ([JP Moral](https://github.com/jpmoral))
@@ -22,7 +22,7 @@
 
 ## 0.7.1
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.7.0...v0.7.1)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.7.0...v0.7.1)
 
 Bugfixes:
 
@@ -31,7 +31,7 @@ Bugfixes:
 
 ## 0.7.0
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.7.0.pre1...v0.7.0)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.7.0.pre1...v0.7.0)
 
 Bugfixes:
 
@@ -39,7 +39,7 @@ Bugfixes:
 
 ## 0.7.0.pre1
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.6.9...v0.7.0.pre1)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.6.9...v0.7.0.pre1)
 
 Enhancements:
 
@@ -48,7 +48,7 @@ Enhancements:
 
 ## 0.6.8
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.6.7...v0.6.8)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.6.7...v0.6.8)
 
 Bugfixes:
 
@@ -75,7 +75,7 @@ Enhancements:
 
 ## 0.6.7
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.6.6...v0.6.7)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.6.6...v0.6.7)
 
 Enhancements:
 
@@ -84,21 +84,21 @@ Enhancements:
 
 ## 0.6.6
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.6.5...v0.6.6)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.6.5...v0.6.6)
 
 ## 0.6.5
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.6.4...v0.6.5)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.6.4...v0.6.5)
 
 ## 0.6.4
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.6.3...v0.6.4)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.6.3...v0.6.4)
 
 The changelog entries are coming soon!
 
 ## 0.6.3
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.6.2...v0.6.3)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.6.2...v0.6.3)
 
 Enhancements:
 
@@ -110,7 +110,7 @@ Enhancements:
 
 ## 0.6.2
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.6.1...v0.6.2)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.6.1...v0.6.2)
 
 Enhancements:
 
@@ -125,7 +125,7 @@ Enhancements:
 
 ## 0.6.1
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.6.0...v0.6.1)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.6.0...v0.6.1)
 
 Enhancements:
 
@@ -133,12 +133,12 @@ Enhancements:
 
 ## 0.6.0
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.5.4...v0.6.0)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.5.4...v0.6.0)
 
 Enhancements:
 
 * `Request#url` now also contains the url parameters.
-* Use updated ethon version which provides access to protocols and redir_protocols in response to [libcurl SASL buffer overflow vulnerability](http://curl.haxx.se/docs/adv_20130206.html)
+* Use updated ethon version which provides access to protocols and redir_protocols in response to [libcurl SASL buffer overflow vulnerability](https://curl.haxx.se/docs/adv_20130206.html)
 
 Bugfixes:
 
@@ -149,7 +149,7 @@ Bugfixes:
 
 ## 0.5.4
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.5.3...v0.5.4)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.5.3...v0.5.4)
 
 Enhancements:
 
@@ -167,7 +167,7 @@ Enhancements:
 
 ## 0.5.3
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.5.2...v0.5.3)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.5.2...v0.5.3)
 
 Enhancements:
 
@@ -180,7 +180,7 @@ Bugfixes:
 
 ## 0.5.2
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.5.1...v0.5.2)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.5.1...v0.5.2)
 
 Enhancements:
 
@@ -193,7 +193,7 @@ Enhancements:
 
 ## 0.5.1
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.5.0...v0.5.1)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.5.0...v0.5.1)
 
 Enhancements:
 
@@ -203,7 +203,7 @@ Enhancements:
 
 ## 0.5.0
 
-[Full Changelog](http://github.com/typhoeus/typhoeus/compare/v0.4.2...v0.5.0)
+[Full Changelog](https://github.com/typhoeus/typhoeus/compare/v0.4.2...v0.5.0)
 
 Major Changes:
 
@@ -211,7 +211,7 @@ Major Changes:
   * Params are url params and a body is always a body for every request type
   * The options you can set might have a slightly other names, as Ethon sticks to
     libcurl names. See
-    [Easy.new](http://rubydoc.info/github/typhoeus/ethon/Ethon/Easy#initialize-instance_method)
+    [Easy.new](https://rubydoc.info/github/typhoeus/ethon/Ethon/Easy#initialize-instance_method)
     for a description.
   * Request parameter and body are properly encoded (only POST multiform body is not)
   * No more header sanitizing. Before: `:headers => { 'user_agent' => 'Custom' }` was modified to

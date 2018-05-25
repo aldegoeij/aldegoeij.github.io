@@ -6,7 +6,7 @@ describe(Jekyll::JekyllSitemap) do
     {
       "source"      => source_dir,
       "destination" => dest_dir,
-      "url"         => "http://example.org",
+      "url"         => "https://example.org",
       "collections" => {
         "my_collection" => { "output" => true },
         "other_things"  => { "output" => false }

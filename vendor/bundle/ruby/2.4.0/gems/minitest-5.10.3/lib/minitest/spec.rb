@@ -57,11 +57,11 @@ module Kernel
   #
   # For more information on getting started with writing specs, see:
   #
-  # http://www.rubyinside.com/a-minitestspec-tutorial-elegant-spec-style-testing-that-comes-with-ruby-5354.html
+  # https://www.rubyinside.com/a-minitestspec-tutorial-elegant-spec-style-testing-that-comes-with-ruby-5354.html
   #
   # For some suggestions on how to improve your specs, try:
   #
-  # http://betterspecs.org
+  # https://betterspecs.org
   #
   # but do note that several items there are debatable or specific to
   # rspec.

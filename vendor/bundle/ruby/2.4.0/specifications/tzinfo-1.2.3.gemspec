@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.email = "phil.ross@gmail.com".freeze
   s.extra_rdoc_files = ["README.md".freeze, "CHANGES.md".freeze, "LICENSE".freeze]
   s.files = ["CHANGES.md".freeze, "LICENSE".freeze, "README.md".freeze]
-  s.homepage = "http://tzinfo.github.io".freeze
+  s.homepage = "https://tzinfo.github.io".freeze
   s.licenses = ["MIT".freeze]
   s.rdoc_options = ["--title".freeze, "TZInfo".freeze, "--main".freeze, "README.md".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 1.8.7".freeze)

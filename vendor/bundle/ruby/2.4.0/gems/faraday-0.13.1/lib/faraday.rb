@@ -8,9 +8,9 @@ require 'forwardable'
 #
 # Examples
 #
-#   Faraday.get "http://faraday.com"
+#   Faraday.get "https://faraday.com"
 #
-#   conn = Faraday.new "http://faraday.com"
+#   conn = Faraday.new "https://faraday.com"
 #   conn.get '/'
 #
 module Faraday
@@ -50,14 +50,14 @@ module Faraday
     #
     # Examples
     #
-    #   Faraday.new 'http://faraday.com'
+    #   Faraday.new 'https://faraday.com'
     #
-    #   # http://faraday.com?page=1
-    #   Faraday.new 'http://faraday.com', :params => {:page => 1}
+    #   # https://faraday.com?page=1
+    #   Faraday.new 'https://faraday.com', :params => {:page => 1}
     #
     #   # same
     #
-    #   Faraday.new :url => 'http://faraday.com',
+    #   Faraday.new :url => 'https://faraday.com',
     #     :params => {:page => 1}
     #
     # Returns a Faraday::Connection.

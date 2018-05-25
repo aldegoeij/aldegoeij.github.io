@@ -1,10 +1,10 @@
 SafeYAML
 ========
 
-[![Build Status](https://travis-ci.org/dtao/safe_yaml.png)](http://travis-ci.org/dtao/safe_yaml)
-[![Gem Version](https://badge.fury.io/rb/safe_yaml.png)](http://badge.fury.io/rb/safe_yaml)
+[![Build Status](https://travis-ci.org/dtao/safe_yaml.png)](https://travis-ci.org/dtao/safe_yaml)
+[![Gem Version](https://badge.fury.io/rb/safe_yaml.png)](https://badge.fury.io/rb/safe_yaml)
 
-The **SafeYAML** gem provides an alternative implementation of `YAML.load` suitable for accepting user input in Ruby applications. Unlike Ruby's built-in implementation of `YAML.load`, SafeYAML's version will not expose apps to arbitrary code execution exploits (such as [the ones discovered](http://www.reddit.com/r/netsec/comments/167c11/serious_vulnerability_in_ruby_on_rails_allowing/) [in Rails in early 2013](http://www.h-online.com/open/news/item/Rails-developers-close-another-extremely-critical-flaw-1793511.html)).
+The **SafeYAML** gem provides an alternative implementation of `YAML.load` suitable for accepting user input in Ruby applications. Unlike Ruby's built-in implementation of `YAML.load`, SafeYAML's version will not expose apps to arbitrary code execution exploits (such as [the ones discovered](https://www.reddit.com/r/netsec/comments/167c11/serious_vulnerability_in_ruby_on_rails_allowing/) [in Rails in early 2013](https://www.h-online.com/open/news/item/Rails-developers-close-another-extremely-critical-flaw-1793511.html)).
 
 **If you encounter any issues with SafeYAML, check out the 'Common Issues' section below.** If you don't see anything that addresses the problem you're experiencing, by all means, [create an issue](https://github.com/dtao/safe_yaml/issues/new)!
 
@@ -181,11 +181,11 @@ The above list will grow over time, as more issues are discovered.
 Versioning
 ----------
 
-SafeYAML will follow [semantic versioning](http://semver.org/) so any updates to the first major version will maintain backwards compatability. So expect primarily bug fixes and feature enhancements (if anything!) from here on out... unless it makes sense to break the interface at some point and introduce a version 2.0, which I honestly think is unlikely.
+SafeYAML will follow [semantic versioning](https://semver.org/) so any updates to the first major version will maintain backwards compatability. So expect primarily bug fixes and feature enhancements (if anything!) from here on out... unless it makes sense to break the interface at some point and introduce a version 2.0, which I honestly think is unlikely.
 
 Requirements
 ------------
 
-SafeYAML requires Ruby 1.8.7 or newer and works with both [Syck](http://www.ruby-doc.org/stdlib-1.8.7/libdoc/yaml/rdoc/YAML.html) and [Psych](http://github.com/tenderlove/psych).
+SafeYAML requires Ruby 1.8.7 or newer and works with both [Syck](https://www.ruby-doc.org/stdlib-1.8.7/libdoc/yaml/rdoc/YAML.html) and [Psych](https://github.com/tenderlove/psych).
 
 If you are using a version of Ruby where Psych is the default YAML engine (e.g., 1.9.3) but you want to use Syck, be sure to set `YAML::ENGINE.yamler = "syck"` **before** requiring the safe_yaml gem.

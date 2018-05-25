@@ -64,7 +64,7 @@ module Octokit
       #     'octokit/octokit.rb',
       #     'web',
       #     {
-      #       :url => 'http://something.com/webhook',
+      #       :url => 'https://something.com/webhook',
       #       :content_type => 'json'
       #     },
       #     {
@@ -106,7 +106,7 @@ module Octokit
       #     100000,
       #     'web',
       #     {
-      #       :url => 'http://something.com/webhook',
+      #       :url => 'https://something.com/webhook',
       #       :content_type => 'json'
       #     },
       #     {
@@ -208,7 +208,7 @@ module Octokit
       #   @client.create_org_hook(
       #     'octokit',
       #     {
-      #       :url => 'http://something.com/webhook',
+      #       :url => 'https://something.com/webhook',
       #       :content_type => 'json'
       #     },
       #     {
@@ -241,7 +241,7 @@ module Octokit
       #     'octokit',
       #     123,
       #     {
-      #       :url => 'http://something.com/webhook',
+      #       :url => 'https://something.com/webhook',
       #       :content_type => 'json'
       #     },
       #     {

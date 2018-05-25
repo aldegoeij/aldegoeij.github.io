@@ -82,7 +82,7 @@ module FFI
         def_type   = parts.join(" ")
 
         # GCC does mapping with __attribute__ stuf, also see
-        # http://hal.cs.berkeley.edu/cil/cil016.html section 16.2.7.  Problem
+        # https://hal.cs.berkeley.edu/cil/cil016.html section 16.2.7.  Problem
         # with this is that the __attribute__ stuff can either occur before or
         # after the new type that is defined...
         if type =~ /__attribute__/

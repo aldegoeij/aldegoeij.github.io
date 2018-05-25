@@ -28,7 +28,7 @@ RSpec.describe JekyllRedirectFrom::Generator do
 
         it "creates the redirect" do
           expect(page).to_not be_nil
-          expect(page.output).to match("http://jekyllrb.com/one_redirect_from.html")
+          expect(page.output).to match("https://jekyllrb.com/one_redirect_from.html")
         end
       end
 
@@ -41,7 +41,7 @@ RSpec.describe JekyllRedirectFrom::Generator do
           redirects.each do |url|
             page = site.pages.find { |p| p.url == url }
             expect(page).to_not be_nil
-            expect(page.output).to match("http://jekyllrb.com/multiple_redirect_froms.html")
+            expect(page.output).to match("https://jekyllrb.com/multiple_redirect_froms.html")
           end
         end
       end
@@ -52,7 +52,7 @@ RSpec.describe JekyllRedirectFrom::Generator do
 
       it "redirects" do
         expect(page).to_not be_nil
-        expect(page.output).to match("http://jekyllrb.com/articles/redirect-me-plz.html")
+        expect(page.output).to match("https://jekyllrb.com/articles/redirect-me-plz.html")
       end
     end
   end
@@ -80,7 +80,7 @@ RSpec.describe JekyllRedirectFrom::Generator do
       let(:doc) { site.documents.find { |p| p.url == "/articles/redirect-somewhere-else-plz.html" } }
 
       it "redirects" do
-        expect(doc.output).to match("http://www.zombo.com")
+        expect(doc.output).to match("https://www.zombo.com")
       end
     end
   end

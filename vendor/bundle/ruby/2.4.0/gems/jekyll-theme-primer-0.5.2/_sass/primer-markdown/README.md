@@ -1,6 +1,6 @@
 # Primer CSS Markdown
 
-[![npm version](http://img.shields.io/npm/v/primer-markdown.svg)](https://www.npmjs.org/package/primer-markdown)
+[![npm version](https://img.shields.io/npm/v/primer-markdown.svg)](https://www.npmjs.org/package/primer-markdown)
 [![Build Status](https://travis-ci.org/primer/primer-css.svg?branch=master)](https://travis-ci.org/primer/primer-css)
 
 > Stylesheets for rendering GitHub Flavored Markdown and syntax highlighted code snippets.
@@ -196,11 +196,11 @@ Inline code inside table cells should still be distinguishable.
 
 Small images should be shown at their actual size.
 
-![](http://placekitten.com/g/300/200/)
+![](https://placekitten.com/g/300/200/)
 
 Large images should always scale down and fit in the content container.
 
-![](http://placekitten.com/g/1200/800/)
+![](https://placekitten.com/g/1200/800/)
 
 ```
 This is the final element on the page and there should be no margin below this.
@@ -212,7 +212,7 @@ This is the final element on the page and there should be no margin below this.
 [MIT](./LICENSE) &copy; [GitHub](https://github.com/)
 
 [primer-css]: https://github.com/primer/primer
-[docs]: http://primercss.io/
+[docs]: https://primercss.io/
 [npm]: https://www.npmjs.com/
 [install-npm]: https://docs.npmjs.com/getting-started/installing-node
-[sass]: http://sass-lang.com/
+[sass]: https://sass-lang.com/

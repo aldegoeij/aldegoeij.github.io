@@ -125,7 +125,7 @@ module Nokogiri
           xml.doc.create_internal_subset(
                                          'html',
                                          "-//W3C//DTD HTML 4.01 Transitional//EN",
-                                         "http://www.w3.org/TR/html4/loose.dtd"
+                                         "https://www.w3.org/TR/html4/loose.dtd"
                                          )
           xml.root do
             xml.foo

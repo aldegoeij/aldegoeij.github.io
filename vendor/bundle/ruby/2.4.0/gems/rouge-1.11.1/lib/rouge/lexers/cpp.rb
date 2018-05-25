@@ -46,7 +46,7 @@ module Rouge
       id = /[a-zA-Z_][a-zA-Z0-9_]*/
 
       prepend :root do
-        # Offload C++ extensions, http://offload.codeplay.com/
+        # Offload C++ extensions, https://offload.codeplay.com/
         rule /(?:__offload|__blockingoffload|__outer)\b/, Keyword::Pseudo
       end
 

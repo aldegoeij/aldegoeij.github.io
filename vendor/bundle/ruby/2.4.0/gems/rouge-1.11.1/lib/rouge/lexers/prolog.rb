@@ -4,7 +4,7 @@ module Rouge
   module Lexers
     class Prolog < RegexLexer
       title "Prolog"
-      desc "The Prolog programming language (http://en.wikipedia.org/wiki/Prolog)"
+      desc "The Prolog programming language (https://en.wikipedia.org/wiki/Prolog)"
       tag 'prolog'
       aliases 'prolog'
       filenames '*.pro', '*.P', '*.prolog', '*.pl'

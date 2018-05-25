@@ -1,4 +1,4 @@
-; copied from http://llvm.org/docs/LangRef.html#module-structure
+; copied from https://llvm.org/docs/LangRef.html#module-structure
 ; Declare the string constant as a global constant.
 @.str = private unnamed_addr constant [13 x i8] c"hello world\0A\00"
 

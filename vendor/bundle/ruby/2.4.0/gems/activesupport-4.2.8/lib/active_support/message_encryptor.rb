@@ -55,13 +55,13 @@ module ActiveSupport
     end
 
     # Encrypt and sign a message. We need to sign the message in order to avoid
-    # padding attacks. Reference: http://www.limited-entropy.com/padding-oracle-attacks.
+    # padding attacks. Reference: https://www.limited-entropy.com/padding-oracle-attacks.
     def encrypt_and_sign(value)
       verifier.generate(_encrypt(value))
     end
 
     # Decrypt and verify a message. We need to verify the message in order to
-    # avoid padding attacks. Reference: http://www.limited-entropy.com/padding-oracle-attacks.
+    # avoid padding attacks. Reference: https://www.limited-entropy.com/padding-oracle-attacks.
     def decrypt_and_verify(value)
       _decrypt(verifier.verify(value))
     end

@@ -11,7 +11,7 @@ module HTML
     #   class FuuuFilter < HTML::Pipeline::Filter
     #     def call
     #       doc.search('img').each do |img|
-    #         img['src'] = "http://paradoxdgn.com/junk/avatars/trollface.jpg"
+    #         img['src'] = "https://paradoxdgn.com/junk/avatars/trollface.jpg"
     #       end
     #     end
     #   end

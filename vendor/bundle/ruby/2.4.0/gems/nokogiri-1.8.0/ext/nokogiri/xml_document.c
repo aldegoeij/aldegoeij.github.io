@@ -375,28 +375,28 @@ static VALUE new(int argc, VALUE *argv, VALUE klass)
  *
  *    doc = Nokogiri::XML <<-EOXML
  *       <root>
- *         <car xmlns:part="http://general-motors.com/">
+ *         <car xmlns:part="https://general-motors.com/">
  *           <part:tire>Michelin Model XGV</part:tire>
  *         </car>
- *         <bicycle xmlns:part="http://schwinn.com/">
+ *         <bicycle xmlns:part="https://schwinn.com/">
  *           <part:tire>I'm a bicycle tire!</part:tire>
  *         </bicycle>
  *       </root>
  *       EOXML
  *
  *    doc.xpath("//tire").to_s # => ""
- *    doc.xpath("//part:tire", "part" => "http://general-motors.com/").to_s # => "<part:tire>Michelin Model XGV</part:tire>"
- *    doc.xpath("//part:tire", "part" => "http://schwinn.com/").to_s # => "<part:tire>I'm a bicycle tire!</part:tire>"
+ *    doc.xpath("//part:tire", "part" => "https://general-motors.com/").to_s # => "<part:tire>Michelin Model XGV</part:tire>"
+ *    doc.xpath("//part:tire", "part" => "https://schwinn.com/").to_s # => "<part:tire>I'm a bicycle tire!</part:tire>"
  *
  *    doc.remove_namespaces!
  *
  *    doc.xpath("//tire").to_s # => "<tire>Michelin Model XGV</tire><tire>I'm a bicycle tire!</tire>"
- *    doc.xpath("//part:tire", "part" => "http://general-motors.com/").to_s # => ""
- *    doc.xpath("//part:tire", "part" => "http://schwinn.com/").to_s # => ""
+ *    doc.xpath("//part:tire", "part" => "https://general-motors.com/").to_s # => ""
+ *    doc.xpath("//part:tire", "part" => "https://schwinn.com/").to_s # => ""
  *
  *  For more information on why this probably is *not* a good thing in general,
  *  please direct your browser to
- *  http://tenderlovemaking.com/2009/04/23/namespaces-in-xml.html
+ *  https://tenderlovemaking.com/2009/04/23/namespaces-in-xml.html
  */
 VALUE remove_namespaces_bang(VALUE self)
 {

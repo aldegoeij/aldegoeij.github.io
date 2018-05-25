@@ -47,27 +47,27 @@ module Nokogiri
 
       def test_parsing_attribute_namespace
         doc = Nokogiri::XML <<-EOXML
-<root xmlns='http://google.com/' xmlns:f='http://flavorjon.es/'>
+<root xmlns='https://google.com/' xmlns:f='https://flavorjon.es/'>
   <div f:myattr='foo'></div>
 </root>
         EOXML
 
         node = doc.at_css "div"
         attr = node.attributes["myattr"]
-        assert_equal "http://flavorjon.es/", attr.namespace.href
+        assert_equal "https://flavorjon.es/", attr.namespace.href
       end
 
       def test_setting_attribute_namespace
         doc = Nokogiri::XML <<-EOXML
-<root xmlns='http://google.com/' xmlns:f='http://flavorjon.es/'>
+<root xmlns='https://google.com/' xmlns:f='https://flavorjon.es/'>
   <div f:myattr='foo'></div>
 </root>
         EOXML
 
         node = doc.at_css "div"
         attr = node.attributes["myattr"]
-        attr.add_namespace("fizzle", "http://fizzle.com/")
-        assert_equal "http://fizzle.com/", attr.namespace.href
+        attr.add_namespace("fizzle", "https://fizzle.com/")
+        assert_equal "https://fizzle.com/", attr.namespace.href
       end
     end
   end

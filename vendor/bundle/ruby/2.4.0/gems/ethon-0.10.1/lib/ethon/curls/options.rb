@@ -202,7 +202,7 @@ module Ethon
 
       # Curl multi options, refer
       # Defined @ https://github.com/bagder/curl/blob/master/include/curl/multi.h
-      # Documentation @ http://curl.haxx.se/libcurl/c/curl_multi_setopt.html
+      # Documentation @ https://curl.haxx.se/libcurl/c/curl_multi_setopt.html
       option_type :multi
 
       option :multi, :socketfunction, :callback, 1
@@ -221,7 +221,7 @@ module Ethon
 
       # Curl easy options
       # Defined @ https://github.com/bagder/curl/blob/master/include/curl/curl.h
-      # Documentation @ http://curl.haxx.se/libcurl/c/curl_easy_setopt.html
+      # Documentation @ https://curl.haxx.se/libcurl/c/curl_easy_setopt.html
       ## BEHAVIOR OPTIONS
       option_type :easy
 

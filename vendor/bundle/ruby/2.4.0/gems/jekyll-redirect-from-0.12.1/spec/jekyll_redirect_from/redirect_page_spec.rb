@@ -45,7 +45,7 @@ describe JekyllRedirectFrom::RedirectPage do
           expect(page.to_liquid["permalink"]).to eql(from)
           expect(page.to_liquid).to have_key("redirect")
           expect(page.to_liquid["redirect"]["from"]).to eql(from)
-          expected = "http://jekyllrb.com/2014/01/03/redirect-me-plz.html"
+          expected = "https://jekyllrb.com/2014/01/03/redirect-me-plz.html"
           expect(page.to_liquid["redirect"]["to"]).to eql(expected)
         end
       end

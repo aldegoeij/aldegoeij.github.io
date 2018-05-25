@@ -20,7 +20,7 @@ describe Ethon::Multi::Operations do
 
     context "when hydra has easy" do
       before do
-        easy.url = "http://localhost:3001/"
+        easy.url = "https://localhost:3001/"
         multi.add(easy)
         multi.send(:trigger, pointer)
       end
@@ -34,8 +34,8 @@ describe Ethon::Multi::Operations do
       let(:another_easy) { Ethon::Easy.new }
 
       before do
-        easy.url = "http://localhost:3001/"
-        another_easy.url = "http://localhost:3001/"
+        easy.url = "https://localhost:3001/"
+        another_easy.url = "https://localhost:3001/"
         multi.add(easy)
         multi.add(another_easy)
         multi.send(:trigger, pointer)
@@ -152,7 +152,7 @@ describe Ethon::Multi::Operations do
 
     context "when easy handle" do
       before do
-        easy.url = "http://localhost:3001/"
+        easy.url = "https://localhost:3001/"
         multi.add(easy)
       end
 
@@ -171,7 +171,7 @@ describe Ethon::Multi::Operations do
         ary = []
         4.times do
           ary << another_easy = Ethon::Easy.new
-          another_easy.url = "http://localhost:3001/"
+          another_easy.url = "https://localhost:3001/"
         end
         ary
       end

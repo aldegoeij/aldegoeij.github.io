@@ -4,7 +4,7 @@ describe Ethon::Easy::Http do
   let(:easy) { Ethon::Easy.new }
 
   describe "#http_request" do
-    let(:url) { "http://localhost:3001/" }
+    let(:url) { "https://localhost:3001/" }
     let(:action_name) { :get }
     let(:options) { {} }
 

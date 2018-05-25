@@ -18,7 +18,7 @@ Please note that this deprecation note only applies to the precompiled Windows g
 ## Compatibility notes
 
 * [JRuby] Removed support for `jruby --1.8` code paths. [#1607] (Thanks, @kares!)
-* [MRI Windows] Retrieve zlib source from http://zlib.net/fossils to avoid deprecation issues going forward. See #1632 for details around this problem.
+* [MRI Windows] Retrieve zlib source from https://zlib.net/fossils to avoid deprecation issues going forward. See #1632 for details around this problem.
 
 
 ## Features
@@ -60,8 +60,8 @@ Please note that this deprecation note only applies to the precompiled Windows g
 For more information:
 
 * https://github.com/sparklemotion/nokogiri/issues/1634
-* http://people.canonical.com/~ubuntu-security/cve/2017/CVE-2017-5029.html
-* http://people.canonical.com/~ubuntu-security/cve/2016/CVE-2016-4738.html
+* https://people.canonical.com/~ubuntu-security/cve/2017/CVE-2017-5029.html
+* https://people.canonical.com/~ubuntu-security/cve/2016/CVE-2016-4738.html
 
 
 # 1.7.1 / 2017-03-19
@@ -73,8 +73,8 @@ For more information:
 For more information:
 
 * https://github.com/sparklemotion/nokogiri/issues/1615
-* http://people.canonical.com/~ubuntu-security/cve/2016/CVE-2016-4658.html
-* http://people.canonical.com/~ubuntu-security/cve/2016/CVE-2016-5131.html
+* https://people.canonical.com/~ubuntu-security/cve/2016/CVE-2016-4658.html
+* https://people.canonical.com/~ubuntu-security/cve/2016/CVE-2016-5131.html
 
 
 # 1.7.0.1 / 2017-01-04
@@ -128,7 +128,7 @@ See these libxml2 email posts for more:
 
 For a more detailed analysis, you may care to read Canonical's take on these security issues:
 
-* http://www.ubuntu.com/usn/usn-2994-1
+* https://www.ubuntu.com/usn/usn-2994-1
 
 
 [MRI] Bundled libxslt is upgraded to 1.1.29, which fixes a security issue as well as many long-known outstanding bugs, some features, some portability improvements, and general cleanup.
@@ -209,7 +209,7 @@ This version pulls in several upstream patches to the vendored libxml2 and libxs
   CVE-2015-8242
   CVE-2015-8317
 
-See also http://www.ubuntu.com/usn/usn-2834-1/
+See also https://www.ubuntu.com/usn/usn-2834-1/
 
 
 # 1.6.7 / 2015-11-29
@@ -249,7 +249,7 @@ This version pulls in an upstream patch to the vendored libxml2 to address:
 
 * unclosed comment uninitialized access issue (#1376)
 
-This issue was assigned CVE-2015-8710 after the fact. See http://seclists.org/oss-sec/2015/q4/616 for details.
+This issue was assigned CVE-2015-8710 after the fact. See https://seclists.org/oss-sec/2015/q4/616 for details.
 
 
 # 1.6.6.3 / 2015-11-16
@@ -1007,7 +1007,7 @@ Repackaging of 1.5.1 with a gemspec that is compatible with older Rubies. #631, 
   * Removed namespace related methods from Nokogiri::XML::Document
   * Fixed a segfault when a namespace was added twice
   * Made nokogiri work with Snow Leopard GH #79
-  * Mailing list has moved to: http://groups.google.com/group/nokogiri-talk
+  * Mailing list has moved to: https://groups.google.com/group/nokogiri-talk
   * HTML fragments now correctly handle comments and CDATA blocks. GH #78
   * Nokogiri::XML::Document#clone is now an alias of dup
 

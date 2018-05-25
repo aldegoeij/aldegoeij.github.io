@@ -3,7 +3,7 @@ require 'rack/handler/webrick'
 require 'net/http'
 
 # The code for this is inspired by Capybara's server:
-#   http://github.com/jnicklas/capybara/blob/0.3.9/lib/capybara/server.rb
+#   https://github.com/jnicklas/capybara/blob/0.3.9/lib/capybara/server.rb
 class LocalhostServer
   READY_MESSAGE = "Server ready"
 

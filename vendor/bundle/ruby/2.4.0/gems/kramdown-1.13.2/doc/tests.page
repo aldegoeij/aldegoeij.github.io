@@ -24,7 +24,7 @@ If you believe you have found a bug in the implementation, please follow these s
   fashion, please open a [bug report] and attach two files: one with the text and one with the HTML
   conversion you think is correct.
 
-[bug report]: http://github.com/gettalong/kramdown/issues
+[bug report]: https://github.com/gettalong/kramdown/issues
 
 
 ## Benchmark
@@ -100,5 +100,5 @@ different Ruby interpreters:
 ![jruby 1.7.15]({relocatable: img/graph-jruby-1.7.15-392.png})
 ![rubinius 2.2.10]({relocatable: img/graph-rubinius-2.2.10-0.png})
 
-[Markdown Test Suite]: http://daringfireball.net/projects/downloads/MarkdownTest_1.0.zip
-[MDTest]: http://www.michelf.com/docs/projets/mdtest-1.0.zip
+[Markdown Test Suite]: https://daringfireball.net/projects/downloads/MarkdownTest_1.0.zip
+[MDTest]: https://www.michelf.com/docs/projets/mdtest-1.0.zip

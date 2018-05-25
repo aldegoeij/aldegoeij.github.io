@@ -103,7 +103,7 @@ redirect_from: /post/123456798/
 
 If `site.url` is set, its value, together with `site.baseurl`, is used as a prefix for the redirect url automatically. This is useful for scenarios where a site isn't available from the domain root, so the redirects point to the correct path. If `site.url` is not set, only `site.baseurl` is used, if set.
 
-**_Note_**: If you are hosting your Jekyll site on [GitHub Pages](https://pages.github.com/), and `site.url` is not set, the prefix is set to the pages domain name i.e. http://example.github.io/project or a custom CNAME.
+**_Note_**: If you are hosting your Jekyll site on [GitHub Pages](https://pages.github.com/), and `site.url` is not set, the prefix is set to the pages domain name i.e. https://example.github.io/project or a custom CNAME.
 
 ### Redirect To
 
@@ -112,7 +112,7 @@ Sometimes, you may want to redirect a site page to a totally different website. 
 ```yaml
 title: My amazing post
 redirect_to:
-  - http://www.github.com
+  - https://www.github.com
 ```
 
 If you have multiple `redirect_to`s set, only the first one will be respected.

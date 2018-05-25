@@ -17,7 +17,7 @@ module PublicSuffix
   #   PublicSuffix.parse("nic.test")
   #   # => PublicSuffix::DomainInvalid
   #
-  #   PublicSuffix.parse("http://www.nic.it")
+  #   PublicSuffix.parse("https://www.nic.it")
   #   # => PublicSuffix::DomainInvalid
   #
   class DomainInvalid < Error

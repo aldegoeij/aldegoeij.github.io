@@ -1,7 +1,7 @@
 /*
  * Written by Doug Lea with assistance from members of JCP JSR-166
  * Expert Group and released to the public domain, as explained at
- * http://creativecommons.org/publicdomain/zero/1.0/
+ * https://creativecommons.org/publicdomain/zero/1.0/
  */
 
 // This is based on the 1.79 version.
@@ -369,7 +369,7 @@ public class ConcurrentHashMapV8<K, V>
      * functions take a long time.  However, statistically, under
      * random hash codes, this is not a common problem.  Ideally, the
      * frequency of nodes in bins follows a Poisson distribution
-     * (http://en.wikipedia.org/wiki/Poisson_distribution) with a
+     * (https://en.wikipedia.org/wiki/Poisson_distribution) with a
      * parameter of about 0.5 on average, given the resizing threshold
      * of 0.75, although with a large variance because of resizing
      * granularity. Ignoring variance, the expected occurrences of
@@ -742,7 +742,7 @@ public class ConcurrentHashMapV8<K, V>
      * necessary if all elements were non-Comparable and had tied
      * hashes.)  The red-black balancing code is updated from
      * pre-jdk-collections
-     * (http://gee.cs.oswego.edu/dl/classes/collections/RBCell.java)
+     * (https://gee.cs.oswego.edu/dl/classes/collections/RBCell.java)
      * based in turn on Cormen, Leiserson, and Rivest "Introduction to
      * Algorithms" (CLR).
      *

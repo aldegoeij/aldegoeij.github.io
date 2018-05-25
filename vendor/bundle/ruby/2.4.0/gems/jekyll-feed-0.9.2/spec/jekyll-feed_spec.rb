@@ -8,7 +8,7 @@ describe(JekyllFeed) do
       "source"      => source_dir,
       "destination" => dest_dir,
       "show_drafts" => true,
-      "url"         => "http://example.org",
+      "url"         => "https://example.org",
       "name"       => "My awesome site",
       "author"      => {
         "name"        => "Dr. Jekyll"
@@ -45,7 +45,7 @@ describe(JekyllFeed) do
     expect(contents).to match /http:\/\/example\.org\/2014\/03\/04\/march-the-fourth\.html/
     expect(contents).to match /http:\/\/example\.org\/2014\/03\/02\/march-the-second\.html/
     expect(contents).to match /http:\/\/example\.org\/2013\/12\/12\/dec-the-second\.html/
-    expect(contents).to match "http://example.org/2015/08/08/stuck-in-the-middle.html"
+    expect(contents).to match "https://example.org/2015/08/08/stuck-in-the-middle.html"
     expect(contents).to_not match /http:\/\/example\.org\/2016\/02\/09\/a-draft\.html/
   end
 
@@ -92,9 +92,9 @@ describe(JekyllFeed) do
   end
 
   it "includes the item image" do
-    expect(contents).to include('<media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://example.org/image.png" />')
-    expect(contents).to include('<media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cdn.example.org/absolute.png" />')
-    expect(contents).to include('<media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://example.org/object-image.png" />')
+    expect(contents).to include('<media:thumbnail xmlns:media="https://search.yahoo.com/mrss/" url="https://example.org/image.png" />')
+    expect(contents).to include('<media:thumbnail xmlns:media="https://search.yahoo.com/mrss/" url="https://cdn.example.org/absolute.png" />')
+    expect(contents).to include('<media:thumbnail xmlns:media="https://search.yahoo.com/mrss/" url="https://example.org/object-image.png" />')
   end
 
   context "parsing" do
@@ -107,7 +107,7 @@ describe(JekyllFeed) do
     end
 
     it "outputs the link" do
-      expect(feed.link.href).to eql("http://example.org/feed.xml")
+      expect(feed.link.href).to eql("https://example.org/feed.xml")
     end
 
     it "outputs the generator" do
@@ -122,7 +122,7 @@ describe(JekyllFeed) do
     it "includes item contents" do
       post = feed.items.last
       expect(post.title.content).to eql("Dec The Second")
-      expect(post.link.href).to eql("http://example.org/2013/12/12/dec-the-second.html")
+      expect(post.link.href).to eql("https://example.org/2013/12/12/dec-the-second.html")
       expect(post.published.content).to eql(Time.parse("2013-12-12"))
     end
 
@@ -217,14 +217,14 @@ describe(JekyllFeed) do
     end
 
     it "renders the feed meta" do
-      expected = 'href="http://example.org/bass/feed.xml"'
+      expected = 'href="https://example.org/bass/feed.xml"'
       expect(feed_meta).to include(expected)
     end
   end
 
   context "feed meta" do
     it "renders the feed meta" do
-      expected = '<link type="application/atom+xml" rel="alternate" href="http://example.org/feed.xml" title="My awesome site" />'
+      expected = '<link type="application/atom+xml" rel="alternate" href="https://example.org/feed.xml" title="My awesome site" />'
       expect(feed_meta).to eql(expected)
     end
 
@@ -233,7 +233,7 @@ describe(JekyllFeed) do
         Jekyll.configuration({
           "source"      => source_dir,
           "destination" => dest_dir,
-          "url"         => "http://example.org"
+          "url"         => "https://example.org"
         })
       end
 
@@ -257,14 +257,14 @@ describe(JekyllFeed) do
     end
 
     it "renders the feed meta with custom feed path" do
-      expected = 'href="http://example.org/atom.xml"'
+      expected = 'href="https://example.org/atom.xml"'
       expect(feed_meta).to include(expected)
     end
   end
 
   context "feed stylesheet" do
     it "includes the stylesheet" do
-      expect(contents).to include('<?xml-stylesheet type="text/xml" href="http://example.org/feed.xslt.xml"?>')
+      expect(contents).to include('<?xml-stylesheet type="text/xml" href="https://example.org/feed.xslt.xml"?>')
     end
   end
 

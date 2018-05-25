@@ -20,7 +20,7 @@ class Net::HTTP
       if path.start_with?("ftp://") || use_ssl?
         path
       else
-        "http://#{addr_port}#{path}"
+        "https://#{addr_port}#{path}"
       end
     else
       path
@@ -323,7 +323,7 @@ private
     end
   end
 
-  # From: http://stackoverflow.com/a/5471032/7672
+  # From: https://stackoverflow.com/a/5471032/7672
   # Thanks, Mislav!
   #
   # Cross-platform way of finding an executable in the $PATH.

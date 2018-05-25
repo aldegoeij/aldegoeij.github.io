@@ -1,7 +1,7 @@
 #!/bin/bash
 
 RELEASES_URL="https://github.com/jekyll/jekyll/releases"
-JEKYLL_VERSION=`curl http://jekyllrb.com/latest_version.txt`
+JEKYLL_VERSION=`curl https://jekyllrb.com/latest_version.txt`
 JEKYLL_BUNDLE="jekyll-${JEKYLL_VERSION}.tar.gz"
 
 wget "${RELEASES_URL}/download/v${JEKYLL_VERSION}/${JEKYLL_BUNDLE}"

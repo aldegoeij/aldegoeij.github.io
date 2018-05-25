@@ -10,7 +10,7 @@ namespace :yard do
     system command or raise "#{command} failed"
   end
 
-  desc 'Pushes generated documentation to github pages: http://ruby-concurrency.github.io/thread_safe/'
+  desc 'Pushes generated documentation to github pages: https://ruby-concurrency.github.io/thread_safe/'
   task :push => [:setup, :yard] do
 
     message = Dir.chdir(root) do

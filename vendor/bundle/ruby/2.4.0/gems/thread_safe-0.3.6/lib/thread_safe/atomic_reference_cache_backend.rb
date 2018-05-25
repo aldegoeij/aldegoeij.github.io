@@ -3,7 +3,7 @@ module ThreadSafe
   # available in public domain.
   #
   # Original source code available here:
-  # http://gee.cs.oswego.edu/cgi-bin/viewcvs.cgi/jsr166/src/jsr166e/ConcurrentHashMapV8.java?revision=1.59
+  # https://gee.cs.oswego.edu/cgi-bin/viewcvs.cgi/jsr166/src/jsr166e/ConcurrentHashMapV8.java?revision=1.59
   #
   # The Ruby port skips out the +TreeBin+ (red-black trees for use in bins whose
   # size exceeds a threshold).
@@ -102,7 +102,7 @@ module ThreadSafe
   # when user +eql?+ or mapping functions take a long time. However,
   # statistically, under random hash codes, this is not a common problem.
   # Ideally, the frequency of nodes in bins follows a Poisson distribution
-  # (http://en.wikipedia.org/wiki/Poisson_distribution) with a parameter of
+  # (https://en.wikipedia.org/wiki/Poisson_distribution) with a parameter of
   # about 0.5 on average, given the resizing threshold of 0.75, although with a
   # large variance because of resizing granularity. Ignoring variance, the
   # expected occurrences of list size k are (exp(-0.5) * pow(0.5, k) /

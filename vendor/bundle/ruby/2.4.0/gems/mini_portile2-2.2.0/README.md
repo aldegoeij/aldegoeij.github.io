@@ -8,7 +8,7 @@ previous, please visit
 [![travis status](https://travis-ci.org/flavorjones/mini_portile.svg?branch=master)](https://travis-ci.org/flavorjones/mini_portile?branch=master)
 [![appveyor status](https://ci.appveyor.com/api/projects/status/509669xx1qlhqqab/branch/master?svg=true)](https://ci.appveyor.com/project/flavorjones/mini-portile/branch/master)
 
-* Documentation: http://www.rubydoc.info/github/flavorjones/mini_portile
+* Documentation: https://www.rubydoc.info/github/flavorjones/mini_portile
 * Source Code: https://github.com/flavorjones/mini_portile
 * Bug Reports: https://github.com/flavorjones/mini_portile/issues
 
@@ -65,7 +65,7 @@ quick example:
 gem "mini_portile2", "~> 2.0.0" # NECESSARY if used in extconf.rb. see below.
 require "mini_portile2"
 recipe = MiniPortile.new("libiconv", "1.13.1")
-recipe.files = ["http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz"]
+recipe.files = ["https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz"]
 recipe.cook
 recipe.activate
 ```
@@ -146,7 +146,7 @@ Example:
 task :libiconv do
   recipe = MiniPortile.new("libiconv", "1.13.1")
   recipe.files << {
-    url: "http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz"],
+    url: "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz"],
     sha256: "55a36168306089009d054ccdd9d013041bfc3ab26be7033d107821f1c4949a49"
   }
   checkpoint = ".#{recipe.name}-#{recipe.version}.installed"
@@ -184,7 +184,7 @@ MiniPortile can verify the integrity of the downloaded file per SHA256, SHA1 or 
 
 ```ruby
   recipe.files << {
-    url: "http://your.host/file.tar.bz2",
+    url: "https://your.host/file.tar.bz2",
     sha256: "<32 byte hex value>",
   }
 ```
@@ -203,10 +203,10 @@ MiniPortile can also verify the integrity of the downloaded file per PGP signatu
   EOT
 
   recipe.files << {
-    url: "http://your.host/file.tar.bz2",
+    url: "https://your.host/file.tar.bz2",
     gpg: {
       key: public_key,
-      signature_url: "http://your.host/file.tar.bz2.sig"
+      signature_url: "https://your.host/file.tar.bz2.sig"
     }
   }
 ```

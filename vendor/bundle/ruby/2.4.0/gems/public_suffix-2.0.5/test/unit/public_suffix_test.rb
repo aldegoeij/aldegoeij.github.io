@@ -92,8 +92,8 @@ class PublicSuffixTest < Minitest::Test
   end
 
   def test_self_parse_with_uri
-    error = assert_raises(PublicSuffix::DomainInvalid) { PublicSuffix.parse("http://google.com") }
-    assert_match(%r{http://google\.com}, error.message)
+    error = assert_raises(PublicSuffix::DomainInvalid) { PublicSuffix.parse("https://google.com") }
+    assert_match(%r{https://google\.com}, error.message)
   end
 
 

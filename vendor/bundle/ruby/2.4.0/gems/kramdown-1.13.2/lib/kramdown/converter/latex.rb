@@ -263,7 +263,7 @@ module Kramdown
       end
 
       # Inspired by Maruku: entity conversion table based on the one from htmltolatex
-      # (http://sourceforge.net/projects/htmltolatex/), with some small adjustments/additions
+      # (https://sourceforge.net/projects/htmltolatex/), with some small adjustments/additions
       ENTITY_CONV_TABLE = {
         913 => ['$A$'],
         914 => ['$B$'],

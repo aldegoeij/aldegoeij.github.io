@@ -698,7 +698,7 @@ module Sass
     # ActiveSupport, and only needs to be called when `val` is likely
     # to be `nil` reasonably often.
     #
-    # See [this bug report](http://redmine.ruby-lang.org/issues/4917).
+    # See [this bug report](https://redmine.ruby-lang.org/issues/4917).
     #
     # @param val [Object]
     # @return [Object]
@@ -743,8 +743,8 @@ module Sass
     #   contents are invalid in the native encoding.
     def check_sass_encoding(str)
       # Determine the fallback encoding following section 3.2 of CSS Syntax Level 3 and Encodings:
-      # http://www.w3.org/TR/2013/WD-css-syntax-3-20130919/#determine-the-fallback-encoding
-      # http://encoding.spec.whatwg.org/#decode
+      # https://www.w3.org/TR/2013/WD-css-syntax-3-20130919/#determine-the-fallback-encoding
+      # https://encoding.spec.whatwg.org/#decode
       binary = str.dup.force_encoding("BINARY")
       if binary.start_with?(UTF_8_BOM)
         binary.slice! 0, UTF_8_BOM.length
@@ -952,7 +952,7 @@ module Sass
       map
     end
 
-    # Encodes `value` as VLQ (http://en.wikipedia.org/wiki/VLQ).
+    # Encodes `value` as VLQ (https://en.wikipedia.org/wiki/VLQ).
     #
     # @param value [Integer]
     # @return [String] The encoded value
@@ -1056,7 +1056,7 @@ module Sass
     end
 
     # Calculates the memoization table for the Least Common Subsequence algorithm.
-    # Algorithm from [Wikipedia](http://en.wikipedia.org/wiki/Longest_common_subsequence_problem#Computing_the_length_of_the_LCS)
+    # Algorithm from [Wikipedia](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem#Computing_the_length_of_the_LCS)
     def lcs_table(x, y)
       # This method does not take a block as an explicit parameter for performance reasons.
       c = Array.new(x.size) {[]}
@@ -1077,7 +1077,7 @@ module Sass
     # rubocop:disable ParameterLists
 
     # Computes a single longest common subsequence for arrays x and y.
-    # Algorithm from [Wikipedia](http://en.wikipedia.org/wiki/Longest_common_subsequence_problem#Reading_out_an_LCS)
+    # Algorithm from [Wikipedia](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem#Reading_out_an_LCS)
     def lcs_backtrace(c, x, y, i, j, &block)
       # rubocop:enable ParameterList
       return [] if i == 0 || j == 0

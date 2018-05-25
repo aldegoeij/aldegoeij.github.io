@@ -30,7 +30,7 @@ describe 'location' do
   # Test cases consist of a kramdown string that uses IALs to specify the expected
   # line numbers for a given element.
   test_cases = {
-    'autolink' => %(testing autolinks\n\n<http://kramdown.org>{:.line-3}),
+    'autolink' => %(testing autolinks\n\n<https://kramdown.org>{:.line-3}),
     'blockquote' => %(
       > block quote1
       >
@@ -93,7 +93,7 @@ describe 'location' do
     'link' => %(
       a para
 
-      This is [a link](http://rubyforge.org){:.line-3} to a page.
+      This is [a link](https://rubyforge.org){:.line-3} to a page.
 
       Here comes a ![smiley](../images/smiley.png){:.line-5}
     ),

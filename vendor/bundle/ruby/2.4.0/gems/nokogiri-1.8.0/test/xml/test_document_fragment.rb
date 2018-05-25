@@ -189,7 +189,7 @@ module Nokogiri
 
       def test_fragment_without_a_namespace_does_not_get_a_namespace
         doc = Nokogiri::XML <<-EOX
-          <root xmlns="http://tenderlovemaking.com/" xmlns:foo="http://flavorjon.es/" xmlns:bar="http://google.com/">
+          <root xmlns="https://tenderlovemaking.com/" xmlns:foo="https://flavorjon.es/" xmlns:bar="https://google.com/">
             <foo:existing></foo:existing>
           </root>
         EOX
@@ -199,7 +199,7 @@ module Nokogiri
 
       def test_fragment_namespace_resolves_against_document_root
         doc = Nokogiri::XML <<-EOX
-          <root xmlns:foo="http://flavorjon.es/" xmlns:bar="http://google.com/">
+          <root xmlns:foo="https://flavorjon.es/" xmlns:bar="https://google.com/">
             <foo:existing></foo:existing>
           </root>
         EOX
@@ -212,7 +212,7 @@ module Nokogiri
 
       def test_fragment_invalid_namespace_is_silently_ignored
         doc = Nokogiri::XML <<-EOX
-          <root xmlns:foo="http://flavorjon.es/" xmlns:bar="http://google.com/">
+          <root xmlns:foo="https://flavorjon.es/" xmlns:bar="https://google.com/">
             <foo:existing></foo:existing>
           </root>
         EOX

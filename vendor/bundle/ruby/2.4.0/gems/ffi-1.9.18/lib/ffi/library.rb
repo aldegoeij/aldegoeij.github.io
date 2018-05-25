@@ -157,7 +157,7 @@ module FFI
 
     # Set the calling convention for {#attach_function} and {#callback}
     #
-    # @see http://en.wikipedia.org/wiki/Stdcall#stdcall
+    # @see https://en.wikipedia.org/wiki/Stdcall#stdcall
     # @note +:stdcall+ is typically used for attaching Windows API functions
     #
     # @param [Symbol] convention one of +:default+, +:stdcall+
@@ -283,9 +283,9 @@ module FFI
     # @return [Array<String>]
     # This function returns a list of possible names to lookup.
     # @note Function names on windows may be decorated if they are using stdcall. See
-    #   * http://en.wikipedia.org/wiki/Name_mangling#C_name_decoration_in_Microsoft_Windows
-    #   * http://msdn.microsoft.com/en-us/library/zxk0tw93%28v=VS.100%29.aspx
-    #   * http://en.wikibooks.org/wiki/X86_Disassembly/Calling_Conventions#STDCALL
+    #   * https://en.wikipedia.org/wiki/Name_mangling#C_name_decoration_in_Microsoft_Windows
+    #   * https://msdn.microsoft.com/en-us/library/zxk0tw93%28v=VS.100%29.aspx
+    #   * https://en.wikibooks.org/wiki/X86_Disassembly/Calling_Conventions#STDCALL
     #   Note that decorated names can be overridden via def files.  Also note that the
     #   windows api, although using, doesn't have decorated names.
     def function_names(name, arg_types)

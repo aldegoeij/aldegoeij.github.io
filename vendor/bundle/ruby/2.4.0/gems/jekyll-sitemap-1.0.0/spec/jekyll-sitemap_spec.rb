@@ -7,7 +7,7 @@ describe(Jekyll::JekyllSitemap) do
     {
       "source"      => source_dir,
       "destination" => dest_dir,
-      "url"         => "http://example.org",
+      "url"         => "https://example.org",
       "collections" => {
         "my_collection" => { "output" => true },
         "other_things"  => { "output" => false }
@@ -139,22 +139,22 @@ describe(Jekyll::JekyllSitemap) do
 
     it "adds baseurl to robots.txt" do
       content = File.read(dest_dir("robots.txt"))
-      expect(content).to match("Sitemap: http://example.org/bass/sitemap.xml")
+      expect(content).to match("Sitemap: https://example.org/bass/sitemap.xml")
     end
   end
 
   context "with urls that needs URI encoding" do
     let(:config) do
-      Jekyll.configuration(Jekyll::Utils.deep_merge_hashes(overrides, {"url" => "http://ümlaut.example.org"}))
+      Jekyll.configuration(Jekyll::Utils.deep_merge_hashes(overrides, {"url" => "https://ümlaut.example.org"}))
     end
 
     it "performs URI encoding of site url" do
-      expect(contents).to match %r!<loc>http://xn--mlaut-jva.example.org/</loc>!
-      expect(contents).to match %r!<loc>http://xn--mlaut-jva.example.org/some-subfolder/this-is-a-subpage.html</loc>!
-      expect(contents).to match %r!<loc>http://xn--mlaut-jva.example.org/2014/03/04/march-the-fourth.html</loc>!
-      expect(contents).to match %r!<loc>http://xn--mlaut-jva.example.org/2016/04/01/%E9%94%99%E8%AF%AF.html</loc>!
-      expect(contents).to match %r!<loc>http://xn--mlaut-jva.example.org/2016/04/02/%E9%94%99%E8%AF%AF.html</loc>!
-      expect(contents).to match %r!<loc>http://xn--mlaut-jva.example.org/2016/04/03/%E9%94%99%E8%AF%AF.html</loc>!
+      expect(contents).to match %r!<loc>https://xn--mlaut-jva.example.org/</loc>!
+      expect(contents).to match %r!<loc>https://xn--mlaut-jva.example.org/some-subfolder/this-is-a-subpage.html</loc>!
+      expect(contents).to match %r!<loc>https://xn--mlaut-jva.example.org/2014/03/04/march-the-fourth.html</loc>!
+      expect(contents).to match %r!<loc>https://xn--mlaut-jva.example.org/2016/04/01/%E9%94%99%E8%AF%AF.html</loc>!
+      expect(contents).to match %r!<loc>https://xn--mlaut-jva.example.org/2016/04/02/%E9%94%99%E8%AF%AF.html</loc>!
+      expect(contents).to match %r!<loc>https://xn--mlaut-jva.example.org/2016/04/03/%E9%94%99%E8%AF%AF.html</loc>!
     end
 
     it "does not double-escape urls" do
@@ -173,7 +173,7 @@ describe(Jekyll::JekyllSitemap) do
       end
 
       it "renders liquid" do
-        expect(contents).to match("Sitemap: http://xn--mlaut-jva.example.org/sitemap.xml")
+        expect(contents).to match("Sitemap: https://xn--mlaut-jva.example.org/sitemap.xml")
       end
     end
   end

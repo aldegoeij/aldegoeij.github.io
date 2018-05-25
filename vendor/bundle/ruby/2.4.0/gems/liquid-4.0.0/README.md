@@ -1,13 +1,13 @@
-[![Build Status](https://api.travis-ci.org/Shopify/liquid.svg?branch=master)](http://travis-ci.org/Shopify/liquid)
-[![Inline docs](http://inch-ci.org/github/Shopify/liquid.svg?branch=master)](http://inch-ci.org/github/Shopify/liquid)
+[![Build Status](https://api.travis-ci.org/Shopify/liquid.svg?branch=master)](https://travis-ci.org/Shopify/liquid)
+[![Inline docs](https://inch-ci.org/github/Shopify/liquid.svg?branch=master)](https://inch-ci.org/github/Shopify/liquid)
 
 # Liquid template engine
 
 * [Contributing guidelines](CONTRIBUTING.md)
 * [Version history](History.md)
-* [Liquid documentation from Shopify](http://docs.shopify.com/themes/liquid-basics)
+* [Liquid documentation from Shopify](https://docs.shopify.com/themes/liquid-basics)
 * [Liquid Wiki at GitHub](https://github.com/Shopify/liquid/wiki)
-* [Website](http://liquidmarkup.org/)
+* [Website](https://liquidmarkup.org/)
 
 ## Introduction
 

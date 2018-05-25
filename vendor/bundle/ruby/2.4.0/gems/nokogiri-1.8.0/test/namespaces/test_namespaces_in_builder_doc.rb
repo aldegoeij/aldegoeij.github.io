@@ -6,11 +6,11 @@ module Nokogiri
       def setup
         super
         b = Nokogiri::XML::Builder.new do |x|
-          x.fruit(:xmlns => 'ns:fruit', :'xmlns:veg' => 'ns:veg', :'xmlns:xlink' => 'http://www.w3.org/1999/xlink') do
+          x.fruit(:xmlns => 'ns:fruit', :'xmlns:veg' => 'ns:veg', :'xmlns:xlink' => 'https://www.w3.org/1999/xlink') do
             x.pear { x.bosc }
             x.orange
             x[:veg].carrot do
-              x.cheese(:xmlns => 'ns:dairy', :'xlink:href' => 'http://example.com/cheese/')
+              x.cheese(:xmlns => 'ns:dairy', :'xlink:href' => 'https://example.com/cheese/')
             end
             x[:meat].bacon(:'xmlns:meat' => 'ns:meat') do
               x.apple :count => 2
@@ -43,7 +43,7 @@ module Nokogiri
         assert_equal 'ns:dairy', check_namespace(@doc.root.elements[2].elements[0])
       end
       def test_builder_nondefault_attr_ns
-        assert_equal 'http://www.w3.org/1999/xlink', 
+        assert_equal 'https://www.w3.org/1999/xlink', 
           check_namespace(@doc.root.elements[2].elements[0].attribute_nodes.find { |a| a.name =~ /href/ })
       end
       def test_builder_single_decl_ns_2
@@ -64,11 +64,11 @@ module Nokogiri
 
       def test_builder_namespaced_attribute_on_unparented_node
         doc = Nokogiri::XML::Builder.new do |x|
-          x.root('xmlns:foo' => 'http://foo.io') {
+          x.root('xmlns:foo' => 'https://foo.io') {
             x.obj('foo:attr' => 'baz')
           }
         end.doc
-        assert_equal 'http://foo.io', doc.root.children.first.attribute_nodes.first.namespace.href
+        assert_equal 'https://foo.io', doc.root.children.first.attribute_nodes.first.namespace.href
       end
     end
   end

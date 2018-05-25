@@ -271,7 +271,7 @@ module Liquid
     #   %Z - Time zone name
     #   %% - Literal ``%'' character
     #
-    #   See also: http://www.ruby-doc.org/core/Time.html#method-i-strftime
+    #   See also: https://www.ruby-doc.org/core/Time.html#method-i-strftime
     def date(input, format)
       return input if format.to_s.empty?
 

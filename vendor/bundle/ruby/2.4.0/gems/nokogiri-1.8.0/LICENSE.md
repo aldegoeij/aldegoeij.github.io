@@ -2,12 +2,12 @@
 
 Copyright (c) 2008 - 2017:
 
-* [Aaron Patterson](http://tenderlovemaking.com)
-* [Mike Dalessio](http://mike.daless.io)
-* [Charles Nutter](http://blog.headius.com)
-* [Sergio Arbeo](http://www.serabe.com)
-* [Patrick Mahoney](http://polycrystal.org)
-* [Yoko Harada](http://yokolet.blogspot.com)
+* [Aaron Patterson](https://tenderlovemaking.com)
+* [Mike Dalessio](https://mike.daless.io)
+* [Charles Nutter](https://blog.headius.com)
+* [Sergio Arbeo](https://www.serabe.com)
+* [Patrick Mahoney](https://polycrystal.org)
+* [Yoko Harada](https://yokolet.blogspot.com)
 * [Akinori MUSHA](https://akinori.org)
 * [John Shahid](https://github.com/jvshahid)
 

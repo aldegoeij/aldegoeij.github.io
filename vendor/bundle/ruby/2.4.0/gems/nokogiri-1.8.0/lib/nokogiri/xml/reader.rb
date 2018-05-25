@@ -8,7 +8,7 @@ module Nokogiri
     # Here is an example of usage:
     #
     #   reader = Nokogiri::XML::Reader(<<-eoxml)
-    #     <x xmlns:tenderlove='http://tenderlovemaking.com/'>
+    #     <x xmlns:tenderlove='https://tenderlovemaking.com/'>
     #       <tenderlove:foo awesome='true'>snuggles!</tenderlove:foo>
     #     </x>
     #   eoxml

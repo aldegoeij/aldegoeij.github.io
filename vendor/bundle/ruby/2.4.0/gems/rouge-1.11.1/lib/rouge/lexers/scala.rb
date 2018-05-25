@@ -12,7 +12,7 @@ module Rouge
       mimetypes 'text/x-scala', 'application/x-scala'
 
       # As documented in the ENBF section of the scala specification
-      # http://www.scala-lang.org/docu/files/ScalaReference.pdf
+      # https://www.scala-lang.org/docu/files/ScalaReference.pdf
       whitespace = /\p{Space}/
       letter = /[\p{L}$_]/
       upper = /[\p{Lu}$_]/

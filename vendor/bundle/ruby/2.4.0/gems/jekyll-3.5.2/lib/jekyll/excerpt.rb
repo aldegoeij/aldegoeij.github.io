@@ -90,7 +90,7 @@ module Jekyll
     #
     #     Second paragraph.
     #
-    #     [1]: http://example.com/
+    #     [1]: https://example.com/
     #
     # This is fairly good option for Markdown and Textile files. But might cause
     # problems for HTML docs (which is quite unusual for Jekyll). If default
@@ -106,7 +106,7 @@ module Jekyll
     #
     #     First paragraph with [link][1].
     #
-    #     [1]: http://example.com/
+    #     [1]: https://example.com/
     #
     # Excerpts are rendered same time as content is rendered.
     #

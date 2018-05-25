@@ -20,7 +20,7 @@ module ThreadSafe
         Kernel.rand(MAX_XOR_SHIFTABLE_INT) + 1 # 0 can't be xorshifted
       end
 
-      # xorshift based on: http://www.jstatsoft.org/v08/i14/paper
+      # xorshift based on: https://www.jstatsoft.org/v08/i14/paper
       if 0.size == 4
         # using the "yˆ=y>>a; yˆ=y<<b; yˆ=y>>c;" transform with the (a,b,c) tuple with values (3,1,14) to minimise Bignum overflows
         def xorshift(x)

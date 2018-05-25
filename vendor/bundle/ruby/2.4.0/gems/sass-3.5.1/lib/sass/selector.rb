@@ -267,7 +267,7 @@ module Sass
       end
     end
 
-    # An attribute selector (e.g. `[href^="http://"]`).
+    # An attribute selector (e.g. `[href^="https://"]`).
     class Attribute < Simple
       # The attribute name.
       #

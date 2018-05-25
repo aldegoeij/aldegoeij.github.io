@@ -2,7 +2,7 @@ module ExecJS
   # Encodes strings as UTF-8
   module Encoding
     if RUBY_ENGINE == 'jruby' || RUBY_ENGINE == 'rbx'
-      # workaround for jruby bug http://jira.codehaus.org/browse/JRUBY-6588
+      # workaround for jruby bug https://jira.codehaus.org/browse/JRUBY-6588
       # workaround for rbx bug https://github.com/rubinius/rubinius/issues/1729
       def encode(string)
         if string.encoding.name == 'ASCII-8BIT'

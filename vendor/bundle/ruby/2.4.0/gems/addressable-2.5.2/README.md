@@ -7,17 +7,17 @@
   <dt>License</dt><dd>Apache 2.0</dd>
 </dl>
 
-[![Gem Version](http://img.shields.io/gem/dt/addressable.svg)][gem]
+[![Gem Version](https://img.shields.io/gem/dt/addressable.svg)][gem]
 [![Build Status](https://secure.travis-ci.org/sporkmonger/addressable.svg?branch=master)][travis]
 [![Dependency Status](https://gemnasium.com/sporkmonger/addressable.svg?travis)][gemnasium]
 [![Test Coverage Status](https://img.shields.io/coveralls/sporkmonger/addressable.svg)][coveralls]
-[![Documentation Coverage Status](http://inch-ci.org/github/sporkmonger/addressable.svg?branch=master)][inch]
+[![Documentation Coverage Status](https://inch-ci.org/github/sporkmonger/addressable.svg?branch=master)][inch]
 
 [gem]: https://rubygems.org/gems/addressable
-[travis]: http://travis-ci.org/sporkmonger/addressable
+[travis]: https://travis-ci.org/sporkmonger/addressable
 [gemnasium]: https://gemnasium.com/sporkmonger/addressable
 [coveralls]: https://coveralls.io/r/sporkmonger/addressable
-[inch]: http://inch-ci.org/github/sporkmonger/addressable
+[inch]: https://inch-ci.org/github/sporkmonger/addressable
 
 # Description
 
@@ -35,7 +35,7 @@ RFC 6570 (level 4), providing support for IRIs and URI templates.
 ```ruby
 require "addressable/uri"
 
-uri = Addressable::URI.parse("http://example.com/path/to/resource/")
+uri = Addressable::URI.parse("https://example.com/path/to/resource/")
 uri.scheme
 #=> "http"
 uri.host
@@ -43,9 +43,9 @@ uri.host
 uri.path
 #=> "/path/to/resource/"
 
-uri = Addressable::URI.parse("http://www.詹姆斯.com/")
+uri = Addressable::URI.parse("https://www.詹姆斯.com/")
 uri.normalize
-#=> #<Addressable::URI:0xc9a4c8 URI:http://www.xn--8ws00zhy3a.com/>
+#=> #<Addressable::URI:0xc9a4c8 URI:https://www.xn--8ws00zhy3a.com/>
 ```
 
 
@@ -58,24 +58,24 @@ For more details, see [RFC 6570](https://www.rfc-editor.org/rfc/rfc6570.txt).
 
 require "addressable/template"
 
-template = Addressable::Template.new("http://example.com/{?query*}/")
+template = Addressable::Template.new("https://example.com/{?query*}/")
 template.expand({
   "query" => {
     'foo' => 'bar',
     'color' => 'red'
   }
 })
-#=> #<Addressable::URI:0xc9d95c URI:http://example.com/?foo=bar&color=red>
+#=> #<Addressable::URI:0xc9d95c URI:https://example.com/?foo=bar&color=red>
 
-template = Addressable::Template.new("http://example.com/{?one,two,three}")
+template = Addressable::Template.new("https://example.com/{?one,two,three}")
 template.partial_expand({"one" => "1", "three" => 3}).pattern
-#=> "http://example.com/?one=1{&two}&three=3"
+#=> "https://example.com/?one=1{&two}&three=3"
 
 template = Addressable::Template.new(
-  "http://{host}{/segments*}/{?one,two,bogus}{#fragment}"
+  "https://{host}{/segments*}/{?one,two,bogus}{#fragment}"
 )
 uri = Addressable::URI.parse(
-  "http://example.com/a/b/c/?one=1&two=2#foo"
+  "https://example.com/a/b/c/?one=1&two=2#foo"
 )
 template.extract(uri)
 #=>
