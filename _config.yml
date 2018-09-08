@@ -1,6 +1,6 @@
 # Site Settings
 locale                   : "en"
-title                    : "Business degree, Tech addiction."
+title                    : "Building Clouds."
 title_separator          : "-"
 name                     : "ALDG / QRMR / Alexander L. de Goeij"
 description              : "Blog about digital enterprise startups and tech: architecture, cloud, engineering, development, python, linux, consulting, you name it."
@@ -72,7 +72,7 @@ analytics:
 author:
   name             : "Alexander"
   avatar           : "/assets/images/me.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Working on digital enterprise startups in cloud architecture, infrastructure and engineering."
+  bio              : "Working as a Cloud Engineer / Cloud Architect at digital enterprise startups."
   location         : "Earth, but mostly Amsterdam."
   email            : "alexander@aldg.nl"
   uri              :
@@ -83,7 +83,7 @@ author:
   facebook         :
   foursquare       :
   github           : "aldegoeij"
-  gitlab           :
+  gitlab           : "aldegoeij"
   google_plus      :
   keybase          :
   instagram        :
